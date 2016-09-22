@@ -21,7 +21,12 @@
             atau bahkan bertemu dengan pasanganmu ;))
         - Target Audience: 13-tak hingga :D #Bagi anak2 yg sudah mandiri, dan sekolahnya jauh dari orang tua
             bagi para orang tua yg masih khawatir dan belum terbiasa dg budaya daerah lain :)
-            
+# backup
+# Pernah menggunakan aplikasi Prediksi Cuaca?
+# Yup, ide ini tentang aplikasi Prediksi Cuaca.
+# Mengapa saya mau mengembangkan aplikasi yang sudah pernah ada?
+# Jawabannya sederhana, let's don't reinvent the wheel here.
+
 3. Upload video kamu ke youtube dan setting hak aksesnya ke unlisted/tidak tercantum.
 4. Submit url video kamu di https://unikomcodelabs.typeform.com/to/qNkVEI
 5. Submit hanya boleh sekali, lebih dari sekali dianggap gugur
