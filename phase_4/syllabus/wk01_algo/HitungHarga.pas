@@ -108,24 +108,3 @@ begin
     
     until (pesan_kembali = 'T');
 end.
-            if (pilihan = 1) then
-            begin
-                // Kasus anak ayam
-                // jumlah := 0;
-                write('Masukkan jumlah anak ayam: '); readln(jumlah);
-
-                sisa := jumlah;
-                for i := jumlah downto 1 do
-                begin
-                    write('Anak ayam turun ', sisa);
-
-                    sisa := sisa - 1;
-
-                    if (sisa = 0) then
-                        writeln(', mati satu tinggal induknya')
-                    else
-                        writeln(', mati satu tinggal ', sisa);
-                end;                
-                
-                write('Press any key to continue...'); readln();
-            end;
