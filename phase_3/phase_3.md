@@ -3,12 +3,12 @@
 1. Melakukan presentasi selama maksimal 5 menit dan ada sesi tanya jawab selama 5 menit.
 
 2. Membuat slide PowerPoint, berisi :
-    - Latar belakang masalah
-    - Solusi yang ditawarkan
-    - Deskripsi aplikasi
-    - Keunikan aplikasi dari aplikasi sejenis
-    - Target pengguna dari aplikasi
-    - Bagaimana mempromosikan aplikasinya
+    - Latar belakang masalah #done
+    - Solusi yang ditawarkan #done
+    - Deskripsi aplikasi #done
+    - Keunikan aplikasi dari aplikasi sejenis #done
+    - Target pengguna dari aplikasi #done
+    - Bagaimana mempromosikan aplikasinya #done
     - Business model aplikasi, (bagaimana aplikasi menghasilkan uang), contoh line menjual stiker berbayar.
     - Salah satu contoh slide : https://1drv.ms/p/s!Amq4AEgUTf6LgRpYVKPn6jJdGMZs
 
