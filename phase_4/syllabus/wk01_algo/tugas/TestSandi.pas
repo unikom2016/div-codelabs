@@ -10,22 +10,23 @@ var
 
     kesempatan, pilihan, jumlah, i, j, sisa: integer;
 
-    batas, genap, total: integer;
+    batas, total: integer;
 
-    angka, baris, n: integer;
+    angka, baris: integer;
 
 begin
     kesempatan := 1;
     repeat
+        clrscr;
         write('Masukkan password (kesempatan ke - ', kesempatan, ') : '); readln(kata_sandi);
         
         if (kata_sandi = sandi) then
         begin
             writeln('Password anda benar! Selamat Datang!');
+            writeln('Tekan Enter!');
             
             repeat
                 clrscr;
-                writeln('Tekan Enter!');
             
                 writeln('1. Kasus anak ayam');
                 writeln('2. Jumlah bilangan genap');
@@ -58,6 +59,7 @@ begin
                 if (pilihan = 2) then
                 begin
                     // jumlah bilangan genap
+                    total := 0;
                     write('Masukkan batas bilangan: '); readln(batas);
                     writeln();
                 
@@ -97,11 +99,14 @@ begin
                     begin
                         for j := 1 to i do
                         begin
+                            if (angka < 10) then
+                                write(' ');
                             write(angka, ' ');
                             angka := angka + 1;
                         end;
                         writeln();
                     end;
+
                     for i := baris - 1 downto 1 do
                     begin
                         for j := i downto 1 do
@@ -125,6 +130,12 @@ begin
                     write('Press any key to continue...'); readln();
                     break; // exit the menu
 
+                end;
+
+                if (pilihan > 4) then
+                begin
+                    clrscr;
+                    write('Pilihan tidak diketahui!'); readln();
                 end;
             
             until (pilihan = 4);
