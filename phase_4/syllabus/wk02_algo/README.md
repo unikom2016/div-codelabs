@@ -13,3 +13,12 @@ By Value
 
 By Reference
 -Output, I/O, bisa digunakan kembali
+
+
+Procedure:
+1. Menampilkan menu
+2. Anak ayam
+3. Segitiga
+
+Function:
+1. Deret genap

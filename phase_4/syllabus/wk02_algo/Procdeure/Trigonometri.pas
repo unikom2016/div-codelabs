@@ -1,4 +1,4 @@
-program Practice;
+program Trigonometri;
 
 var
     { Kamus Global }
@@ -6,33 +6,34 @@ var
 
     // variable: data_type => By Value
     // var variable: data_type => By Reference
-    procedure HitungLuasPersegi(sisi: integer, var luas: integer);
-    var
-        { Kamus Lokal }
-        sisi, luas: integer;
+    function HitungLuasPersegi(s: integer): integer;
+    // var
+    //     { Kamus Lokal }
+    //     s, l: integer;
     
     begin
-        luas := sisi * sisi;
+        // Function name
+        HitungLuasPersegi := s * s;
     end;
 
-    procedure HitungVolumeKubus(sisi: integer, var volume: integer);
-    var
-        { Kamus Lokal }
-        sisi, volume: integer;
+    function HitungVolumeKubus(s: integer): integer;
+    // var
+    //     { Kamus Lokal }
+    //     sisi, volume: integer;
     
     begin
-        volume := sisi * sisi * sisi;
+        HitungVolumeKubus := s * s * s;
     end;
     
 begin
     { Call the procedure }
     write('Masukkan sisi: '); readln(sisi);
-    
-    HitungLuasPersegi(sisi, luas);
+
+    luas := HitungLuasPersegi(sisi);
     write('Luas persegi yaitu: ', luas);
 
-    HitungVolumeKubus(sisi, volume);
-    write('Volume kubus yaitu: ', volume);
+    volume := HitungVolumeKubus(sisi);
+    writeln('Volume kubus yaitu: ', volume);
 
     readln;
 end.
