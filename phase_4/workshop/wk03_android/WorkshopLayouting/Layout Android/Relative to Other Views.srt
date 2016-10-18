@@ -1,0 +1,488 @@
+1
+00:00:00,420 --> 00:00:03,469
+Ketika susunan relatif pandangan sekitarnya,
+
+2
+00:00:03,469 --> 00:00:06,190
+Anda dapat menetapkan batas untuk posisi mereka.
+
+3
+00:00:06,190 --> 00:00:09,885
+Sebagai contoh, sebuah TextView TextView harus pada yang berbeda,
+
+4
+00:00:09,885 --> 00:00:14,090
+atau kanan ke kiri satu ImageView TextView.
+
+5
+00:00:14,090 --> 00:00:18,020
+Batasan ini meminta saya untuk mengatur meja untuk pesta.
+
+6
+00:00:18,910 --> 00:00:21,380
+Kita akan memiliki pesta ulang tahun
+
+7
+00:00:21,380 --> 00:00:23,540
+harus melihat pada grafik tempat duduk.
+
+8
+00:00:23,540 --> 00:00:25,490
+Kami mengundang orang-orang untuk makan malam
+
+9
+00:00:25,490 --> 00:00:28,330
+Tapi ada batas untuk mana orang ingin duduk.
+
+10
+00:00:28,330 --> 00:00:30,550
+Beberapa orang ingin duduk di samping teman mereka,
+
+11
+00:00:30,550 --> 00:00:33,490
+Beberapa orang kembali ke sana yang mereka tidak suka.
+
+12
+00:00:33,490 --> 00:00:36,120
+Sehingga mereka tidak akan ingin duduk dekat beberapa orang.
+
+13
+00:00:36,120 --> 00:00:39,860
+Mengingat semua faktor ini, saya pikir dari tata letak yang sesuai.
+
+14
+00:00:39,860 --> 00:00:41,880
+Kunal, Ben dan Kagure terjadi di sini.
+
+15
+00:00:41,880 --> 00:00:45,900
+Natalie, Lyla dan aku akan tinggal di sini dan Amy, dan Jenny akan Omoju di sudut ini.
+
+16
+00:00:45,900 --> 00:00:49,400
+Kita bisa duduk di posisi XML, menggunakan TextView
+
+17
+00:00:49,400 --> 00:00:51,040
+dan tidak relatif tata letak?
+
+18
+00:00:51,040 --> 00:00:53,270
+Kita tahu bagaimana untuk mengurutkan tampilan di sudut.
+
+19
+00:00:53,270 --> 00:00:57,398
+Jadi TextView Lyla akan jatuh margin yang lebih rendah dan kiri induk.
+
+20
+00:00:57,398 --> 00:01:01,390
+TextView Jennie akan dimasukkan dalam menit dan menit di bawah induk yang sama.
+
+21
+00:01:01,390 --> 00:01:04,510
+Kita akan menempatkan Ben di tepi atas dari orangtua.
+
+22
+00:01:04,510 --> 00:01:07,780
+By the way, kami memberikan yang orangtua memiliki lebar penuh dan tinggi layar
+
+23
+00:01:07,780 --> 00:01:11,360
+Haruskah kita mengatur lebar orangtua yang sesuai dan tinggi.
+
+24
+00:01:11,360 --> 00:01:12,430
+Periksa kembali dengan Ben.
+
+25
+00:01:12,430 --> 00:01:14,550
+Dia dimasukkan ke dalam bagian atas orangtua.
+
+26
+00:01:14,550 --> 00:01:17,360
+Kami juga ingin menempatkan dia di tengah horizontal.
+
+27
+00:01:17,360 --> 00:01:20,320
+Dan Anda dapat memanggil pandangan ini adalah jangkar tampilan 3.
+
+28
+00:01:20,320 --> 00:01:23,750
+Karena orang-orang yang disusun hubungan dengan orang-orang ini.
+
+29
+00:01:23,750 --> 00:01:27,670
+Dan orang-orang ini tidak akan bergerak, meskipun posisi sisa bintang.
+
+30
+00:01:27,670 --> 00:01:29,360
+Mari kita tambahkan satu lagi.
+
+31
+00:01:29,360 --> 00:01:32,810
+Kami memiliki Kunal sini - Ben penghuni kiri.
+
+32
+00:01:32,810 --> 00:01:35,259
+Tapi bagaimana untuk menunjukkannya di XML?
+
+33
+00:01:35,259 --> 00:01:39,552
+Tidak ada atribut menyatakan pandangan ke kiri
+
+34
+00:01:39,552 --> 00:01:40,655
+pandangan nama yang berbeda Ben.
+
+35
+00:01:40,655 --> 00:01:43,363
+Sifat Android luas,
+
+36
+00:01:43,363 --> 00:01:46,940
+secara efektif untuk semua kasus yang Anda inginkan.
+
+37
+00:01:46,940 --> 00:01:49,410
+Kami ingin menempatkan Kunal kiri Ben,
+
+38
+00:01:49,410 --> 00:01:52,580
+tapi kita tidak tahu sifat yang tersedia yang bisa melakukannya.
+
+39
+00:01:52,580 --> 00:01:53,768
+Untungnya,
+
+40
+00:01:53,768 --> 00:01:58,780
+RelativeLayout memiliki android atribut: layout_toLeftof.
+
+41
+00:01:58,780 --> 00:02:03,520
+Kunal akan berarti tampilan teks meninggalkan pandangan yang berbeda.
+
+42
+00:02:03,520 --> 00:02:08,020
+Dan cara kita menentukan pengguna Pemandangan ID.
+
+43
+00:02:08,020 --> 00:02:10,300
+Kita dapat mengatur tampilan ID untuk setiap pandangan publik.
+
+44
+00:02:10,300 --> 00:02:13,110
+Dan mereka tidak perlu alamat untuk RelativeLayout.
+
+45
+00:02:13,110 --> 00:02:16,425
+Mereka dapat ditentukan dalam RelativeLayout, atau LinearLayout
+
+46
+00:02:16,425 --> 00:02:18,330
+atau kelompok lain pandang.
+
+47
+00:02:18,330 --> 00:02:22,020
+Pada TextView Ben, kita dapat menambahkan android: id.
+
+48
+00:02:22,020 --> 00:02:23,860
+Nilainya adalah nama ID.
+
+49
+00:02:23,860 --> 00:02:28,550
+Format itu dimulai dengan karakter @ - referensi ke sumber daya
+
+50
+00:02:28,550 --> 00:02:34,263
+di app Android. Kita telah melihat @ referensi untuk gambar.
+
+51
+00:02:34,263 --> 00:02:36,516
+Contohnya adalah aplikasi Drawable.
+
+52
+00:02:36,516 --> 00:02:38,950
+Kemudian kita mendefinisikan jenis sumber daya.
+
+53
+00:02:38,950 --> 00:02:41,017
+Dalam hal ini, jenis sumber daya id itu.
+
+54
+00:02:41,017 --> 00:02:44,197
+Kami juga plus karena ini adalah pertama
+
+55
+00:02:44,197 --> 00:02:45,219
+kita menggunakan id ini.
+
+56
+00:02:45,219 --> 00:02:50,120
+Kemudian menandatangani / dan nama tampilan.
+
+57
+00:02:50,120 --> 00:02:53,190
+Ini adalah nama yang kita masukkan ke TextView Ben.
+
+58
+00:02:53,190 --> 00:02:55,240
+Kami menyebutnya ben_text_view.
+
+59
+00:02:56,320 --> 00:02:59,120
+Kebutuhan dasar adalah nama harus tidak mengandung spasi.
+
+60
+00:02:59,120 --> 00:03:01,557
+Itu sebabnya kami menggunakan ubin menandai sini.
+
+61
+00:03:02,087 --> 00:03:03,383
+Ini harus mulai dengan 1 karakter
+
+62
+00:03:03,383 --> 00:03:06,229
+dan tidak mengandung simbol aneh.
+
+63
+00:03:07,250 --> 00:03:08,990
+Jumlah ini juga.
+
+64
+00:03:08,990 --> 00:03:14,290
+Dalam hal ini, kami telah ditugaskan ID untuk Ben adalah ben_text_view
+
+65
+00:03:14,290 --> 00:03:16,130
+Dengan demikian kita dapat menggunakannya nanti.
+
+66
+00:03:16,130 --> 00:03:20,460
+Jadi dengan Kunal TextView, kita dapat menambahkan atribut layout_toLeftof
+
+67
+00:03:20,460 --> 00:03:22,920
+dan kita bisa menyebutnya kiri Ben TextView.
+
+68
+00:03:24,190 --> 00:03:28,390
+Kami mengacu pada TextView Ben ID, useid.
+
+69
+00:03:28,390 --> 00:03:32,322
+Kami tidak perlu menggunakan tanda plus karena kita telah mendefinisikan ID itu.
+
+70
+00:03:32,322 --> 00:03:34,692
+Ini adalah kedua kalinya kami menggunakan ID tersebut.
+
+71
+00:03:34,692 --> 00:03:38,910
+Ketika kita nama ID baru, pastikan mereka berbeda.
+
+72
+00:03:38,910 --> 00:03:42,550
+Sering memilih nama yang terkait dengan isinya akan berguna.
+
+73
+00:03:42,550 --> 00:03:45,920
+Jadi itulah bagaimana Anda menempatkan Ben Kunal kiri.
+
+74
+00:03:45,920 --> 00:03:49,740
+Sebagai contoh, kita ingin menempatkan di sebelah Jennie Omoju.
+
+75
+00:03:49,740 --> 00:03:51,760
+Karena kita perlu untuk merujuk kepada Jennie,
+
+76
+00:03:51,760 --> 00:03:53,980
+kita perlu membuat ID untuk Jennie.
+
+77
+00:03:53,980 --> 00:03:58,240
+Pada TextView Jennie, kita mendefinisikan atribut dan nilai-nilai assign ke dalam.
+
+78
+00:03:58,240 --> 00:04:01,880
+Nama ID adalah jennie_text_view.
+
+79
+00:04:01,880 --> 00:04:04,550
+Pada Omoju TextView, kita menambahkan atribut ini.
+
+80
+00:04:04,550 --> 00:04:09,680
+Hal ini menunjukkan bahwa telah mengenakan jennie_text_view Omoju.
+
+81
+00:04:09,680 --> 00:04:11,380
+Dan di sini adalah ID yang telah kita buat.
+
+82
+00:04:12,450 --> 00:04:13,850
+Lihatlah layout XML.
+
+83
+00:04:13,850 --> 00:04:18,010
+Kami memiliki tata letak relatif dengan tinggi dan lebar adalah match_parent.
+
+84
+00:04:18,010 --> 00:04:19,870
+Kami telah lyla_text_view.
+
+85
+00:04:19,870 --> 00:04:22,267
+Ini adalah peringkat di sudut kiri bawah induk
+
+86
+00:04:22,267 --> 00:04:23,750
+Itu adalah apa yang Anda lihat di bawah.
+
+87
+00:04:24,770 --> 00:04:26,314
+Dan kami memiliki jennie_text_view.
+
+88
+00:04:26,314 --> 00:04:29,010
+Ini adalah peringkat di sudut kanan bawah induk.
+
+89
+00:04:29,010 --> 00:04:29,720
+Ada di sini.
+
+90
+00:04:31,300 --> 00:04:32,876
+Kami memiliki ben_text_view.
+
+91
+00:04:32,876 --> 00:04:35,900
+Hal ini dekat dengan tepi atas dari orangtua.
+
+92
+00:04:35,900 --> 00:04:38,290
+Hal ini berpusat horizontal.
+
+93
+00:04:38,290 --> 00:04:39,880
+Ini adalah pandangan jangkar
+
+94
+00:04:39,880 --> 00:04:42,460
+dan kita bisa mengatur tampilan lain di samping mereka.
+
+95
+00:04:42,460 --> 00:04:45,720
+Perhatikan bahwa dengan setiap tampilan saya telah menambahkan ID.
+
+96
+00:04:45,720 --> 00:04:48,040
+Ini adalah ID dari TextView Ben.
+
+97
+00:04:48,040 --> 00:04:50,970
+Kita dapat menempatkan TextView Kunal Ben kiri.
+
+98
+00:04:50,970 --> 00:04:56,930
+Kunal Aku meletakkan di atas orang tua, dan meninggalkan Ben TextView.
+
+99
+00:04:56,930 --> 00:04:58,525
+Saya mengambil pandangan dari Ben ID sini.
+
+100
+00:04:58,525 --> 00:05:02,025
+Kemudian kita pasang di Jenny Omoju TextView.
+
+101
+00:05:02,025 --> 00:05:04,915
+Omoju dimasukkan ke dalam margin kanan induk
+
+102
+00:05:04,915 --> 00:05:06,435
+dan di atas TextView Jenny.
+
+103
+00:05:07,505 --> 00:05:08,245
+Fantastis.
+
+104
+00:05:08,245 --> 00:05:11,465
+Dan banyak orang untuk dimasukkan ke dalam tata letak ini.
+
+105
+00:05:12,925 --> 00:05:15,625
+Dalam catatan panduan kami memberi Anda link
+
+106
+00:05:15,625 --> 00:05:19,270
+untuk XML Visualizer dengan beberapa kode yang ada.
+
+107
+00:05:19,270 --> 00:05:20,910
+Harap mengedit file XML
+
+108
+00:05:20,910 --> 00:05:24,200
+untuk membuat tata letak yang diinginkan.
+
+109
+00:05:24,200 --> 00:05:28,200
+Beberapa pandangan diklasifikasikan salah, Anda akan perlu untuk memperbaikinya.
+
+110
+00:05:29,310 --> 00:05:32,480
+By the way, kami telah memperkenalkan banyak atribut.
+
+111
+00:05:32,480 --> 00:05:34,680
+Tapi jangan memaksa diri untuk menghafal mereka semua.
+
+112
+00:05:34,680 --> 00:05:36,446
+Anda dapat meninjau setiap saat.
+
+113
+00:05:36,446 --> 00:05:40,460
+Anda hanya perlu mencari tata letak relatif, parameter tata letak.
+
+114
+00:05:40,460 --> 00:05:45,260
+Jika Anda mengklik link pertama, Anda akan memiliki dokumentasi untuk itu.
+
+115
+00:05:45,260 --> 00:05:48,870
+Semua XML atribut, Anda dapat menerapkan untuk melihat
+
+116
+00:05:48,870 --> 00:05:53,050
+di RelativeLayout untuk RelativeLayout tahu bagaimana mengatur.
+
+117
+00:05:53,050 --> 00:05:55,015
+Berikut adalah beberapa atribut yang Anda sudah tahu.
+
+118
+00:05:55,015 --> 00:06:00,080
+Layout_above, alignParentbottom, alignParentright dan sebagainya.
+
+119
+00:06:00,080 --> 00:06:02,040
+Perhatikan bahwa, untuk tujuan mengajar,
+
+120
+00:06:02,040 --> 00:06:05,510
+XML Visualizer tidak dapat mendukung semua atribut.
+
+121
+00:06:05,510 --> 00:06:08,630
+Tetapi ketika Anda sedang mengembangkan aplikasi untuk Android Studio
+
+122
+00:06:08,630 --> 00:06:10,050
+Anda akan menggunakan mereka semua.
+

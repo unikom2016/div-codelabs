@@ -1,0 +1,648 @@
+1
+00:00:00,970 --> 00:00:05,250
+Dalam tes terakhir, kami mencoba untuk belajar bagaimana membuat tampilan teks
+
+2
+00:00:05,250 --> 00:00:08,240
+Tom, Tim, dan Tod ruang pribadi
+
+3
+00:00:08,240 --> 00:00:12,010
+dengan memisahkan mereka merata spasi perangkat vertikal.
+
+4
+00:00:13,380 --> 00:00:15,740
+Saya mencoba untuk menetapkan nilai dp tetap,
+
+5
+00:00:15,740 --> 00:00:19,900
+tapi itu tidak akan berhasil jika Anda mengubah ke perangkat lagi seperti tablet.
+
+6
+00:00:19,900 --> 00:00:24,300
+Kami mencoba setting match_parent, tapi tampaknya Tom digit besar.
+
+7
+00:00:24,300 --> 00:00:27,390
+Dan mendorong dua tempat tersisa dari layar.
+
+8
+00:00:27,390 --> 00:00:31,440
+Kemudian saya mulai mempelajari kapasitas tata letak linear.,
+
+9
+00:00:31,440 --> 00:00:34,660
+Dokumen mengatakan bahwa untuk tata letak vertikal linear,
+
+10
+00:00:34,660 --> 00:00:37,820
+jika kita ingin mereka melihat seorang anak, kita perlu menetapkan
+
+11
+00:00:37,820 --> 00:00:42,320
+nilai panjang 0 dp dan nilai kapasitas 1 untuk setiap tampilan anak.
+
+12
+00:00:43,590 --> 00:00:46,480
+Memberikan nilai pada kapasitas pandangan manusia
+
+13
+00:00:46,480 --> 00:00:49,490
+seperti berkomunikasi suatu kepentingan untuk itu.
+
+14
+00:00:49,490 --> 00:00:50,930
+Nilai kapasitas yang lebih tinggi,
+
+15
+00:00:50,930 --> 00:00:55,040
+semakin banyak ruang itu bisa jika ruang yang tersedia dalam tampilan aslinya.
+
+16
+00:00:56,280 --> 00:00:57,510
+Sebagai contoh, untuk
+
+17
+00:00:57,510 --> 00:01:01,920
+Tata letak linear vertikal ini, akan mengisi turun secara vertikal seperti ini.
+
+18
+00:01:01,920 --> 00:01:04,590
+Tata letak linear ini akan memiliki lebih banyak ruang,
+
+19
+00:01:04,590 --> 00:01:08,900
+dan akan didistribusikan untuk tampilan yang berharga ruang.
+
+20
+00:01:08,900 --> 00:01:11,020
+Jika pengguna melihat nilai besar,
+
+21
+00:01:11,020 --> 00:01:14,450
+nilai panjang tersedia akan diberikan ke tampilan yang jauh lebih.
+
+22
+00:01:14,450 --> 00:01:16,740
+Jika pandangan layak ukuran yang sangat kecil,
+
+23
+00:01:16,740 --> 00:01:19,900
+nilai panjang tersedia diberikan kepada pandangan bahwa kurang.
+
+24
+00:01:19,900 --> 00:01:21,340
+Aku akan menunjukkan.
+
+25
+00:01:21,340 --> 00:01:24,130
+Aku akan mengatur panjang dari pandangan 0dp
+
+26
+00:01:24,130 --> 00:01:26,020
+dan kemudian mengatur ukuran 1.
+
+27
+00:01:26,020 --> 00:01:29,642
+Output pertama tata letak linear TextViews Tim dan Todd dua,
+
+28
+00:01:29,642 --> 00:01:33,880
+karena mereka memiliki panjang tetap berdasarkan isi di dalamnya.
+
+29
+00:01:33,880 --> 00:01:38,019
+Dan kemudian ada Tom TextView dengan panjang 0dp awal,
+
+30
+00:01:38,019 --> 00:01:38,880
+kapasitas 1.
+
+31
+00:01:38,880 --> 00:01:41,266
+Tidak ada orang lain dapat melihat nilai-nilai kapasitas,
+
+32
+00:01:41,266 --> 00:01:45,000
+karena nilai default adalah 0 ruang jika tidak ditentukan.
+
+33
+00:01:45,000 --> 00:01:47,710
+Jadi ini adalah satu-satunya pandangan layak ruang.
+
+34
+00:01:47,710 --> 00:01:50,480
+Jadi root untuk Text melihat ViewTom ini semua panjang yang tersisa
+
+35
+00:01:50,480 --> 00:01:51,900
+layar.
+
+36
+00:01:51,900 --> 00:01:55,610
+Itulah mengapa Anda melihat kata Tom keras.
+
+37
+00:01:55,610 --> 00:01:58,810
+Sekarang saya akan mencoba untuk memberikan nilai pada ukuran pandangan yang lebih.
+
+38
+00:01:58,810 --> 00:02:02,660
+Jadi setiap anak memiliki pandangan dimensi 0dp dan kapasitas 1.
+
+39
+00:02:02,660 --> 00:02:04,980
+Ini adalah tata letak linear akan membuat.
+
+40
+00:02:04,980 --> 00:02:08,250
+Ini akan mencoba untuk mengetahui panjang tampilan anak lainnya.
+
+41
+00:02:08,250 --> 00:02:10,889
+Panjang pandangan ini dimulai dari 0 dp.
+
+42
+00:02:10,889 --> 00:02:13,950
+Ini berarti bahwa panjang sisa yang tersedia dari tampilan aslinya
+
+43
+00:02:13,950 --> 00:02:16,410
+pada dasarnya seluruh panjang layar.
+
+44
+00:02:16,410 --> 00:02:19,500
+Ini membagi seluruh panjang layar dengan total kapasitas
+
+45
+00:02:19,500 --> 00:02:20,280
+3.
+
+46
+00:02:20,280 --> 00:02:24,215
+Dan kemudian memberi sepertiga dari panjang yang tersedia untuk TextView Tom,
+
+47
+00:02:24,215 --> 00:02:27,220
+sepertiga dari panjang jantung literal,
+
+48
+00:02:27,220 --> 00:02:29,680
+dan sepertiga untuk kata Todd.
+
+49
+00:02:29,680 --> 00:02:32,840
+Mereka akan spasi sepanjang semua perangkat
+
+50
+00:02:32,840 --> 00:02:37,250
+bahkan pada perangkat layar yang lebih besar dengan nilai kapasitas ini.
+
+51
+00:02:37,250 --> 00:02:40,130
+Jika saya mengubah nilai kapasitas yang lebih tinggi,
+
+52
+00:02:40,130 --> 00:02:44,920
+tampilan asli akan memberikan lebih panjang tersedia untuk TextView Tim.
+
+53
+00:02:44,920 --> 00:02:47,310
+Bahkan saya bisa mengubahnya ke nilai yang lebih tinggi,
+
+54
+00:02:47,310 --> 00:02:51,380
+dan Anda dapat melihat bahwa itu terus mendapatkan lebih panjang adalah.
+
+55
+00:02:51,380 --> 00:02:54,240
+Dalam hal ini, TextView Tim memiliki ukuran 8.
+
+56
+00:02:54,240 --> 00:02:56,910
+Tom memiliki kapasitas 1, dan Todd memiliki ukuran 1.
+
+57
+00:02:56,910 --> 00:03:00,340
+Oleh karena itu, total kapasitas adalah 8, 9, 10.
+
+58
+00:03:00,340 --> 00:03:03,930
+Jadi membagi asli tampilan panjang tersedia untuk sepuluh.
+
+59
+00:03:03,930 --> 00:03:06,710
+Dan sepersepuluh kata Tom, 8/10 untuk surat itu Tim,
+
+60
+00:03:06,710 --> 00:03:08,170
+dan sepersepuluh untuk Todd.
+
+61
+00:03:09,450 --> 00:03:13,020
+Jadi dengan layout linear bersama, kami memiliki 3 anak TextView.
+
+62
+00:03:13,020 --> 00:03:15,410
+Kami mengatur panjang awal adalah 0 dp.
+
+63
+00:03:15,410 --> 00:03:19,400
+Jadi mereka semua ditumpuk di bagian atas layar dengan panjang 0.
+
+64
+00:03:19,400 --> 00:03:23,290
+Ini berarti bahwa pandangan asli, semua menambah tinggi ini.
+
+65
+00:03:23,290 --> 00:03:27,810
+Jika saya mengatur volume pertama dengan masing-masing anak TextView,
+
+66
+00:03:27,810 --> 00:03:31,420
+panjang yang tersedia dari tampilan asli akan dibagi rata antara tampilan anak.
+
+67
+00:03:32,810 --> 00:03:35,400
+Demikian pula, tata letak linear horizontal adalah sama.
+
+68
+00:03:35,400 --> 00:03:37,550
+Sebagai contoh, kita memiliki 3 anak TextView.
+
+69
+00:03:37,550 --> 00:03:39,820
+Kita mulai dengan lebar 0 dp.
+
+70
+00:03:39,820 --> 00:03:43,300
+Ini berarti bahwa pandangan asli, semua ini menambahkan lebar.
+
+71
+00:03:43,300 --> 00:03:46,960
+Jika saya memberikan nilai 1 ruang untuk setiap tampilan anak,
+
+72
+00:03:46,960 --> 00:03:50,110
+Saya akan mengambil lebar sisa yang tersedia dari tampilan aslinya
+
+73
+00:03:50,110 --> 00:03:52,740
+dan dibagi rata untuk setiap tampilan anak.
+
+74
+00:03:52,740 --> 00:03:54,910
+Sekali lagi, tidak memiliki kapasitas 1.
+
+75
+00:03:54,910 --> 00:03:57,740
+Mungkin 3 atau nilai lain.
+
+76
+00:03:57,740 --> 00:03:59,960
+Atau bahkan nol.
+
+77
+00:03:59,960 --> 00:04:04,440
+Jika tampilan memiliki ukuran 0, berarti tidak berubah tergantung pada
+
+78
+00:04:04,440 --> 00:04:06,290
+Sisa ruang dalam tampilan aslinya.
+
+79
+00:04:06,290 --> 00:04:09,560
+Pada dasarnya itu akan tetap lebar dan panjang ditetapkan.
+
+80
+00:04:09,560 --> 00:04:12,710
+Saya ingin menunjukkan satu hal adalah ketika untuk mengatur panjang 0
+
+81
+00:04:12,710 --> 00:04:14,370
+atau lebar adalah 0.
+
+82
+00:04:14,370 --> 00:04:15,700
+Jika Anda memiliki tata letak linear vertikal,
+
+83
+00:04:15,700 --> 00:04:18,950
+Anda mengisi layout linear sepanjang jalan.
+
+84
+00:04:18,950 --> 00:04:21,080
+Anda tidak akan tahu berapa banyak panjang harus,
+
+85
+00:04:21,080 --> 00:04:24,710
+pertama harus menetapkan panjang dp adalah 0, maka memberikan nilai kapasitas.
+
+86
+00:04:24,710 --> 00:04:28,760
+Mirip dengan tata letak linier horisontal, Anda mengisinya secara horizontal.
+
+87
+00:04:28,760 --> 00:04:31,920
+Anda juga tidak tahu lebar pandangan.
+
+88
+00:04:31,920 --> 00:04:34,930
+Anda mengatur lebar adalah 0 dp, dan memberikan nilai kapasitas.
+
+89
+00:04:36,660 --> 00:04:39,820
+Pada dasarnya, Anda bisa memikirkan untuk menempatkan nilai ke ruang tampilan
+
+90
+00:04:39,820 --> 00:04:44,840
+seperti mungkin peregangan itu tergantung pada ukuran tampilan aslinya.
+
+91
+00:04:44,840 --> 00:04:48,540
+Ini bagus untuk mengisi ruang dalam perangkat kecil
+
+92
+00:04:48,540 --> 00:04:49,259
+atau lebih besar.
+
+93
+00:04:50,620 --> 00:04:53,730
+Berikut adalah beberapa contoh aplikasi praktis dari tata letak ruang.
+
+94
+00:04:54,980 --> 00:04:57,210
+Ini adalah Google Hangouts app.
+
+95
+00:04:57,210 --> 00:05:01,750
+Anda dapat menggunakan untuk chatting dengan teman-teman atau mengirim gambar penguin mereka.
+
+96
+00:05:01,750 --> 00:05:05,620
+Di bagian bawah layar adalah di mana Anda mengirim pesan.
+
+97
+00:05:05,620 --> 00:05:08,950
+Mari kita lihat tata letak di bawah sedikit lebih dekat.
+
+98
+00:05:08,950 --> 00:05:13,490
+Ini adalah tata letak linier horisontal seperti yang diatur dalam baris horizontal.
+
+99
+00:05:13,490 --> 00:05:15,347
+Hal ini terdiri dari ImageView,
+
+100
+00:05:15,347 --> 00:05:19,090
+bidang EditText di mana Anda dapat memasukkan teks, dan satu ImageView lainnya.
+
+101
+00:05:19,090 --> 00:05:22,520
+Sekarang panjang setiap tampilan yang wrap_content
+
+102
+00:05:22,520 --> 00:05:25,410
+karena merangkum semua isi di dalam.
+
+103
+00:05:25,410 --> 00:05:28,480
+Lebar dari dua sudut pandang gambar wrap_content
+
+104
+00:05:28,480 --> 00:05:30,710
+karena itu hanya cocok konten lebar dalam.
+
+105
+00:05:30,710 --> 00:05:34,140
+Kami mengatur ukuran 0 karena kita tidak ingin ini lebih besar,
+
+106
+00:05:34,140 --> 00:05:37,890
+bahkan jika ada lebih banyak ruang tersisa dalam tampilan aslinya.
+
+107
+00:05:37,890 --> 00:05:41,700
+Volume set ke 0 untuk memastikan bahwa hanya lebar dan panjang yang wrap_content
+
+108
+00:05:41,700 --> 00:05:43,280
+dan itu tidak akan berubah.
+
+109
+00:05:43,280 --> 00:05:46,310
+Aku ingin terlihat lebih besar panjang pada perangkat layar besar,
+
+110
+00:05:46,330 --> 00:05:50,640
+dan ingin itu diperkecil untuk ditampilkan pada perangkat dengan layar yang lebih kecil.
+
+111
+00:05:50,640 --> 00:05:54,250
+Jadi saya menetapkan lebar 0 dp dan berat 1.
+
+112
+00:05:54,250 --> 00:05:58,404
+Ini berarti bahwa tata letak linear asli akan mencoba lagi layout gambar ini sebelum
+
+113
+00:05:58,404 --> 00:05:59,340
+maka gambar ini.
+
+114
+00:05:59,340 --> 00:06:05,050
+Kemudian lebar residual pada perangkat akan diberikan kepada pandangan ini.
+
+115
+00:06:05,050 --> 00:06:07,000
+Berikut adalah contoh aplikasi pemetaan.
+
+116
+00:06:07,000 --> 00:06:09,570
+Ini adalah halaman rinci di situs.
+
+117
+00:06:09,570 --> 00:06:12,480
+Ada tiga tombol di sini, Call, Simpan, dan Situs Web.
+
+118
+00:06:12,480 --> 00:06:14,450
+Mari kita lihat lebih dekat pada mereka.
+
+119
+00:06:14,450 --> 00:06:18,660
+Bahkan Anda dapat membangun mereka sebagai TextViews dan simbol terkait,
+
+120
+00:06:18,660 --> 00:06:21,700
+dan Anda dapat melihat catatan panduan untuk lebih jelasnya.
+
+121
+00:06:21,700 --> 00:06:23,540
+Tapi itu benar-benar adalah titik kontak.
+
+122
+00:06:23,540 --> 00:06:26,520
+Untuk latihan ini, mari kita asumsikan bahwa ini adalah TextView.
+
+123
+00:06:26,520 --> 00:06:29,710
+Lebar masing-masing TextView akan wrap_content
+
+124
+00:06:29,710 --> 00:06:33,000
+karena sesuai dengan panjang isi di dalamnya.
+
+125
+00:06:33,000 --> 00:06:34,980
+Lebar sedikit lebih rumit.
+
+126
+00:06:34,980 --> 00:06:38,485
+Kami ingin setiap orang TextViews tersebar secara horizontal
+
+127
+00:06:38,485 --> 00:06:42,470
+layar ini, tergantung pada ukuran perangkat.
+
+128
+00:06:42,470 --> 00:06:44,980
+Saya tidak ingin semua tampilan tiga teks dibagi menjadi kelompok-kelompok
+
+129
+00:06:44,980 --> 00:06:46,420
+sisi kiri layar.
+
+130
+00:06:47,060 --> 00:06:50,640
+Jadi, untuk rumah semua pandangan, kami menetapkan mereka ukuran yang sama.
+
+131
+00:06:50,640 --> 00:06:54,000
+Kami mengatur lebar ke 0 dan ukuran 1 untuk setiap anak melihatnya.
+
+132
+00:06:54,058 --> 00:06:57,790
+Dengan begitu lebar yang tersedia dalam tampilan asli akan didistribusikan secara merata
+
+133
+00:06:57,790 --> 00:06:58,810
+Antara 3 anak melihat.
+
+134
+00:06:59,790 --> 00:07:02,170
+Dan contoh terakhir adalah sebuah aplikasi email.
+
+135
+00:07:02,170 --> 00:07:05,720
+Ini adalah pesan di layar compose Gmail di mana Anda dapat menulis surat baru.
+
+136
+00:07:05,810 --> 00:07:09,160
+Ini adalah tata letak linear sepanjang, karena karakter dalam kolom.
+
+137
+00:07:10,230 --> 00:07:13,380
+Dan itu terdiri dari empat bidang EditText berbeda.
+
+138
+00:07:13,380 --> 00:07:16,546
+Sekarang, lebar setiap tampilan adalah match_parent
+
+139
+00:07:16,546 --> 00:07:18,990
+karena kami ingin untuk menutupi lebar penuh perangkat.
+
+140
+00:07:18,990 --> 00:07:22,845
+Untuk tinggi, kami menempatkan ketiga dalam wrap_content EditText
+
+141
+00:07:22,845 --> 00:07:25,475
+untuk yang teks semua termasuk di dalamnya.
+
+142
+00:07:25,475 --> 00:07:28,185
+Kami menempatkan kapasitas 0 karena kita tidak ingin
+
+143
+00:07:28,185 --> 00:07:32,620
+mereka bertambah besar bahkan jika panjang lagi dalam tampilan aslinya.
+
+144
+00:07:32,620 --> 00:07:35,870
+Tapi dengan bidang EditText ini akhir di mana Anda menulis email,
+
+145
+00:07:35,870 --> 00:07:40,710
+kami ingin memberikan pengguna banyak ruang untuk menulis surat yang sangat panjang untuk neneknya
+
+146
+00:07:40,710 --> 00:07:44,870
+Oleh karena itu, kami akan menetapkan panjang 0 dp, dan kapasitas 1.
+
+147
+00:07:44,870 --> 00:07:46,700
+Jadi jika tampilan asli dengan kelebihan panjang,
+
+148
+00:07:46,700 --> 00:07:50,070
+itu akan dipindahkan ke EditText anak ini.
+
+149
+00:07:50,070 --> 00:07:54,120
+Pada perangkat dengan layar yang lebih besar, editor email lagi,
+
+150
+00:07:54,120 --> 00:07:56,880
+dan pada perangkat yang lebih kecil itu akan menjadi sedikit lebih kecil.
+
+151
+00:07:58,620 --> 00:08:00,150
+Sekarang giliran Anda.
+
+152
+00:08:00,150 --> 00:08:03,440
+Kami ingin Anda untuk terus membangun tata letak ini di XML visualisator.
+
+153
+00:08:03,440 --> 00:08:06,550
+Anda bisa mulai dengan kode XML yang telah kami sediakan di bawah ini.
+
+154
+00:08:06,550 --> 00:08:08,140
+Berikut adalah beberapa tips.
+
+155
+00:08:08,140 --> 00:08:11,517
+Ketika Anda mencoba untuk berurusan dengan sesuatu seperti ini, pertama kali mencoba untuk menentukan
+
+156
+00:08:11,517 --> 00:08:15,500
+lebar setiap tampilan, maka pengujian lebih lanjut menentukan panjangnya.
+
+157
+00:08:15,500 --> 00:08:18,430
+Juga pastikan gambar menempati seluruh ketinggian residual
+
+158
+00:08:18,430 --> 00:08:19,980
+layout linear aslinya.
+
+159
+00:08:19,980 --> 00:08:22,730
+Jadi, pada layar yang lebih kecil, itu akan menempati kurang dari panjang.
+
+160
+00:08:22,730 --> 00:08:25,110
+Pada layar yang lebih besar, itu menyumbang lebih dari panjang.
+
+161
+00:08:25,110 --> 00:08:26,390
+Mari kita mulai melakukan.
+
+162
+00:08:26,390 --> 00:08:28,381
+Centang kotak ini ketika Anda selesai.
+

@@ -1,0 +1,254 @@
+1
+00:00:00,150 --> 00:00:04,014
+Anda telah lakukan percobaan pertama
+menulis kode dan memperbaiki eror.
+
+2
+00:00:04,040 --> 00:00:07,982
+Eksperimen seperti ini adalah bagian
+penting dari belajar pengembangan Android.
+
+3
+00:00:08,007 --> 00:00:10,169
+Mari kita bahas ukuran tampilan.
+
+4
+00:00:10,194 --> 00:00:13,538
+Kita tahu bahwa lebar dan
+tinggi disajikan dalam nilai DP,
+
+5
+00:00:13,563 --> 00:00:15,324
+atau kepadatan piksel independen.
+
+6
+00:00:15,349 --> 00:00:18,178
+Ini membuatnya terlihat baik
+di perangkat yang berbeda.
+
+7
+00:00:18,203 --> 00:00:21,142
+Namun, masih ada ruang
+untuk perbaikan dalam UI ini.
+
+8
+00:00:21,167 --> 00:00:24,136
+Jika saya mengubah teks ini
+menjadi lebih panjang,
+
+9
+00:00:24,161 --> 00:00:27,006
+misalnya, sekarang hari ulang tahunmu?
+
+10
+00:00:27,031 --> 00:00:30,737
+Perhatikan pembaruan teks di sini,
+tapi terdiri dua baris.
+
+11
+00:00:30,762 --> 00:00:32,400
+Idealnya semua dalam satu baris,
+
+12
+00:00:32,424 --> 00:00:35,428
+karena ada banyak ruang tersisa di sini.
+
+13
+00:00:35,453 --> 00:00:37,275
+Alasan kotaknya tidak berubah ukuran,
+
+14
+00:00:37,300 --> 00:00:41,332
+karena kami berikan ukuran kotak itu
+pada lebar tetap dan ketinggian 150dp.
+
+15
+00:00:41,357 --> 00:00:43,333
+Saat Anda tetapkan nilai spesifik
+
+16
+00:00:43,358 --> 00:00:47,114
+untuk lebar dan tinggi seperti ini,
+disebut <i>hard coding</i> nilai.
+
+17
+00:00:47,139 --> 00:00:49,415
+Umumnya ini dianggap
+bukan praktik yang baik,
+
+18
+00:00:49,440 --> 00:00:53,720
+karena jika teks yang tidak pernah berubah
+seperti ini, maka akan terlihat lucu.
+
+19
+00:00:53,745 --> 00:00:56,812
+Kita harus mengubah lebarnya
+ke ukuran seperti 200,
+
+20
+00:00:56,837 --> 00:00:58,707
+agar semua dalam satu baris.
+
+21
+00:00:58,732 --> 00:01:01,869
+Tapi akan sangat menjengkelkan
+selalu memperbarui lebar dan tinggi,
+
+22
+00:01:01,869 --> 00:01:03,627
+berdasarkan keadaan teks tersebut.
+
+23
+00:01:03,652 --> 00:01:06,297
+Kau mungkin tidak tahu
+seperti apa teksnya sampai nanti.
+
+24
+00:01:06,322 --> 00:01:09,790
+Misalnya, jika kau mempunyai aplikasi
+yang menampilkan artikel berita,
+
+25
+00:01:09,815 --> 00:01:12,209
+judul setiap ceritanya mungkin berubah.
+
+26
+00:01:12,234 --> 00:01:15,795
+Anda tidak ingin UI rusak,
+jika ada judul yang terlalu panjang,
+
+27
+00:01:15,820 --> 00:01:17,307
+atau terlalu pendek.
+
+28
+00:01:17,332 --> 00:01:20,333
+Di Android kita bisa pecahkan
+masalah ini dengan mengatur lebar
+
+29
+00:01:20,358 --> 00:01:23,880
+menjadi nilai khusus
+yang disebut <i>wrap content</i>.
+
+30
+00:01:23,905 --> 00:01:26,336
+Ini memperbaiki lebar TextView,
+
+31
+00:01:26,361 --> 00:01:30,439
+sehingga pas dengan
+lebar konten di dalamnya.
+
+32
+00:01:30,464 --> 00:01:32,709
+Tidak terlalu pendek dan
+tidak terlalu panjang.
+
+33
+00:01:32,734 --> 00:01:33,969
+Ukurannya pas.
+
+34
+00:01:33,994 --> 00:01:37,413
+Demikian pula untuk tinggi daripada
+menetapkan pada 150dp,
+
+35
+00:01:37,438 --> 00:01:40,431
+kita dapat mengaturnya ke nilai khusus
+yaitu <i>wrap content</i>,
+
+36
+00:01:40,456 --> 00:01:42,484
+maka tampilan teks akan diperbarui,
+
+37
+00:01:42,509 --> 00:01:46,375
+sehingga ukuran tampilan teks
+hanya setinggi teks di dalamnya.
+
+38
+00:01:46,400 --> 00:01:49,595
+Pengaturan <i>wrap content</i> untuk
+tinggi dan lebar sangat bagus,
+
+39
+00:01:49,620 --> 00:01:53,214
+karena Anda mungkin punya konten
+yang diputuskan di sebelah kanan
+
+40
+00:01:53,239 --> 00:01:54,685
+dan sekarang akan digeser,
+
+41
+00:01:54,710 --> 00:01:57,901
+karena tidak ada lagi
+kelebihan ruang dalam tampilan teks.
+
+42
+00:01:57,926 --> 00:02:00,768
+Sama halnya jika ada
+tampilan teks lain di bawah ini,
+
+43
+00:02:00,793 --> 00:02:05,028
+sekarang mereka bisa bergeser ke atas
+ke kanan bawah tampilan teks pertama ini.
+
+44
+00:02:05,053 --> 00:02:08,822
+Kembali ke contoh aplikasi berita,
+jika ini adalah judul cerita,
+
+45
+00:02:08,847 --> 00:02:13,452
+kau takkan ingin deskripsi cerita sampai
+ke bawah sini, sejauh 150 DPI.
+
+46
+00:02:13,477 --> 00:02:17,668
+Sebaliknya, Anda mau deskripsinya
+tepat di bawah judul cerita.
+
+47
+00:02:17,693 --> 00:02:20,651
+Perbesar lagi, mari kita coba<i>
+string</i> yang lebih pendek.
+
+48
+00:02:20,676 --> 00:02:22,657
+Sekarang saatnya Anda berlatih.
+
+49
+00:02:22,682 --> 00:02:25,290
+Anda harus mengubah beberapa hal
+dengan kodenya.
+
+50
+00:02:25,315 --> 00:02:28,941
+Mengubah lebar dan tinggi dari
+TextView menjadi <i>wrap content</i>.
+
+51
+00:02:28,966 --> 00:02:32,801
+Lalu ubah teksnya jadi kalimat panjang
+atau sebuah paragraf,
+
+52
+00:02:32,833 --> 00:02:36,361
+hingga akan muncul lebih dari
+satu baris teks pada pratinjau perangkat.
+
+53
+00:02:36,386 --> 00:02:40,546
+Anda dapat ketikkan lagu
+ulang tahun jika mau, itu cukup panjang.
+
+54
+00:02:40,546 --> 00:02:42,901
+Kode untuk memulainya ada di
+tautan di bawah sini.
+

@@ -1,0 +1,51 @@
+1
+00:00:00,020 --> 00:00:00,770
+Baiklah.
+
+2
+00:00:00,770 --> 00:00:02,730
+Sekarang kita akan mulai melihat kode.
+
+3
+00:00:02,730 --> 00:00:06,880
+Ini akan menjadi letak TextView,
+yang menampilkan teks di layar.
+
+4
+00:00:06,880 --> 00:00:10,210
+Jika saya tulis kumpulan kode ini, maka
+telepon selulernya tampak begini.
+
+5
+00:00:10,210 --> 00:00:13,605
+Sekarang, saya tahu mungkin
+ini terlihat lucu bagi Anda,
+
+6
+00:00:13,605 --> 00:00:18,177
+karena ini tak seperti kata-kata normal
+dan kalimat yang kita pakai sehari-hari.
+
+7
+00:00:18,177 --> 00:00:20,295
+Kita akan mempelajarinya sedikit, namun
+
+8
+00:00:20,295 --> 00:00:24,225
+pertama saya ingin Anda
+mengamati kode ini.
+
+9
+00:00:24,225 --> 00:00:27,305
+Tulislah sedikitnya tiga hal
+yang Anda perhatikan dari kode ini.
+
+10
+00:00:27,305 --> 00:00:30,651
+Sertakan hal-hal yang masuk akal,
+juga hal-hal yang aneh
+
+11
+00:00:30,651 --> 00:00:32,621
+atau yang membingungkan Anda.
+

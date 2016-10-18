@@ -1,0 +1,221 @@
+1
+00:00:00,220 --> 00:00:04,210
+Langkah pertama adalah mengenai memilih 
+tampilan yang anda ingin gunakan.
+
+2
+00:00:04,210 --> 00:00:08,290
+Pertama saya akan menjelaskan apa yang 
+dimaksud tampilan pada Android dengan gamblang.
+
+3
+00:00:08,290 --> 00:00:12,400
+Singkatnya, tampilan adalah kotak pada 
+layar yang menunjukkan beberapa isi.
+
+4
+00:00:12,400 --> 00:00:15,610
+Dapat berupa gambar, sebuah teks atau 
+tombol atau
+
+5
+00:00:15,610 --> 00:00:17,170
+hal lainnya yang dapat ditampilkan oleh 
+apl.
+
+6
+00:00:17,170 --> 00:00:22,780
+Tampilan individu tersebut membentuk apa 
+yang kita sebut tata letak layar.
+
+7
+00:00:22,780 --> 00:00:24,690
+Semua yang anda akan lihat dan
+
+8
+00:00:24,690 --> 00:00:29,120
+berinteraksi dengan apl anda disebut 
+antarmuka pelanggan, atau disingkat UI.
+
+9
+00:00:29,120 --> 00:00:32,910
+Ada beberapa tipe tampilan yang berbeda 
+dengan beberapa nama berbeda.
+
+10
+00:00:32,910 --> 00:00:35,620
+Sebuah tampilan yang menunjukkan beberapa 
+teks disebut TampilanTeks.
+
+11
+00:00:35,620 --> 00:00:37,490
+Inilah contoh-contohnya.
+
+12
+00:00:37,490 --> 00:00:41,540
+Sebuah tampilan yang menunjukkan gambar 
+disebut TampilanGambar, dan Inilah contohnya.
+
+13
+00:00:41,540 --> 00:00:45,070
+Sebuah tampilan yang menunjukkan tombol 
+disebut, Tombol.
+
+14
+00:00:45,070 --> 00:00:46,620
+Inilah contoh-contohnya.
+
+15
+00:00:46,620 --> 00:00:49,910
+Ada banyak tipe tampilan di Android yang 
+sangat bermanfaat untuk
+
+16
+00:00:49,910 --> 00:00:53,020
+digunakan, tetapi kita akan tetap fokus 
+pada tiga yang pertama.
+
+17
+00:00:53,020 --> 00:00:55,770
+Sebelumnya telah disinggung bahwa semua 
+tampilan adalah kotak di layar,
+
+18
+00:00:55,770 --> 00:00:57,890
+tetapi di mana semua kotaknya?
+
+19
+00:00:57,890 --> 00:01:01,290
+Secara teknis mereka tidak terlihat, tapi 
+saya akan menggambarkannya untuk anda jadi
+
+20
+00:01:01,290 --> 00:01:03,390
+anda dapat melihat di mana batas setiap 
+kotak tersebut.
+
+21
+00:01:03,390 --> 00:01:05,730
+Seperti yang anda lihat,
+
+22
+00:01:05,730 --> 00:01:10,250
+setiap apl dapat dipecah menjadi bentukan 
+tampilan individu.
+
+23
+00:01:10,250 --> 00:01:13,690
+Dengan kata lain, sebuah tampilan adalah 
+blok bentukan dasar yang anda gunakan
+
+24
+00:01:13,690 --> 00:01:16,150
+untuk membuat tata letak bagi apl anda.
+
+25
+00:01:16,150 --> 00:01:20,080
+Untuk membantu anda memahami ide tampilan 
+kotak pada layar,
+
+26
+00:01:20,080 --> 00:01:22,840
+ini adalah situasi di mana anda lebih 
+bisa mengenalinya.
+
+27
+00:01:22,840 --> 00:01:26,110
+Jika anda pernah menggunakan aplikasi 
+Google seperti mewarnai atau menggambar
+
+28
+00:01:26,110 --> 00:01:31,130
+maka anda telah menambahkan kotak teks ke 
+kanvas, lalu anda mengetik teks anda.
+
+29
+00:01:31,130 --> 00:01:32,710
+Jika anda menekan di bagian luarnya,
+
+30
+00:01:32,710 --> 00:01:36,280
+anda tidak dapat melihat batasan kotak 
+walaupun ada.
+
+31
+00:01:36,280 --> 00:01:39,090
+Dan batasan tersebut akan berfungsi ketika
+anda memulai
+
+32
+00:01:39,090 --> 00:01:41,260
+mengerjakan hal seperti menambahkan warna 
+latar atau
+
+33
+00:01:41,260 --> 00:01:45,380
+menambahkan garis di sekelilingnya, lalu
+berpengaruh pada ukuran kotak tersebut.
+
+34
+00:01:46,598 --> 00:01:51,100
+Saya juga ingin mengemukakan bahwa format 
+tampilan tersebut dinamakan KataKapital.
+
+35
+00:01:52,240 --> 00:01:56,140
+Camel case berarti tidak ada spasi di-
+antara kata, dan
+
+36
+00:01:56,140 --> 00:01:58,860
+awal setiap kata adalah huruf besar.
+
+37
+00:01:58,860 --> 00:02:02,000
+Alasannya mengapa dinamakan camel case 
+karena
+
+38
+00:02:02,000 --> 00:02:05,540
+bentuk kata yang naik dan turun seperti 
+punuk unta.
+
+39
+00:02:06,680 --> 00:02:09,299
+Anda akan melihat camel case lebih banyak
+selama kursus ini.
+
+40
+00:02:10,310 --> 00:02:12,420
+Mari kita mulai latih yang telah anda
+pelajari.
+
+41
+00:02:12,420 --> 00:02:16,660
+Ini adalah tangkapan layar dari apl surel
+baru dari Google, dinamakan Inbox.
+
+42
+00:02:16,660 --> 00:02:19,380
+Dapatkah anda mengenali tipe tampilan yang 
+berbeda di sini?
+
+43
+00:02:19,380 --> 00:02:22,430
+Untuk membantu anda, saya telah menyorot 
+tampilan individu.
+
+44
+00:02:22,430 --> 00:02:23,270
+Contohnya untuk A,
+
+45
+00:02:23,270 --> 00:02:26,880
+dapatkah anda beritahukan saya yang mana 
+TampilanTeks, TampilanGambar, atau Tombol.
+
+46
+00:02:26,880 --> 00:02:29,350
+Lakukan hal yang sama untuk B, dan semua
+tampilan tersebut.
+

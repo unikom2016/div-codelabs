@@ -1,0 +1,444 @@
+1
+00:00:00,490 --> 00:00:01,260
+Mari kita tinjau.
+
+2
+00:00:01,260 --> 00:00:04,080
+Kami telah dikenal untuk layout linear dapat mengatur arah
+
+3
+00:00:04,080 --> 00:00:05,650
+horizontal atau vertikal.
+
+4
+00:00:06,890 --> 00:00:09,610
+Tapi sekarang berpikir tentang apakah pandangan ini dapat mengambil keuntungan
+
+5
+00:00:09,610 --> 00:00:11,240
+layar kosong tidak.
+
+6
+00:00:11,240 --> 00:00:14,730
+Ketika kita berbicara tentang layar kosong, maksudku daerah digunakan untuk berada di layar.
+
+7
+00:00:14,930 --> 00:00:16,560
+Untuk Nexus kami 6,
+
+8
+00:00:16,560 --> 00:00:20,740
+kita memiliki tata letak linear bersama dengan tiga anak dalam tampilan teks.
+
+9
+00:00:20,740 --> 00:00:22,420
+Tom, Tim, dan Todd.
+
+10
+00:00:22,420 --> 00:00:25,500
+Ketika kami menempatkan perangkat di bawah layar bersama seperti ini di tangan,
+
+11
+00:00:25,500 --> 00:00:28,380
+maka semua teks termasuk dalam sisi tampilan di sisi kiri layar.
+
+12
+00:00:29,380 --> 00:00:32,320
+Semua ruang kosong ini tidak digunakan.
+
+13
+00:00:32,320 --> 00:00:35,480
+Demikian pula, jika Anda memutar perangkat ke layar horizontal,
+
+14
+00:00:35,480 --> 00:00:39,950
+teks di tepi kiri atas dan semua ruang kosong ini.
+
+15
+00:00:39,950 --> 00:00:42,110
+Hal ini lebih mudah dikenali pada perangkat tablet,
+
+16
+00:00:42,110 --> 00:00:44,260
+dengan layar yang lebih besar.
+
+17
+00:00:44,260 --> 00:00:47,190
+Kami hanya menggunakan sebagian kecil dari layar,
+
+18
+00:00:47,190 --> 00:00:49,062
+beristirahat kosong.
+
+19
+00:00:49,062 --> 00:00:51,830
+Aku akan belajar untuk dapat melihat ini merata
+
+20
+00:00:51,830 --> 00:00:54,860
+pada layar untuk memanfaatkan lebih banyak ruang yang tersedia.
+
+21
+00:00:54,860 --> 00:00:57,180
+Hal ini berlaku untuk jenis yang berbeda.
+
+22
+00:00:57,180 --> 00:00:59,400
+Anda dapat memiliki gambar yang lebih besar pada layar untuk
+
+23
+00:00:59,400 --> 00:01:03,460
+memiliki pengalaman yang lebih baik, bukannya membiarkan mereka kecil di sudut kiri atas.
+
+24
+00:01:04,289 --> 00:01:05,180
+Mirip dengan tombol,
+
+25
+00:01:05,180 --> 00:01:09,785
+Anda dapat membuat tombol yang lebih besar untuk sentuhan mudah lagi.
+
+26
+00:01:09,785 --> 00:01:13,155
+Untuk keperluan contoh ini, kami akan terus dengan tampilan teks.
+
+27
+00:01:13,155 --> 00:01:16,835
+Gunakan XML visualisator untuk melihat apa yang bisa kita menjelaskan bagaimana pandangan ini.
+
+28
+00:01:18,115 --> 00:01:20,545
+Ini adalah kode untuk Tom, Tim dan Todd.
+
+29
+00:01:20,545 --> 00:01:23,975
+Saya memiliki tiga linear tampilan tata letak dalam teks vertikal
+
+30
+00:01:23,975 --> 00:01:25,909
+dan sepertinya ini pada perangkat.
+
+31
+00:01:26,570 --> 00:01:29,810
+Sekarang, saya ingin menunjukkan kepada Anda bagaimana ini pementasan tiga tampilan teks.
+
+32
+00:01:29,810 --> 00:01:31,060
+Begitu juga Tom di atas ini.
+
+33
+00:01:31,060 --> 00:01:31,980
+Tim di sini.
+
+34
+00:01:31,980 --> 00:01:33,910
+Dan Todd bawah ini.
+
+35
+00:01:33,910 --> 00:01:37,950
+Jelas menempatkan tinggi untuk wrap_content tidak efektif.
+
+36
+00:01:37,950 --> 00:01:41,350
+Hal lain yang kita pelajari adalah meletakkan nilai tetap dp untuk tinggi.
+
+37
+00:01:41,350 --> 00:01:44,510
+Jadi saya akan menempatkan tinggi adalah 200 dp tersebut.
+
+38
+00:01:45,760 --> 00:01:48,340
+Besar. Sekarang ada lebih banyak ruang untuk Tom.
+
+39
+00:01:48,340 --> 00:01:51,320
+Jika Anda melakukan hal yang sama dengan tampilan teks yang tersisa,
+
+40
+00:01:51,320 --> 00:01:54,570
+mereka juga lebih membentang di layar.
+
+41
+00:01:54,570 --> 00:01:57,920
+Tapi satu-satunya cara untuk tepi perangkat.
+
+42
+00:01:57,920 --> 00:02:01,510
+Jika saya memiliki tablet seperti sebelumnya, ini adalah pandangan
+
+43
+00:02:01,510 --> 00:02:04,640
+akan dimasukkan dalam sisi di sisi kiri.
+
+44
+00:02:04,640 --> 00:02:08,880
+Pilihan lain adalah untuk menghubungkan untuk mengatur elevasi, yang saya telah mempelajari ibu.
+
+45
+00:02:08,880 --> 00:02:11,750
+Ketika memesan terhubung ke tampilan induk tampilan teks Tom
+
+46
+00:02:11,750 --> 00:02:15,540
+itu akan menambah tinggi badan ibu dengan pandangan penuh dari layar.
+
+47
+00:02:15,540 --> 00:02:19,230
+Ini akan mendorong yang lain tampilan teks off-layar sehingga Anda tidak akan melihat.
+
+48
+00:02:19,230 --> 00:02:20,930
+Jadi jangan lakukan itu.
+
+49
+00:02:20,930 --> 00:02:23,660
+Waktu saya telah habis ide karena saya telah mencoba untuk paket konten
+
+50
+00:02:23,660 --> 00:02:25,710
+pada tingkat tinggi, dengan nilai dp tetap.
+
+51
+00:02:25,710 --> 00:02:27,300
+Dan kami mencoba untuk menghubungkan dengan pandangan ibu.
+
+52
+00:02:27,300 --> 00:02:32,930
+Dan tidak ada cara memberikan kita beberapa peregangan wajar pada perangkat yang berbeda.
+
+53
+00:02:32,930 --> 00:02:36,420
+Mengambil pencarian Google untuk menemukan solusi untuk masalah ini.
+
+54
+00:02:36,420 --> 00:02:38,360
+Kami akan menggunakan tata letak tampilan grup linear.
+
+55
+00:02:38,360 --> 00:02:40,580
+Dan kami ingin meregangkan pandangan anak sama.
+
+56
+00:02:40,580 --> 00:02:42,260
+Jadi cobalah pencarian.
+
+57
+00:02:42,260 --> 00:02:44,680
+Jadi ada beberapa hasil,
+
+58
+00:02:44,680 --> 00:02:46,920
+Silakan klik pada hasil pertama.
+
+59
+00:02:46,920 --> 00:02:49,358
+Berikut ini adalah link untuk Stackoverflow.
+
+60
+00:02:49,358 --> 00:02:51,700
+Ini adalah halaman Q & A, di mana Anda dapat memposting pertanyaan Anda
+
+61
+00:02:51,700 --> 00:02:54,195
+dan menerima balasan dari pengembang Android.
+
+62
+00:02:54,195 --> 00:02:58,005
+Saya selalu menggunakan situs ini jika perlu bantuan penting apapun.
+
+63
+00:02:58,005 --> 00:03:00,515
+Seringkali orang lain menjawab pertanyaan
+
+64
+00:03:00,515 --> 00:03:01,975
+benih saya.
+
+65
+00:03:01,975 --> 00:03:05,425
+Pertanyaan kita adalah bagaimana untuk meregangkan semua tombol
+
+66
+00:03:05,425 --> 00:03:07,657
+pada lebar layout linear.
+
+67
+00:03:07,657 --> 00:03:09,677
+Ini seperti apa yang kita cari,
+
+68
+00:03:09,677 --> 00:03:12,627
+kecuali bahwa alih-alih tombol, kita memiliki tampilan teks.
+
+69
+00:03:12,627 --> 00:03:15,877
+Dan bukannya lebar tata letak linear, maka kami mencoba untuk membingkai kami
+
+70
+00:03:15,877 --> 00:03:17,767
+menurut ketinggian layout linear.
+
+71
+00:03:17,767 --> 00:03:20,710
+Satu dapat membaca pertanyaan dan berselancar untuk mendapatkan informasi.
+
+72
+00:03:20,710 --> 00:03:23,070
+Biasanya saya hanya melihat jawabannya.
+
+73
+00:03:23,070 --> 00:03:27,590
+Jadi jawaban ini diterima 88 orang dan hijau jejak.
+
+74
+00:03:27,590 --> 00:03:30,840
+Ini berbicara tentang bagaimana Anda dapat dimasukkan ke dalam 0dp layout_width
+
+75
+00:03:30,840 --> 00:03:33,240
+dan layout_weight untuk setiap tombol adalah 1.
+
+76
+00:03:33,240 --> 00:03:36,899
+Dan membagi lebar sama yang tersedia antara tombol.
+
+77
+00:03:37,910 --> 00:03:41,170
+Mungkin Anda tidak tahu jawaban pada tingkat ini, tapi tidak bintang.
+
+78
+00:03:41,170 --> 00:03:44,620
+Bagian penting dari ini adalah bagian layout_weight.
+
+79
+00:03:44,620 --> 00:03:47,950
+Saya belum melihat yang satu ini sebelumnya, tapi tampaknya berkaitan dengan jawabannya.
+
+80
+00:03:47,950 --> 00:03:49,640
+Jadi silahkan salin dan pencarian Google
+
+81
+00:03:49,640 --> 00:03:52,005
+Untuk informasi lebih lanjut tentang layout_weight.
+
+82
+00:03:52,005 --> 00:03:55,205
+Jadi mari kita mencari letak linear layout_weight.
+
+83
+00:03:55,205 --> 00:03:57,605
+Hasil pertama adalah sebuah artikel tentang tata letak linear
+
+84
+00:03:57,605 --> 00:04:00,085
+atas halaman developer.android.com, klik di atasnya.
+
+85
+00:04:01,285 --> 00:04:03,845
+Ini adalah artikel tentang Tata Letak Linear.
+
+86
+00:04:03,845 --> 00:04:08,015
+Kami telah belajar cukup tentang hal-hal ini dalam fitur arah di Android,
+
+87
+00:04:08,015 --> 00:04:11,230
+tapi di sini ada informasi baru tentang sesuatu yang disebut Tata Letak Berat.
+
+88
+00:04:11,230 --> 00:04:14,270
+Juga ada contoh di bagian bawah layar dengan beberapa kode
+
+89
+00:04:14,270 --> 00:04:15,650
+dan screenshot.
+
+90
+00:04:15,650 --> 00:04:17,459
+Saya bisa jumlah semuanya kembali kepada Anda,
+
+91
+00:04:17,459 --> 00:04:21,260
+tapi pertama saya ingin memberikan Anda kesempatan untuk membaca materi ini.
+
+92
+00:04:21,260 --> 00:04:23,710
+Dan mencoba memahami sendiri.
+
+93
+00:04:23,710 --> 00:04:26,180
+Ini akan sangat mirip dengan bagaimana Anda akan memecahkan masalah
+
+94
+00:04:26,180 --> 00:04:28,220
+setelah kursus berakhir.
+
+95
+00:04:28,220 --> 00:04:30,510
+Mencari informasi secara online
+
+96
+00:04:30,510 --> 00:04:33,350
+dan mengeksplorasi cara yang mungkin untuk memecahkan masalah Anda.
+
+97
+00:04:34,500 --> 00:04:37,340
+Jadi di sini adalah tata letak yang sekarang kita miliki di perangkat.
+
+98
+00:04:37,340 --> 00:04:39,120
+Dan ini adalah apa yang ingin kita capai.
+
+99
+00:04:39,120 --> 00:04:42,490
+Tiga paragraf telah tersebar di ketinggian perangkat.
+
+100
+00:04:42,490 --> 00:04:43,720
+Untuk mengatasi masalah ini,
+
+101
+00:04:43,720 --> 00:04:47,060
+Saya ingin Anda untuk membaca artikel tentang Tata Letak Linear di link di bawah.
+
+102
+00:04:47,830 --> 00:04:48,980
+Tidak heran
+
+103
+00:04:48,980 --> 00:04:52,490
+jika Anda tidak mengerti artikel ini secara keseluruhan.
+
+104
+00:04:52,490 --> 00:04:55,390
+Seringkali Anda hanya ingin memahami transient
+
+105
+00:04:55,390 --> 00:04:59,250
+konsep dalam artikel ini dapat membantu memberikan pekerjaan Anda.
+
+106
+00:05:00,320 --> 00:05:03,390
+Kemudian saya ingin Anda untuk memberikan beberapa gagasan tentang bagaimana membangun
+
+107
+00:05:03,390 --> 00:05:05,100
+tata letak yang diperlukan dalam XML.
+
+108
+00:05:05,100 --> 00:05:07,550
+Anda tidak perlu memberikan XML penuh kode tata letak
+
+109
+00:05:07,550 --> 00:05:10,420
+karena bersama-sama kita akan melakukan itu di video berikutnya.
+
+110
+00:05:10,420 --> 00:05:12,600
+Tapi di sini Anda dapat menulis beberapa kalimat atau
+
+111
+00:05:12,600 --> 00:05:16,920
+Informasi bullet dalam artikel yang berkaitan dengan masalah kita.
+

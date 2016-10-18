@@ -1,0 +1,203 @@
+1
+00:00:00,430 --> 00:00:04,712
+Bagus. Sekarang kita tahu bagaimana<i>
+ViewGroup</i> dapat mencakup tampilan.
+
+2
+00:00:04,712 --> 00:00:08,990
+Tiap <i>ViewGroup</i> punya aturan spesifik
+cara meletakkan anak di dalamnya.
+
+3
+00:00:09,270 --> 00:00:11,292
+Pertama, mari lihat <i>LinearLayout</i>.
+
+4
+00:00:11,292 --> 00:00:15,120
+<i>ViewGroup</i> ini dapat mengatur anaknya
+dalam kolom vertikal seperti ini.
+
+5
+00:00:17,310 --> 00:00:20,990
+Perhatikan bahwa ini tak terbatas hanya
+pada satu <i>TextView</i> dan satu <i>ImageView</i>.
+
+6
+00:00:20,990 --> 00:00:25,200
+Kita bisa masukkan sebanyak yang kita mau
+di sini, juga jenis tampilan lainnya.
+
+7
+00:00:25,200 --> 00:00:27,220
+Jadi ini Tommy, dan ini saudaranya, Timmy.
+
+8
+00:00:27,220 --> 00:00:30,576
+Dan ini Ivy dan saudara kembarnya, Irene.
+
+9
+00:00:31,356 --> 00:00:33,890
+<i>LinearLayout</i> juga bisa
+mengatur tampilan anak-anaknya
+
+10
+00:00:33,890 --> 00:00:36,410
+dalam baris horizontal seperti ini.
+
+11
+00:00:38,150 --> 00:00:41,730
+Jika Anda ingin laki-laki
+dilarang masuk, tidak masalah.
+
+12
+00:00:42,240 --> 00:00:45,140
+Ini Ivy, Irene, dan Isabella.
+
+13
+00:00:45,140 --> 00:00:47,630
+Baik, dan itu saja untuk <i>LinearLayout</i>.
+
+14
+00:00:47,630 --> 00:00:48,880
+Mudah sekali, bukan?
+
+15
+00:00:48,880 --> 00:00:52,535
+Anda bisa mengatur anak-anak
+pada kolom vertikal atau baris horizontal.
+
+16
+00:00:52,835 --> 00:00:54,847
+Lalu ada Ayah, si <i>RelativeLayout</i>.
+
+17
+00:00:54,847 --> 00:00:57,175
+<i>RelativeLayout</i>, sekali lagi,
+punya aturan sendiri
+
+18
+00:00:57,175 --> 00:00:59,075
+cara meletakkan anak-anak di dalamnya.
+
+19
+00:00:59,575 --> 00:01:03,425
+Contoh, ia dapat meletakkan anak-anak
+relatif terhadap orang tuanya.
+
+20
+00:01:03,425 --> 00:01:05,455
+Jadi, jika ini adalah orang tua <i>ViewGroup</i>,
+
+21
+00:01:05,455 --> 00:01:09,040
+kita dapat menyejajarkan
+si anak <i>TextView</i> di bawah orang tuanya
+
+22
+00:01:09,040 --> 00:01:12,150
+dan anak <i>ImageView</i>
+sejajar di atas orang tuanya.
+
+23
+00:01:12,150 --> 00:01:15,070
+Ini juga bisa menyejajarkan
+sisi kiri dan kanan orang tua,
+
+24
+00:01:15,070 --> 00:01:16,620
+dan juga bagian tengahnya.
+
+25
+00:01:17,330 --> 00:01:19,810
+Kemampuan <i>RelativeLayout</i> lain yang berguna
+
+26
+00:01:19,810 --> 00:01:23,741
+adalah Anda dapat meletakkan anak
+relatif terhadap tampilan anak lainnya.
+
+27
+00:01:24,131 --> 00:01:26,010
+Jadi, jika ini si orang tua <i>ViewGroup</i>,
+
+28
+00:01:26,010 --> 00:01:30,310
+maka Anda dapat meletakkan<i>
+ImageView</i> di sisi kiri orang tuanya
+
+29
+00:01:30,310 --> 00:01:33,760
+dan meletakkan anak <i>ImageView</i>
+di sisi kanan gambar.
+
+30
+00:01:33,760 --> 00:01:37,780
+Kemudian, anak <i>TextView</i> ini diletakkan
+di sisi kanan <i>ImageView</i>,
+
+31
+00:01:37,780 --> 00:01:40,420
+tapi juga di bawah <i>TextView</i> yang pertama.
+
+32
+00:01:40,420 --> 00:01:42,610
+Anda lihat bagaimana
+beberapa tampilan anak ini
+
+33
+00:01:42,610 --> 00:01:46,480
+disejajarkan relatif terhadap orang tuanya
+atau dengan saudara kandungnya.
+
+34
+00:01:47,210 --> 00:01:50,990
+Itu adalah tinjauan singkat mengenai<i>
+LinearLayout</i> dibanding <i>RelativeLayout</i>.
+
+35
+00:01:50,990 --> 00:01:53,270
+Anda bisa lihat
+bagaimana Anda bisa memilih
+
+36
+00:01:53,270 --> 00:01:56,170
+tergantung jenis tata letak
+yang Anda inginkan pada aplikasi.
+
+37
+00:01:56,640 --> 00:02:00,690
+Sekarang, mari lihat pada XML bagaimana<i>
+ViewGroup</i> mencakup tampilan lainnya.
+
+38
+00:02:01,220 --> 00:02:03,850
+Pada contoh ini,
+kita akan mulai dengan <i>ViewGroup</i>
+
+39
+00:02:03,850 --> 00:02:06,060
+yang mencakup dua anak <i>TextView</i>.
+
+40
+00:02:07,110 --> 00:02:09,500
+Kode ini sedikit lebih banyak
+dari yang biasanya,
+
+41
+00:02:09,500 --> 00:02:12,350
+tapi saya ingin Anda mengamatinya.
+
+42
+00:02:12,350 --> 00:02:17,280
+Sebagai petunjuk, kode orang tua merah,
+dan kode anak <i>TextView</i> biru.
+
+43
+00:02:17,280 --> 00:02:20,050
+Kami tautkan kode di bawah
+supaya Anda bisa mempelajarinya.
+
+44
+00:02:20,050 --> 00:02:21,740
+Lalu tulis tiga pengamatan di sini.
+

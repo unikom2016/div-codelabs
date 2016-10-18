@@ -1,0 +1,445 @@
+1
+00:00:00,490 --> 00:00:03,560
+Anda telah mengamati dengan baik kuis
+terakhir tentang <i>XML</i>
+
+2
+00:00:03,560 --> 00:00:04,720
+yang kami tunjukkan.
+
+3
+00:00:04,720 --> 00:00:08,150
+Sekarang kita akan membahas lebih banyak<i>
+syntax XML</i> secara lebih formal.
+
+4
+00:00:08,150 --> 00:00:12,470
+<i>Syntax</i> artinya aturan-aturan yang
+medefinisikan apa itu <i>XML</i> yang benar.
+
+5
+00:00:12,470 --> 00:00:16,530
+Jika Anda tulis <i>XML</i> yang salah,
+itu takkan tampil di ponsel Anda.
+
+6
+00:00:16,680 --> 00:00:20,130
+Ini adalah kode untuk elemen <i>XML</i>
+yang disebut <i>TextView</i>.
+
+7
+00:00:20,130 --> 00:00:24,110
+Kita selalu mulai dengan tanda buka kurung
+lancip, diikuti dengan nama tampilan.
+
+8
+00:00:24,110 --> 00:00:28,020
+Ini dapat menjadi tampilan gambar, tombol,
+atau jenis tampilan lainnya.
+
+9
+00:00:28,020 --> 00:00:30,790
+Lalu kita punya sedaftar atribut di
+sini, satu per baris.
+
+10
+00:00:30,790 --> 00:00:35,880
+Dan kita punya garis miring dan
+tanda tutup kurung lancip.
+
+11
+00:00:35,880 --> 00:00:38,420
+Ada banyak simbol dan karakter di sini.
+
+12
+00:00:38,420 --> 00:00:41,945
+Agar anda mudah mengingatnya, pikirkanlah
+satu tanda buka kurung lancip.
+
+13
+00:00:41,945 --> 00:00:44,089
+[BUNYI] Lalu kita lihat nama tampilan.
+
+14
+00:00:44,089 --> 00:00:47,052
+[BUNYI] Dan atributnya [BUNYI] dan
+
+15
+00:00:47,052 --> 00:00:52,008
+garis miring [BUNYI] dan
+tanda tutup kurung lancip.
+
+16
+00:00:52,008 --> 00:00:59,066
+[BUNYI] Jadi itulah keseluruhannya [BUNYI]
+
+17
+00:00:59,066 --> 00:01:02,814
+Jika Anda lupa salah satu dari semua
+simbol ini, maka <i>XML</i> Anda akan salah.
+
+18
+00:01:02,814 --> 00:01:07,500
+Inilah alasan hadirnya simbol-simbol ini.
+
+19
+00:01:07,500 --> 00:01:10,490
+Untuk tiap elemen <i>XML</i>, saat Anda memulai
+atau membuka satu <i>tag</i>,
+
+20
+00:01:10,490 --> 00:01:12,910
+Anda harus selalu menutupnya.
+
+21
+00:01:12,910 --> 00:01:15,680
+Itu seperti menaruh titik di akhir
+kalimat, namun untuk <i>XML</i>
+
+22
+00:01:15,680 --> 00:01:19,260
+pastikan Anda selalu menutup tiap <i>tag</i>.
+
+23
+00:01:20,440 --> 00:01:21,900
+Karena kita mulai <i>tag</i> di sini
+
+24
+00:01:21,900 --> 00:01:25,197
+lalu langsung menutupnya,
+maka ini disebut <i>self-closing tag</i>.
+
+25
+00:01:26,690 --> 00:01:28,410
+Selain <i>self-closing tag</i>,
+
+26
+00:01:28,410 --> 00:01:31,570
+Anda bisa memiliki <i>tag</i> pembuka dan<i>
+tag</i> pembuka yang terpisah.
+
+27
+00:01:33,060 --> 00:01:35,090
+Inilah contoh yang menunjukkan menfaatnya.
+
+28
+00:01:35,090 --> 00:01:37,990
+Ini untuk tampilan<i>
+LinearLayout</i> yang akan Anda
+
+29
+00:01:37,990 --> 00:01:39,740
+pelajari nanti. Namun ketahuilah,
+
+30
+00:01:39,740 --> 00:01:42,820
+ini adalah <i>tag</i> pembuka
+dan ini adalah <i>tag</i> penutup.
+
+31
+00:01:44,510 --> 00:01:49,550
+<i>Tag</i> penutup adalah sama,
+kecuali ia punya tanda buka kurung lancip,
+
+32
+00:01:49,550 --> 00:01:53,199
+garis miring, dan nama tampilan
+dan tanda tutup kurung lancip.
+
+33
+00:01:54,330 --> 00:01:55,730
+Jadi, beda antara pembuka
+
+34
+00:01:55,730 --> 00:01:58,400
+dan penutup yaitu garis miring.
+
+35
+00:02:00,080 --> 00:02:04,630
+Dan anda juga akan melihat bahwa di
+dalamnya, ada dua elemen <i>TextView XML</i>.
+
+36
+00:02:04,630 --> 00:02:09,840
+Ada juga elemen anak <i>XML</i>
+dalam induk <i>LinearLayout</i>.
+
+37
+00:02:09,840 --> 00:02:12,775
+Dapat dibayangkan jika ada<i>
+self-closing tag</i> di sini untuk
+
+38
+00:02:12,775 --> 00:02:16,810
+<i>LinearLayout</i>, lalu Anda tidak tahu
+berapa anak <i>XML</i> yang ada di dalamnya.
+
+39
+00:02:16,810 --> 00:02:18,430
+Namun sekarang <i>tag</i> penutup ada
+
+40
+00:02:18,430 --> 00:02:20,550
+di sini, Anda tahu bahwa
+ada dua anak <i>XML</i>.
+
+41
+00:02:22,020 --> 00:02:25,750
+Dalam kasus kita ini, untuk <i>TextView</i>,
+tidak ada elemen anak <i>XML</i>, jadi
+
+42
+00:02:25,750 --> 00:02:30,200
+kita bisa memberi <i>self-closing tag</i> karena
+itu akan menghindarkan kita dari menulis
+
+43
+00:02:30,200 --> 00:02:34,840
+tanda buka kurung lancip, garis miring,
+dan tanda tutup kurung lancip <i>XML</i>.
+
+44
+00:02:36,140 --> 00:02:40,210
+Anda lihat, kita punya banyak teks
+tambahan di dalam <i>tag</i> ini.
+
+45
+00:02:40,210 --> 00:02:42,160
+Ini disebut atribut.
+
+46
+00:02:42,160 --> 00:02:44,950
+Atribut adalah syarat yang
+menentukan sifat atau tampilan
+
+47
+00:02:44,950 --> 00:02:48,040
+di ponsel Android.
+
+48
+00:02:48,040 --> 00:02:51,000
+Contohnya, kita bisa memikirkannya
+dengan perumpamaan ini.
+
+49
+00:02:51,000 --> 00:02:54,230
+Seseorang punya atribut seperti:
+rambut hitam, dan mata coklat.
+
+50
+00:02:54,230 --> 00:02:57,492
+Sebuah teks punya atribut seperti lebar,
+tinggi, latar belakang,
+
+51
+00:02:57,492 --> 00:02:59,190
+teks di antara banyak lainnya.
+
+52
+00:02:59,190 --> 00:03:02,560
+Lihat lebih dekat pada
+format di tiap baris,
+
+53
+00:03:02,560 --> 00:03:06,040
+kita punya nama atribut di kiri. Dengan
+garis bawah berwarna
+
+54
+00:03:06,040 --> 00:03:07,040
+kuning di sini.
+
+55
+00:03:07,040 --> 00:03:09,970
+dan di kanan, kita punya nilai
+yang sebenarnya.
+
+56
+00:03:11,600 --> 00:03:14,180
+Penting diketahui bahwa
+nilai atribut harus diapit
+
+57
+00:03:14,180 --> 00:03:17,730
+tanda petik sebagai bagian
+dari <i>syntax</i> untuk <i>XML</i>.
+
+58
+00:03:19,220 --> 00:03:22,830
+Lalu kita punya tanda sama dengan
+di tengah untuk menyatakan bahwa nama
+
+59
+00:03:22,830 --> 00:03:25,940
+atribut di kiri telah diatur
+untuk nilai di kanan.
+
+60
+00:03:25,940 --> 00:03:29,570
+Jadi teks untuk <i>TextView</i> adalah
+Happy Birthday!, dan
+
+61
+00:03:29,570 --> 00:03:32,640
+tingginya 75 dpi. Semua atribut ini
+
+62
+00:03:34,080 --> 00:03:36,070
+punya nilai <i>default</i> (otomatis),
+
+63
+00:03:36,070 --> 00:03:38,850
+dan ada atribut yang tidak ada
+di daftar kita di sini.
+
+64
+00:03:38,850 --> 00:03:42,740
+Itu karena <i>TextView</i> punya nilai <i>default</i>
+untuk semua atributnya. Jika nilai
+
+65
+00:03:42,740 --> 00:03:45,690
+<i>default</i> sesuai bagi Anda,
+Anda tidak perlu mengubahnya.
+
+66
+00:03:46,750 --> 00:03:48,000
+Tuliskan saja barisan
+
+67
+00:03:48,000 --> 00:03:50,940
+kode di sini yang ingin Anda buat
+berbeda dari nilai <i>default</i>.
+
+68
+00:03:50,940 --> 00:03:52,920
+Contohnya, warna latar belakang <i>default</i>
+
+69
+00:03:52,920 --> 00:03:55,170
+untuk <i>TextView</i> adalah
+transparan. Namun, kita
+
+70
+00:03:55,170 --> 00:03:57,890
+ingin mengubahnya menjadi
+abu-abu, itulah alasan
+
+71
+00:03:57,890 --> 00:03:59,400
+adanya sebaris kode di sini.
+
+72
+00:04:01,430 --> 00:04:03,250
+Satu catatan lagi yang penting.
+
+73
+00:04:03,250 --> 00:04:06,770
+Manusia sangat pintar, jika saya tulis
+ungkapan seperti ini, Anda mungkin
+
+74
+00:04:06,770 --> 00:04:10,450
+tahu maksudnya, bahkan jika saya tidak
+menggunakan penulisan atau tata bahasa
+
+75
+00:04:10,450 --> 00:04:13,040
+yang tepat, atau bahkan kata sungguhan.
+
+76
+00:04:13,040 --> 00:04:17,089
+Namun, komputer tidak pintar, jadi
+Anda harus menggunakan simbol yang tepat
+
+77
+00:04:17,089 --> 00:04:20,720
+dan nama yang dikenalnya, jika tidak maka
+komputer tidak akan paham maksudnya
+
+78
+00:04:20,720 --> 00:04:22,110
+dan kode Anda akan salah.
+
+79
+00:04:23,410 --> 00:04:24,740
+Inilah contohnya.
+
+80
+00:04:24,740 --> 00:04:28,580
+Untuk nama tampilan, kita tidak bisa
+mengejanya <i>TxtView</i>, atau <i>Textview</i>
+
+81
+00:04:28,580 --> 00:04:32,640
+dengan huruf v kecil, atau<i>
+text view</i> dengan spasi.
+
+82
+00:04:32,640 --> 00:04:34,140
+Ini tidak benar dan komputer
+
+83
+00:04:34,140 --> 00:04:37,260
+tidak akan paham maksud sebenarnya.
+
+84
+00:04:37,260 --> 00:04:40,800
+Jika kita ingin <i>TextView</i> kita harus
+mengejanya dengan tepat dengan
+
+85
+00:04:40,800 --> 00:04:43,370
+huruf T kapital dan V kapital.
+
+86
+00:04:44,610 --> 00:04:48,080
+Nama atribut harus dieja dengan
+tepat dengan titik dua
+
+87
+00:04:48,080 --> 00:04:49,260
+setelah kata android.
+
+88
+00:04:49,260 --> 00:04:53,960
+Kita harus menaruh tanda sama dengan dan
+kita tanda petik di sekitar nilainya.
+
+89
+00:04:53,960 --> 00:04:59,892
+Sekali lagi agar Anda tidak
+melupakannya [BUNYI].
+
+90
+00:04:59,892 --> 00:05:02,683
+Sekarang kita telah belajar
+aturan <i>syntax XML</i>,
+
+91
+00:05:02,683 --> 00:05:06,440
+bisakah Anda jawab pertanyaan-pertanyaan
+untuk elemen <i>XML</i> ini?
+
+92
+00:05:06,440 --> 00:05:09,530
+Pertama, apa nama elemen <i>XML</i> ini?
+
+93
+00:05:09,530 --> 00:05:13,320
+Lalu, Apa saja nama atribut
+yang dipisahkan oleh tanda koma?
+
+94
+00:05:13,320 --> 00:05:15,570
+Bukan nilai atribut.
+
+95
+00:05:15,570 --> 00:05:17,540
+Lalu, pada baris mana <i>tag</i>-nya ditutup?
+
+96
+00:05:18,580 --> 00:05:21,490
+Untuk memudahkan, saya tuliskan
+nomor barisnya di sisi kiri.
+

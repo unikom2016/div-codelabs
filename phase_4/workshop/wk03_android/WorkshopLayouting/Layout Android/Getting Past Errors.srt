@@ -1,0 +1,402 @@
+1
+00:00:00,430 --> 00:00:05,430
+Alasan kami mengajukan pertanyaan terakhir
+tentang membuat dan memperbaiki eror
+
+2
+00:00:05,430 --> 00:00:08,570
+karena keterampilan penting <i>web developer</i>
+
+3
+00:00:08,570 --> 00:00:11,170
+adalah kemampuan memperbaiki kesalahan.
+
+4
+00:00:11,170 --> 00:00:14,305
+Tak ada <i>web developer</i> menulis kode
+langsung sempurna pertama kali.
+
+5
+00:00:14,305 --> 00:00:15,875
+Jika Anda pikirkan,
+
+6
+00:00:15,875 --> 00:00:20,765
+seluruh produk pencarian Google
+tidak ditulis sempurna dalam satu hari.
+
+7
+00:00:20,765 --> 00:00:25,765
+Banyak pengulangan bertahun-tahun,
+dan akan terus begitu.
+
+8
+00:00:25,765 --> 00:00:29,723
+Jadi, terlepas dari apakah Anda<i>
+developer</i> baru atau berpengalaman,
+
+9
+00:00:29,723 --> 00:00:34,794
+untuk mencapai tujuan akhir,
+jalannya tidak benar-benar lurus.
+
+10
+00:00:34,794 --> 00:00:37,347
+Anda akan menemui
+hambatan sepanjang jalan,
+
+11
+00:00:37,347 --> 00:00:38,820
+dan Anda harus sungguh kreatif
+
+12
+00:00:38,820 --> 00:00:43,650
+dalam mencoba menemukan solusi baru
+mengatasi hambatan itu.
+
+13
+00:00:43,650 --> 00:00:47,880
+Saat berhasil, Anda kemudian akan
+bertemu hambatan lain, dan seterusnya.
+
+14
+00:00:47,880 --> 00:00:52,180
+Dan Anda harus selalu memikirkan
+cara mengatasi hambatan itu.
+
+15
+00:00:52,640 --> 00:00:59,680
+Dan akhirnya, setelah banyak kerja keras,
+Anda menemukan jalan ke tujuan,
+
+16
+00:00:59,680 --> 00:01:03,400
+dan walaupun sangat sulit,
+sangat layak pada akhirnya
+
+17
+00:01:03,400 --> 00:01:07,270
+karena Anda merasa berdaya, percaya diri,
+dan sangat bangga akan hasil kerja Anda.
+
+18
+00:01:07,910 --> 00:01:11,620
+Jadi <i>developer</i> yang sangat baik
+tahu bagaimana cara memperbaiki eror
+
+19
+00:01:11,620 --> 00:01:13,220
+dan melanjutkan pekerjaan mereka.
+
+20
+00:01:13,220 --> 00:01:15,140
+Inilah beberapa kebiasaan dan strategi
+
+21
+00:01:15,140 --> 00:01:19,810
+yang digunakan untuk <i>debug</i>
+atau memperbaiki eror.
+
+22
+00:01:19,810 --> 00:01:21,920
+Pertama mereka membaca pesan eror.
+
+23
+00:01:21,920 --> 00:01:24,770
+Saat Anda menulis dokumennya
+di Google Docs. Contohnya,
+
+24
+00:01:24,770 --> 00:01:29,280
+jika ada salah eja, maka akan diberi tahu
+dengan garis bawah merah.
+
+25
+00:01:29,280 --> 00:01:34,250
+Sama dengan Android Studio,
+jika Anda salah mengetik XML ,
+
+26
+00:01:34,250 --> 00:01:38,810
+akan muncul garis bawah merah berlekuk
+atau akan disorot dengan warna merah.
+
+27
+00:01:38,810 --> 00:01:40,866
+Juga, batangan di sisi ini,
+
+28
+00:01:40,866 --> 00:01:44,169
+yang akan menunjukan pesan jika Anda
+meletakkan <i>mouse</i> di bar merah.
+
+29
+00:01:44,169 --> 00:01:48,871
+tapi di XML Visualizer, juga akan ada
+pesan kesalahan yang membantu.
+
+30
+00:01:48,871 --> 00:01:52,216
+Jadi jika saya membuat eror,
+seperti menghilangkan tanda kutip,
+
+31
+00:01:52,216 --> 00:01:55,820
+maka saya akan diberi tahu,
+jumlah tanda kutipnya ganjil
+
+32
+00:01:55,820 --> 00:01:57,350
+yang harus saya betulkan.
+
+33
+00:01:57,350 --> 00:02:00,630
+Kadang, Anda juga akan diberi tahu,
+baris mana yang ada masalahnya.
+
+34
+00:02:00,630 --> 00:02:03,320
+Nomor baris ada di sisi kiri ini.
+
+35
+00:02:03,320 --> 00:02:06,320
+Jadi, di baris keenam,
+kita tahu ada masalah.
+
+36
+00:02:06,320 --> 00:02:09,050
+Ini akan membantu
+mempersempit cakupan masalah,
+
+37
+00:02:09,050 --> 00:02:13,210
+daripada harus membaca seluruh kode Anda
+dan mencoba menemukan masalahnya.
+
+38
+00:02:13,210 --> 00:02:15,720
+Jika Anda masih tak paham
+pesan erornya,
+
+39
+00:02:15,720 --> 00:02:19,780
+cobalah untuk mengidentifikasi
+kata yang Anda mengerti dan yang tidak.
+
+40
+00:02:19,780 --> 00:02:23,280
+Anda bisa cari di Google
+kata yang tidak dimengerti.
+
+41
+00:02:23,550 --> 00:02:28,320
+Atau Anda bisa salin saja seluruh
+pesan erornya dan cari di Google.
+
+42
+00:02:28,320 --> 00:02:30,790
+Teknik lain yaitu memakai contoh
+kode yang berhasil
+
+43
+00:02:30,790 --> 00:02:32,800
+dan membandingkannya
+dengan pekerjaan Anda
+
+44
+00:02:32,800 --> 00:02:34,860
+untuk mencari tahu apa yang salah.
+
+45
+00:02:34,860 --> 00:02:38,380
+Kami sudah berikan beberapa kode
+sebagai contoh di beberapa video terakhir.
+
+46
+00:02:38,380 --> 00:02:41,458
+Sumber lain yang bagus adalah
+lembar contek Common Android Views
+
+47
+00:02:41,458 --> 00:02:42,960
+yang akan kami berikan.
+
+48
+00:02:42,960 --> 00:02:47,320
+Di sini, kami lihat berbagai nama tampilan
+dan juga ada potongan kode.
+
+49
+00:02:47,320 --> 00:02:49,770
+juga tampilan untuk dilihat
+pada perangkat.
+
+50
+00:02:50,310 --> 00:02:53,120
+Anda bisa bandingkan kode Anda
+dengan punya kami di sini
+
+51
+00:02:53,120 --> 00:02:55,170
+dan melihat jika ada perbedaan.
+
+52
+00:02:55,170 --> 00:02:57,360
+Teknik ketiga adalah membatalkan.
+
+53
+00:02:57,710 --> 00:02:59,870
+Jika Anda perhatikan apa yang Anda ketik,
+
+54
+00:02:59,870 --> 00:03:02,960
+seharusnya Anda bisa lihat dengan cepat
+ketika Anda salah ketik.
+
+55
+00:03:03,430 --> 00:03:07,357
+Coba batalkan beberapa simbol terakhir,
+dan lihat jika itu memperbaiki eror.
+
+56
+00:03:08,400 --> 00:03:12,385
+Seperti yang saya tunjukkan sebelumnya,
+Anda bisa tekan Cmd+Z untuk membatalkan...
+
+57
+00:03:12,385 --> 00:03:15,470
+...atau mengubah. Atau Cmd+Shift+Z
+untuk mengembalikan perubahan.
+
+58
+00:03:15,470 --> 00:03:19,945
+Di Windows, tombol Ctrl+Z untuk batal
+dan Ctrl+Shift+Z untuk mengembalikan.
+
+59
+00:03:20,965 --> 00:03:24,915
+Di XML Visualizer, ada tombol praktis
+untuk membatalkan dan mengembalikan.
+
+60
+00:03:25,615 --> 00:03:29,477
+Jika Anda tak tahu yang harus dilakukan,
+Anda bisa selalu tekan tombol Reset Code,
+
+61
+00:03:29,477 --> 00:03:32,387
+yang akan membawa Anda kembali
+ke kode awal yang kami berikan,
+
+62
+00:03:32,387 --> 00:03:33,877
+yang seharusnya berhasil.
+
+63
+00:03:33,877 --> 00:03:37,167
+Teknik keempat adalah meminta bantuan.
+
+64
+00:03:37,167 --> 00:03:40,527
+Anda dapat bertanya pada siswa lain
+di kelas atau di forum.
+
+65
+00:03:42,242 --> 00:03:44,697
+Seringnya, hanya dengan
+berbicara pada orang lain
+
+66
+00:03:44,697 --> 00:03:46,777
+akan membantu Anda memperbaiki eror.
+
+67
+00:03:46,777 --> 00:03:48,097
+Jangan takut minta bantuan.
+
+68
+00:03:48,097 --> 00:03:51,559
+Ada banyak <i>developer</i> Android
+yang sangat ramah di komunitas
+
+69
+00:03:51,559 --> 00:03:53,160
+dan bersedia membantu Anda.
+
+70
+00:03:53,880 --> 00:03:58,200
+Bahkan, dapat meminta bantuan
+adalah keterampilan penting <i>developer</i>.
+
+71
+00:03:58,200 --> 00:03:59,490
+Tak ada pertanyaan buruk.
+
+72
+00:04:00,550 --> 00:04:05,070
+Semakin Anda berlatih, semakin Anda tahu
+pada siapa Anda harus bertanya
+
+73
+00:04:05,070 --> 00:04:08,590
+dan apa yang harus ditanyakan
+untuk mendapat jawaban dengan cepat.
+
+74
+00:04:09,120 --> 00:04:11,810
+Anda juga bisa mengambil <i>screenshot</i>
+layar pekerjaan Anda,
+
+75
+00:04:11,810 --> 00:04:17,660
+baik di ponsel ataupun XML Visualizer,
+dan menunjukkan bersama dengan kodenya
+
+76
+00:04:17,660 --> 00:04:22,069
+pada forum atau ruang obrolan sehigga
+orang tahu konteks yang Anda bicarakan.
+
+77
+00:04:22,600 --> 00:04:24,899
+Lihat catatan instruktur
+untuk detail lebih jauh.
+
+78
+00:04:25,390 --> 00:04:29,210
+Baik, inilah kesempatan Anda
+untuk melatih beberapa teknik tersebut.
+
+79
+00:04:29,210 --> 00:04:31,540
+Saya ada beberapa kode di sini
+yang ada eror.
+
+80
+00:04:31,540 --> 00:04:34,770
+Jika Anda klik tautan berikut,
+Anda akan menuju XML Visualizer
+
+81
+00:04:34,770 --> 00:04:37,140
+dengan kode yang sudah terisi di sana.
+
+82
+00:04:37,140 --> 00:04:40,090
+Ada sejumlah pesan eror,
+saya mau Anda coba membacanya
+
+83
+00:04:40,090 --> 00:04:41,790
+dan coba perbaiki erornya.
+
+84
+00:04:41,790 --> 00:04:45,790
+Lalu kembali dan jabarkanlah
+setidaknya dua masalah yang Anda lihat.
+
+85
+00:04:45,790 --> 00:04:49,100
+Untuk kredit tambahan, katakan
+jika Anda menemukan keempat masalahnya.
+

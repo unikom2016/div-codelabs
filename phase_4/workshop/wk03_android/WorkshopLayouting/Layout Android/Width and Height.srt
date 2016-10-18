@@ -1,0 +1,446 @@
+1
+00:00:00,390 --> 00:00:02,720
+Sejauh ini kita telah membuat
+daftar tamu.
+
+2
+00:00:02,720 --> 00:00:05,690
+Tunggu, ini daftar tamu untuk
+pesta ulang tahun kan, Catherine?
+
+3
+00:00:05,690 --> 00:00:06,700
+Ya.
+
+4
+00:00:06,700 --> 00:00:08,169
+Semoga saya ada di daftar ini.
+
+5
+00:00:09,140 --> 00:00:10,470
+Yah, kita harus lihat dulu.
+
+6
+00:00:10,810 --> 00:00:13,950
+Wow, saya jadi merasa kecil hati.
+
+7
+00:00:13,950 --> 00:00:15,160
+Bicara tentang kecil,
+
+8
+00:00:15,160 --> 00:00:18,010
+mari kita bahas ukuran tampilan layar.
+
+9
+00:00:18,010 --> 00:00:21,180
+Kita sudah gunakan
+tinggi tetap tertulis, yaitu dp, kan?
+
+10
+00:00:21,180 --> 00:00:23,600
+- Ya, lebar dan tinggi.
+- Benar.
+
+11
+00:00:23,600 --> 00:00:25,640
+Kita juga bisa atur <i>wrap_content</i> tampilan.
+
+12
+00:00:25,640 --> 00:00:27,645
+Benar, cara yang aneh mengatakan bahwa...
+
+13
+00:00:27,645 --> 00:00:29,644
+...tampilannya akan menyesuaikan ruangnya.
+
+14
+00:00:29,644 --> 00:00:32,909
+Jika ruangnya besar,
+tampilan membesar. Dan sebaliknya.
+
+15
+00:00:32,909 --> 00:00:35,100
+Ya, dan sebenarnya ada
+yang ketiga yang bernama
+
+16
+00:00:35,100 --> 00:00:36,810
+<i>match_parent</i>.
+
+17
+00:00:36,810 --> 00:00:37,980
+Kedengarannya agak aneh.
+
+18
+00:00:37,980 --> 00:00:41,690
+Kedengarannya seperti situs kencan
+untuk orangtua tunggal.
+
+19
+00:00:41,690 --> 00:00:42,600
+Tidak juga.
+
+20
+00:00:42,600 --> 00:00:47,370
+<i>Match_parent</i> maksudnya tampilan
+akan selebar atau setinggi induknya.
+
+21
+00:00:47,370 --> 00:00:48,446
+Oh, itu masuk akal.
+
+22
+00:00:48,446 --> 00:00:50,450
+Saya adalah tampilan, saya punya orangtua.
+
+23
+00:00:50,450 --> 00:00:53,840
+Dan... lebar dan tinggi saya
+akan sama dengan orangtua saya.
+
+24
+00:00:53,840 --> 00:00:55,920
+Tepat, jadi untuk menyimpulkan,
+
+25
+00:00:55,920 --> 00:00:59,000
+beragam nilai yang bisa Anda atur
+untuk ukuran tampilan adalah...
+
+26
+00:00:59,000 --> 00:01:01,170
+...dp tetap untuk lebar dan tinggi.
+
+27
+00:01:01,170 --> 00:01:03,270
+Tepat. Anda juga bisa
+lakukan <i>wrap_content.</i>
+
+28
+00:01:03,270 --> 00:01:05,996
+Selanjutnya yang akan kita coba
+adalah <i>match_parent.</i>
+
+29
+00:01:06,660 --> 00:01:10,160
+Inilah beberapa contoh cara mengatur
+lebar yang berbeda pada tampilan anak
+
+30
+00:01:10,160 --> 00:01:13,770
+di LinearLayout yang dapat
+mempengaruhi hasil antarmuka.
+
+31
+00:01:13,770 --> 00:01:18,400
+Di contoh ini kami atur tiap tampilan anak
+untuk punya lebar tetap 200dp.
+
+32
+00:01:18,890 --> 00:01:22,590
+Jika ruang di dalam tiap tampilan
+lebih besar dari 200dp,
+
+33
+00:01:22,590 --> 00:01:25,730
+maka Anda berisiko memotong
+beberapa muatannya seperti ini.
+
+34
+00:01:26,220 --> 00:01:30,520
+Pada contoh ini kami atur lebar
+tiap tampilan anak menjadi <i>wrap_content</i>.
+
+35
+00:01:31,550 --> 00:01:33,500
+Sekarang semua muatannya pas,
+
+36
+00:01:33,500 --> 00:01:37,340
+tapi lebar tiap tampilannya beragam
+tergantung yang ada dalam tiap tampilan.
+
+37
+00:01:37,970 --> 00:01:41,650
+Pada contoh ini, kami atur lebar
+tiap tampilan anak menjadi <i>match_parent.</i>
+
+38
+00:01:41,930 --> 00:01:46,650
+Sekarang Anda lihat bahwa lebar tiap anak
+selebar induk kelompok tampilannya.
+
+39
+00:01:46,650 --> 00:01:48,950
+Terlepas isi di dalamnya.
+
+40
+00:01:49,680 --> 00:01:53,780
+Sekarang nilai yang sama itu juga bisa
+diaplikasikan untuk tinggi tiap tampilan.
+
+41
+00:01:54,070 --> 00:01:59,240
+Pada contoh ini kami atur
+tinggi TextView anak 200dp.
+
+42
+00:01:59,240 --> 00:02:01,570
+Jika isi di dalamnya lebih tinggi,
+
+43
+00:02:01,570 --> 00:02:04,490
+maka ada risiko muatannya terpotong.
+
+44
+00:02:05,170 --> 00:02:09,399
+Pada contoh ini, kami atur tinggi
+tampilan teks anak supaya <i>wrap_content.</i>
+
+45
+00:02:09,659 --> 00:02:12,040
+Dengan begitu semua muatan
+akan terlihat pada layar
+
+46
+00:02:12,040 --> 00:02:13,490
+dan tak ada yang terpotong,
+
+47
+00:02:13,500 --> 00:02:17,240
+karena ukuran TextView
+bergantung dari muatan di dalamnya.
+
+48
+00:02:17,800 --> 00:02:22,080
+Pada contoh ini, kami atur tinggi
+TextView anak menjadi <i>match_parent</i>
+
+49
+00:02:22,790 --> 00:02:25,300
+Dengan begitu tampilan anak
+setinggi orangtuanya,
+
+50
+00:02:25,300 --> 00:02:26,970
+terlepas konten di dalamnya.
+
+51
+00:02:27,600 --> 00:02:29,740
+Mari buka XML Visualizer
+
+52
+00:02:29,740 --> 00:02:32,980
+dan coba membuat kode
+yang lebih mirip induknya.
+
+53
+00:02:32,980 --> 00:02:34,960
+Kami berikan tautan ke XML Visualizer
+
+54
+00:02:34,960 --> 00:02:38,270
+dengan beberapa kode awal
+dalam catatan instruktur di bawah.
+
+55
+00:02:38,830 --> 00:02:42,300
+Pada kasus ini, LinearLayoutnya
+adalah tampilan pokok dari tata letaknya
+
+56
+00:02:42,300 --> 00:02:44,980
+karena ini adalah tampilan pertama
+dan yang paling luar.
+
+57
+00:02:45,400 --> 00:02:49,090
+Jika kita atur <i>match_parent</i> untuk lebar
+dan tingginya dari tampilan pokoknya,
+
+58
+00:02:49,090 --> 00:02:51,870
+dan kita atur ini sebagai
+tata letak utama aplikasi kita,
+
+59
+00:02:51,870 --> 00:02:55,790
+maka LinearLayout ini akan
+setinggi dan selebar layar pada perangkat.
+
+60
+00:02:56,640 --> 00:03:00,300
+Saya bisa tunjukkan dengan mengatur
+latar LinearLayout ini
+
+61
+00:03:00,300 --> 00:03:04,340
+menjadi warna yang tidak transparan.
+
+62
+00:03:04,340 --> 00:03:07,100
+Jika saya pasang warna latar
+abu-abu pada LinearLayout ini,
+
+63
+00:03:07,100 --> 00:03:11,560
+Anda bisa lihat bagaimana abu-abunya
+menjadi penuh pada layar perangkat.
+
+64
+00:03:11,560 --> 00:03:14,780
+Nah, apa yang terjadi jika saya ubah
+lebar atau tinggi tampilan teks
+
+65
+00:03:14,780 --> 00:03:15,980
+menjadi <i>match_parent</i>?
+
+66
+00:03:15,980 --> 00:03:18,450
+Untuk memperjelas
+di mana ikatan tiap tampilannya
+
+67
+00:03:18,450 --> 00:03:21,510
+saya akan atur
+warna latar di tiap tampilan.
+
+68
+00:03:21,510 --> 00:03:25,190
+Sekarang saya akan ubah tinggi
+tampilan teks menjadi <i>match_parent</i>.
+
+69
+00:03:25,520 --> 00:03:28,270
+Omong-omong, ejaannya<i>
+match</i>, garis bawah, <i>parent.</i>
+
+70
+00:03:28,270 --> 00:03:32,530
+Sekarang Anda lihat bahwa TextView ini
+memakan tinggi penuh induknya.
+
+71
+00:03:32,530 --> 00:03:35,290
+Sayangnya, ia menyingkirkan
+semuanya dari layar.
+
+72
+00:03:35,290 --> 00:03:36,580
+Kita tak menginginkan itu.
+
+73
+00:03:36,580 --> 00:03:38,760
+Jadi mari ubah kembali
+menjadi <i>wrap_content.</i>
+
+74
+00:03:39,190 --> 00:03:39,950
+Baik.
+
+75
+00:03:39,950 --> 00:03:43,159
+Mari kita ubah lebarnya menjadi<i>
+match_parent</i> dan lihat yang terjadi.
+
+76
+00:03:43,750 --> 00:03:47,600
+Sekarang lebar TextViewnya
+selebar induknya,
+
+77
+00:03:47,600 --> 00:03:50,750
+yang juga menjadi
+selebar layar perangkatnya.
+
+78
+00:03:51,750 --> 00:03:54,940
+Jika saya ubah TextView lain
+menjadi <i>match_parent</i>,
+
+79
+00:03:54,940 --> 00:03:58,610
+Anda bisa lihat itu juga mulai
+memakan lebar penuh induknya.
+
+80
+00:03:59,490 --> 00:04:01,740
+Saya juga mau bahas satu hal lagi.
+
+81
+00:04:01,740 --> 00:04:04,860
+Tiap kali Anda melihat atribut
+yang berawal dengan garis bawah,
+
+82
+00:04:04,860 --> 00:04:07,080
+seperti Layout_height dan Layout_width,
+
+83
+00:04:07,080 --> 00:04:09,960
+ini sebenarnya adalah
+parameter tata letak kelompok tampilan.
+
+84
+00:04:09,960 --> 00:04:11,890
+Ini digunakan kelompok tampilan induk
+
+85
+00:04:11,890 --> 00:04:15,279
+untuk menentukan
+ukuran dan posisi tampilan ini.
+
+86
+00:04:15,970 --> 00:04:19,540
+Sementara itu, atribut lain seperti
+latar, ukuran teks dan teks
+
+87
+00:04:19,540 --> 00:04:23,320
+ditangani oleh TextView untuk
+mengatur tampilannya sendiri.
+
+88
+00:04:23,320 --> 00:04:25,570
+Tapi parameter tata letak
+kelompok tampilan ini
+
+89
+00:04:25,570 --> 00:04:27,360
+ditangani oleh induknya.
+
+90
+00:04:27,360 --> 00:04:30,460
+Sekarang giliran Anda mencoba
+berbagai nilai lebar dan tinggi.
+
+91
+00:04:30,460 --> 00:04:33,890
+Untuk tautan ke XML Visualizer
+dengan beberapa kode awal,
+
+92
+00:04:33,890 --> 00:04:35,820
+lihat catatan instruktur di bawah.
+
+93
+00:04:35,820 --> 00:04:38,970
+Coba ubah nilai lebar dan tinggi
+untuk tiap TextView.
+
+94
+00:04:38,970 --> 00:04:43,270
+Anda bisa atur nilai dp tetap,<i>
+wrap_content</i>, atau <i>match_parent</i>.
+
+95
+00:04:43,270 --> 00:04:46,730
+Ingatlah untuk tiap tampilan,
+nilai lebar dan tingginya tak perlu cocok.
+
+96
+00:04:46,730 --> 00:04:48,600
+Jika sudah, centang untuk melanjutkan.
+

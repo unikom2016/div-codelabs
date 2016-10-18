@@ -1,0 +1,313 @@
+1
+00:00:00,330 --> 00:00:05,520
+Jika Anda belum lihat, tulisan 
+di layar telepon seluler ini sangat kecil.
+
+2
+00:00:05,520 --> 00:00:09,550
+Maksud saya, saya sulit melihatnya,
+maka saya membutuhkannya lebih besar.
+
+3
+00:00:09,550 --> 00:00:10,380
+Untungnya,
+
+4
+00:00:10,380 --> 00:00:14,800
+ada sebuah atribut yang bisa kita
+pakai untuk mengubah ukuran teks.
+
+5
+00:00:14,800 --> 00:00:17,210
+Oh, tetapi ada sebuah
+kesalahan di sini.
+
+6
+00:00:17,210 --> 00:00:20,600
+Di sini tertulis: komputer tidak
+bisa memahami <i>XML</i> saya.
+
+7
+00:00:20,600 --> 00:00:24,300
+Dua kali memeriksa kodenya saya
+melihat baris baru yang kita tambahkan
+
+8
+00:00:24,300 --> 00:00:28,090
+ternyata berwarna hitam, sedangkan
+semua baris di atasnya berwarna biru untuk
+
+9
+00:00:28,090 --> 00:00:30,760
+nama atributnya dan
+merah untuk nilai atributnya,
+
+10
+00:00:30,760 --> 00:00:32,580
+Jadi ada yang salah dengan baris ini.
+
+11
+00:00:32,580 --> 00:00:34,438
+Oh tunggu, saya melihatnya sekarang.
+
+12
+00:00:34,438 --> 00:00:38,190
+Ada garis miring sebelum tanda
+kurung lancip di sini.
+
+13
+00:00:38,190 --> 00:00:41,330
+Ini sebenarnya kesalahan umum
+bagi pemula untuk menambahkan atribut
+
+14
+00:00:41,330 --> 00:00:43,230
+setelah rangkaian perintah ditutup.
+
+15
+00:00:43,230 --> 00:00:46,290
+Secara teknis, ini berada
+di luar <i>XML limbo</i> atau
+
+16
+00:00:46,290 --> 00:00:50,080
+sesuatu karena ini tidak terikat
+dengan suatu elemen <i>XML</i>.
+
+17
+00:00:50,080 --> 00:00:54,050
+Yang sebenarnya kita inginkan yaitu
+memindahkan simbol-simbol ini ke sini.
+
+18
+00:00:54,050 --> 00:00:54,870
+Itu lebih baik.
+
+19
+00:00:54,870 --> 00:00:59,120
+Tidak ada kesalahan, dan <i>XML</i> ini valid,
+dan tulisan kita lebih besar.
+
+20
+00:00:59,120 --> 00:00:59,890
+
+
+21
+00:00:59,890 --> 00:01:01,630
+Sekarang, ini lebih mudah dibaca.
+
+22
+00:01:01,630 --> 00:01:04,819
+Perhatikan bagaimana ukuran teks
+diatur menjadi 45 sp.
+
+23
+00:01:04,819 --> 00:01:06,730
+Sp singkatan dari skala bebas piksel.
+
+24
+00:01:06,730 --> 00:01:11,290
+Itu adalah satuan yang serupa dengan dp
+yang membuat aplikasi tampak
+
+25
+00:01:11,290 --> 00:01:15,750
+konsisten terhadap peralatan yang berbeda
+dengan perbedaan kerapatan.
+
+26
+00:01:15,750 --> 00:01:19,840
+Sp hanya dipakai untuk <i>font</i> (ukuran teks)
+karena dapat diubah sesuai
+
+27
+00:01:19,840 --> 00:01:22,790
+dengan keinginan pengguna.
+
+28
+00:01:22,790 --> 00:01:24,300
+Mari kita melihatnya sekarang.
+
+29
+00:01:24,300 --> 00:01:26,090
+Ayo lihat letak pengaturannya.
+
+30
+00:01:26,090 --> 00:01:30,750
+Buka pengaturan aplikasi, lalu sentuh<i>
+Display</i>, dan ada satu pilihan untuk
+
+31
+00:01:30,750 --> 00:01:32,160
+ukuran teks.
+
+32
+00:01:32,160 --> 00:01:35,030
+Jika Anda mengkliknya,
+Anda bisa lihat berbagai ukuran teks.
+
+33
+00:01:35,030 --> 00:01:39,140
+Jika saya klik <i>Huge</i>, maka ukuran
+teks akan bertambah.
+
+34
+00:01:39,140 --> 00:01:42,670
+Jadi, selalu gunakan sp untuk
+menentukan ukuran teks agar dapat
+
+35
+00:01:42,670 --> 00:01:45,450
+diperbesar atau diperkecil
+sesuai keinginan pengguna.
+
+36
+00:01:45,450 --> 00:01:48,270
+Sebentar lagi Anda akan mengubah ukuran
+teks dari <i>text view</i>.
+
+37
+00:01:48,270 --> 00:01:50,600
+Pertama-tama saya ingin
+menunjukkan sesuatu.
+
+38
+00:01:50,600 --> 00:01:52,690
+Ini adalah <i>material design spec</i>.
+
+39
+00:01:52,690 --> 00:01:55,450
+Ini merupakan bahasa pemograman
+desain baru dari Google
+
+40
+00:01:55,450 --> 00:01:57,620
+untuk membantu membuat
+aplikasi yang indah dan
+
+41
+00:01:57,620 --> 00:02:02,490
+konsisten di semua peralatan dan platform,
+seperti web dan <i>mobile</i>.
+
+42
+00:02:02,490 --> 00:02:04,970
+Spesifikasi desain, atau<i>
+design spec</i> singkatnya,
+
+43
+00:02:04,970 --> 00:02:08,270
+menonjolkan hal terbaik untuk
+mendesain aplikasi Anda.
+
+44
+00:02:08,270 --> 00:02:12,110
+Ia menyediakan panduan tata letak
+dari aplikasi Anda, gaya visual,
+
+45
+00:02:12,110 --> 00:02:13,870
+pencitraan, animasi, dan lain-lain.
+
+46
+00:02:13,870 --> 00:02:17,450
+Ada juga bagian tipografi, atau <i>font</i>.
+
+47
+00:02:17,450 --> 00:02:20,350
+Ini daftar seluruh informasi yang
+bisa Anda baca nanti.
+
+48
+00:02:20,350 --> 00:02:22,520
+Namun yang terpenting adalah
+panduan di sini,
+
+49
+00:02:22,520 --> 00:02:24,370
+yang membahas anjuran ukuran teks.
+
+50
+00:02:24,370 --> 00:02:26,510
+Jika Anda menampilkan<i>
+header</i> yang besar,
+
+51
+00:02:26,510 --> 00:02:28,950
+Anda bisa menggunakan
+beberapa ukuran teks.
+
+52
+00:02:28,950 --> 00:02:31,890
+Jika Anda membuat judul
+atau badan teks atau keterangan,
+
+53
+00:02:31,890 --> 00:02:33,590
+Anda bisa pakai ukuran-ukuran ini.
+
+54
+00:02:33,590 --> 00:02:37,180
+Ini akan menuntun Anda dalam memilih
+
+55
+00:02:37,180 --> 00:02:38,760
+sesuai dengan kebutuhan Anda.
+
+56
+00:02:38,760 --> 00:02:41,200
+Namun hati-hati, bila Anda
+memilih terlalu banyak
+
+57
+00:02:41,200 --> 00:02:44,440
+ukuran atau gaya,
+pengguna akan kebingungan.
+
+58
+00:02:44,440 --> 00:02:48,500
+Maka pilihlah beberapa gaya untuk
+menampilkan informasi yang Anda inginkan.
+
+59
+00:02:48,500 --> 00:02:49,850
+Saat Anda mengubah ukuran
+
+60
+00:02:49,850 --> 00:02:53,050
+teks untuk <i>TextView</i>
+cobalah sepasang nilai ini.
+
+61
+00:02:53,050 --> 00:02:57,120
+Lanjutkan dan ubah ukuran teks <i>TextWiew</i>
+dengan <i>material design spec</i>.
+
+62
+00:02:57,120 --> 00:02:57,960
+Bila Anda siap
+
+63
+00:02:57,960 --> 00:03:01,550
+dengan tantangan, anda bisa mempelajari
+atribut tampilan teks dari
+
+64
+00:03:01,550 --> 00:03:04,540
+"Google+ Android Dev Protip" yang
+ada di bawah ini.
+
+65
+00:03:04,540 --> 00:03:08,100
+Anda juga bisa mencobanya
+di <i>XML Visualizer</i>.
+
+66
+00:03:08,100 --> 00:03:10,420
+Link ke <i>XML Visualizer</i>
+dengan kode bagi Anda
+
+67
+00:03:10,420 --> 00:03:12,010
+untuk memulai ada di bawah ini.
+

@@ -1,0 +1,146 @@
+1
+00:00:00,190 --> 00:00:03,780
+Bagus sekali. Mari lihat satu hal lagi
+yang bisa Anda ubah.
+
+2
+00:00:04,800 --> 00:00:09,210
+Perhatikan ini tertulis android:color
+dan disebut abu-abu tua.
+
+3
+00:00:09,210 --> 00:00:12,390
+Saya mau mengubahnya menjadi hitam
+
+4
+00:00:12,390 --> 00:00:13,820
+atau mungkin putih.
+
+5
+00:00:14,620 --> 00:00:17,630
+Dan kita lihat ini berubah
+pada perangkatnya di sebelah kanan.
+
+6
+00:00:18,290 --> 00:00:20,790
+Bagaimana jika kita ubah
+jadi warna kesukaan saya?
+
+7
+00:00:20,790 --> 00:00:21,555
+Biru.
+
+8
+00:00:21,555 --> 00:00:25,000
+Tidak begitu berhasil
+karena warnanya tak ditunjang.
+
+9
+00:00:25,000 --> 00:00:29,460
+Warna yang ditunjang Android sedikit,
+tapi Anda tetap dapat mengakses
+
+10
+00:00:29,460 --> 00:00:34,030
+banyak warna lain dengan merincikan
+kode warna heksa dengan tepat.
+
+11
+00:00:34,030 --> 00:00:38,920
+Anda dapat menemukannya
+di spesifikasi warna Material Design.
+
+12
+00:00:39,700 --> 00:00:42,830
+Jadi tiap warna ini
+diberi nama dari tim materialnya,
+
+13
+00:00:42,830 --> 00:00:45,690
+seperti 50, 100, 200.
+
+14
+00:00:45,690 --> 00:00:50,470
+Jadi mari kita pilih biru di sini,
+dan klik ganda untuk menyalinnya,
+
+15
+00:00:50,470 --> 00:00:55,330
+lihat kodenya, dan alih-alih biru,
+
+16
+00:00:55,330 --> 00:01:01,430
+saya akan ganti dengan tanda pagar (#)
+dan kode warna heksanya.
+
+17
+00:01:01,430 --> 00:01:05,489
+Bagus. Sekarang latar tampilan
+teksnya berwarna biru.
+
+18
+00:01:05,489 --> 00:01:07,130
+Kelihatannya lumayan bagus.
+
+19
+00:01:07,130 --> 00:01:11,360
+Sekarang Anda mungkin bertanya
+apakah warna teks juga bisa diubah.
+
+20
+00:01:11,360 --> 00:01:12,950
+Tentu saja bisa.
+
+21
+00:01:12,950 --> 00:01:14,780
+Tambahkan di sini.
+
+22
+00:01:14,780 --> 00:01:21,600
+android : textColor =, dan saya bisa
+rincikan nilai heksanya dalam tanda kutip.
+
+23
+00:01:21,600 --> 00:01:26,720
+Kembali ke panduan warna
+dan pilih warna secara acak.
+
+24
+00:01:27,350 --> 00:01:31,090
+Saya suka hijau, bolehlah pakai warna ini.
+
+25
+00:01:31,090 --> 00:01:35,300
+Salin dan letakkan di antara tanda kutip.
+
+26
+00:01:35,300 --> 00:01:38,650
+Tanda pagar (#) dan kode heksa.
+
+27
+00:01:38,650 --> 00:01:44,320
+Bagus. Sekarang pada perangkat terlihat
+warna teks hijau di atas latar biru.
+
+28
+00:01:44,320 --> 00:01:45,360
+Nah, giliran Anda.
+
+29
+00:01:45,360 --> 00:01:48,410
+Ubah warna latarnya dan teks dari TextView
+
+30
+00:01:48,410 --> 00:01:51,740
+menjadi dua warna yang berbeda
+dari spesifikasi Material Design.
+
+31
+00:01:51,740 --> 00:01:56,590
+Ini tertaut di bawah.
+Juga XML Visualizer dengan kode awalnya.
+
+32
+00:01:56,590 --> 00:01:57,790
+Selamat bersenang-senang.
+

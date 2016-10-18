@@ -1,0 +1,372 @@
+1
+00:00:00,142 --> 00:00:03,975
+Dokumentasi untuk Android ada di
+situs <i>developer.android.com.</i>
+
+2
+00:00:04,000 --> 00:00:06,955
+Itu berisi banyak informasi berguna,
+seperti sampel kode,
+
+3
+00:00:06,980 --> 00:00:08,715
+tutorial dan artikel.
+
+4
+00:00:08,740 --> 00:00:11,747
+Dapat dianggap sebagai panduan manual
+cara membuat aplikasi.
+
+5
+00:00:11,772 --> 00:00:15,733
+Saya menggunakan situs ini tiap hari,
+dan sering saya mencari dengan Google.
+
+6
+00:00:15,758 --> 00:00:17,208
+Saya akan tunjukkan maksudnya.
+
+7
+00:00:17,233 --> 00:00:19,844
+Mari kita lihat dokumentasi
+untuk TextView.
+
+8
+00:00:19,869 --> 00:00:22,912
+Jadi, saya mencari
+tampilan teks Android.
+
+9
+00:00:22,937 --> 00:00:26,619
+Tautan teratas yang muncul adalah
+situs <i>developer.android.com</i>,
+
+10
+00:00:26,644 --> 00:00:28,085
+jadi saya klik tautan itu.
+
+11
+00:00:28,110 --> 00:00:31,753
+Inilah yang disebut referensi
+dokumentasi untuk TextView.
+
+12
+00:00:31,778 --> 00:00:35,325
+Pastinya banyak informasi di laman ini
+dan bisa membingungkan.
+
+13
+00:00:35,325 --> 00:00:37,635
+Biasanya saat kita mencari
+referensi dokumentasi,
+
+14
+00:00:37,660 --> 00:00:39,842
+kita mencoba memecahkan
+masalah spesifik.
+
+15
+00:00:39,867 --> 00:00:43,080
+Kita sebenarnya menyaring
+seluruh informasi tak penting
+
+16
+00:00:43,105 --> 00:00:44,446
+yang tidak dibutuhkan.
+
+17
+00:00:44,471 --> 00:00:47,931
+Saat masuk ke laman ini, saya memeriksa
+bahwa ini memang untuk TextView.
+
+18
+00:00:47,956 --> 00:00:51,439
+Saya mungkin membaca Class Overview,
+lalu menggulir ke bawah.
+
+19
+00:00:51,464 --> 00:00:55,083
+Ini bagian yang menarik.
+Daftar atribut XML.
+
+20
+00:00:55,108 --> 00:00:59,288
+Ini semua kemungkinan
+atribut XML untuk TextView.
+
+21
+00:00:59,313 --> 00:01:03,597
+Terdapat juga penjelasan yang bagus
+tentang kegunaannya di sebelah kanan.
+
+22
+00:01:03,622 --> 00:01:06,774
+Kita tak perlu menghafal
+seluruh atribut ini.
+
+23
+00:01:06,799 --> 00:01:08,901
+Sebenarnya, saya belum menggunakannya.
+
+24
+00:01:08,926 --> 00:01:12,681
+Biasanya saya bekerja dengan
+sebagian kecil darinya.
+
+25
+00:01:12,706 --> 00:01:15,455
+Tapi jika butuh sesuatu
+yang spesial, saya bisa membuka
+
+26
+00:01:15,480 --> 00:01:19,126
+dokumen TextView
+untuk mencari atribut spesifik.
+
+27
+00:01:19,151 --> 00:01:20,870
+Inilah yang kita kenali.
+
+28
+00:01:20,895 --> 00:01:22,606
+Android:textSize.
+
+29
+00:01:22,631 --> 00:01:26,630
+Klik saja, dan terhubung
+ke penjelasan atribut ini.
+
+30
+00:01:26,655 --> 00:01:29,479
+Ini tertera bahwa pengendali ini
+mengubah ukuran teks.
+
+31
+00:01:29,504 --> 00:01:32,319
+Dan tipe dimensi yang disarankan
+untuk teks adalah sp,
+
+32
+00:01:32,344 --> 00:01:35,930
+singkatan dari <i>scaled pixels</i>
+[skala piksel], contohnya, 15sp.
+
+33
+00:01:35,955 --> 00:01:37,780
+Keren, kita pelajari ini lebih awal.
+
+34
+00:01:37,805 --> 00:01:41,095
+Dan jika lupa, kita bisa selalu kembali
+ke dokumentasi TextView
+
+35
+00:01:41,120 --> 00:01:43,212
+dan mencari apa atributnya.
+
+36
+00:01:43,237 --> 00:01:46,966
+Misalkan saya tidak tahu namanya
+yang benar.
+
+37
+00:01:46,991 --> 00:01:50,685
+Di laman pencari, kita bisa gunakan
+fitur pencari untuk mencari halaman itu.
+
+38
+00:01:50,710 --> 00:01:54,707
+Cara lainnya, membuka jendela Find
+menggunakan Cmd+F di Mac,
+
+39
+00:01:54,732 --> 00:01:56,581
+atau Ctrl+F di Windows.
+
+40
+00:01:56,606 --> 00:01:58,684
+Lalu, saya bisa ketikkan
+apa yang dicari.
+
+41
+00:01:58,709 --> 00:02:00,399
+Sebagai contoh, saya mencari
+
+42
+00:02:00,410 --> 00:02:04,468
+cara mengubah huruf
+menjadi huruf besar di TextView.
+
+43
+00:02:04,493 --> 00:02:09,585
+Ini bisa berguna, misalnya, jika saya
+mencoba menunjukkan <i>tab</i> seperti ini, atau
+
+44
+00:02:09,610 --> 00:02:12,575
+jika saya membuat <i>snack bar</i> di
+bagian bawah layar,
+
+45
+00:02:12,600 --> 00:02:14,965
+seperti teks <i>UNDO</i> ini dalam huruf besar.
+
+46
+00:02:14,990 --> 00:02:16,983
+Tombol juga semuanya dalam huruf besar.
+
+47
+00:02:17,008 --> 00:02:21,165
+Kembali ke dokumentasi TextView,
+saya bisa mencari huruf besar.
+
+48
+00:02:21,190 --> 00:02:24,474
+Saya bisa menjelajah seluruh hasil,
+tapi ini kelihatannya cukup bagus.
+
+49
+00:02:24,499 --> 00:02:29,250
+Tertulis ada atribut XML
+bernama <i>android:textAllCaps</i>,
+
+50
+00:02:29,275 --> 00:02:32,857
+dan penjelasan ini mengatakan
+untuk mengubah teks jadi huruf besar.
+
+51
+00:02:32,882 --> 00:02:34,830
+Jika saya klik dan membaca penjelasannya,
+
+52
+00:02:34,855 --> 00:02:38,395
+sepertinya, itulah yang saya cari,
+dan menyebutkan nilai kemungkinan untuk
+
+53
+00:02:38,420 --> 00:02:41,365
+atribut ini adalah benar atau salah.
+
+54
+00:02:41,390 --> 00:02:43,447
+Jadi, saya bisa mencoba ini dengan kode.
+
+55
+00:02:43,472 --> 00:02:47,457
+Jadi, saya kembali ke XML Visualizer,
+misalkan saya punya TextView ini di layar
+
+56
+00:02:47,482 --> 00:02:49,667
+dan ingin mengubahnya menjadi huruf besar.
+
+57
+00:02:49,692 --> 00:02:53,102
+Berdasarkan dokumentasi, saya bisa
+menambah atribut ini yaitu
+
+58
+00:02:53,102 --> 00:02:58,410
+<i>android:textAllCaps</i>, lalu saya bisa
+atur menjadi benar atau salah.
+
+59
+00:02:58,435 --> 00:03:02,109
+Jika saya atur menjadi benar, maka
+semuanya menjadi huruf besar. Keren.
+
+60
+00:03:02,134 --> 00:03:04,752
+Hal keren dari atribut ini
+saya tak perlu membuat
+
+61
+00:03:04,777 --> 00:03:06,129
+dan mengubah teks.
+
+62
+00:03:06,154 --> 00:03:09,645
+Seperti, <i>'OH THE POSSIBILITES'</i>
+semuanya jadi huruf besar.
+
+63
+00:03:09,670 --> 00:03:12,762
+Saya bisa biarkan teks seperti itu,
+dan yang perlu dilakukan
+
+64
+00:03:12,787 --> 00:03:16,438
+hanya mengunci atribut ini
+untuk mengubahnya dari benar ke salah.
+
+65
+00:03:16,463 --> 00:03:18,231
+Sekarang giliran Anda berlatih.
+
+66
+00:03:18,256 --> 00:03:21,739
+Lihatlah dokumentasinya lalu
+perbarui kode Anda dengan benar
+
+67
+00:03:21,764 --> 00:03:24,334
+untuk mencobanya,
+hal itu sangat membutuhkan keahlian.
+
+68
+00:03:24,359 --> 00:03:25,843
+Artinya kita tak perlu hapal
+
+69
+00:03:25,868 --> 00:03:28,659
+semua yang kita ingin lakukan di Android.
+
+70
+00:03:28,684 --> 00:03:31,706
+Kita hanya perlu cari di Google
+dan bisa ditemukan kapan saja.
+
+71
+00:03:31,731 --> 00:03:34,633
+Pertama, saya ingin Anda cari
+di Google <i>"textview android"</i>.
+
+72
+00:03:34,658 --> 00:03:37,111
+untuk menemukan referensi
+dokumentasi TextView.
+
+73
+00:03:37,136 --> 00:03:40,955
+Saya ingin kalian gunakan fitur Find
+di <i>browser</i> untuk mencari
+
+74
+00:03:40,980 --> 00:03:45,705
+laman atribut XML yang mengubah
+TextView jadi tebal atau miring.
+
+75
+00:03:45,730 --> 00:03:49,379
+Kita belum membahas atribut XML ini.
+Jadi, ini kesempatan bagus bagi Anda
+
+76
+00:03:49,404 --> 00:03:51,016
+untuk mempelajarinya sendiri.
+
+77
+00:03:51,016 --> 00:03:53,888
+Saat menemukan sesuatu yang
+mungkin bekerja, cobalah gunakan.
+
+78
+00:03:53,888 --> 00:03:55,895
+Jika tidak berhasil, bukan masalah.
+
+79
+00:03:55,920 --> 00:03:59,000
+Kembalilah ke dokumentasi sampai
+menemukan yang dapat digunakan.
+

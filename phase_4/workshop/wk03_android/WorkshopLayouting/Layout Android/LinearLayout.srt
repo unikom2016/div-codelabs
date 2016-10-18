@@ -1,0 +1,393 @@
+1
+00:00:00,200 --> 00:00:02,440
+Kita sudah lihat bagaimana
+tata letak linear ini
+
+2
+00:00:02,440 --> 00:00:05,270
+mencakup dua tampilan
+teks anak di dalamnya.
+
+3
+00:00:05,270 --> 00:00:08,480
+Omong-omong, warna latar ini
+hanya alat bantu untuk mengajarkan Anda
+
+4
+00:00:08,480 --> 00:00:13,130
+memahami bahwa dua tampilan teks anak
+berada di dalam induknya.
+
+5
+00:00:13,130 --> 00:00:15,940
+Warna merah dan biru sebenarnya
+takkan terlihat di perangkat
+
+6
+00:00:15,940 --> 00:00:20,100
+kecuali Anda secara spesifik mengaturnya
+sebagai warna latar pada tampilan ini.
+
+7
+00:00:20,100 --> 00:00:23,110
+Untuk menunjukkan yang saya maksud
+mari buka XML Visualizer.
+
+8
+00:00:23,110 --> 00:00:25,270
+Jika kita masukkan kode
+pada XML Visualizer,
+
+9
+00:00:25,270 --> 00:00:27,570
+kelihatannya seperti ini pada perangkat.
+
+10
+00:00:27,570 --> 00:00:30,020
+Pertama-tama ada
+kelompok tampilan LinearLayout,
+
+11
+00:00:30,020 --> 00:00:33,850
+dan ini transparan karena
+tak ada warna latar yang dipasang.
+
+12
+00:00:33,850 --> 00:00:36,680
+Anak pertama adalah TextView
+yang mengatur daftar tamu,
+
+13
+00:00:36,680 --> 00:00:38,780
+jadi itu muncul di atas sini.
+
+14
+00:00:38,780 --> 00:00:41,580
+Anak kedua adalah TextView
+yang bertuliskan Kunal
+
+15
+00:00:41,580 --> 00:00:44,020
+dan muncul di bawah TextView pertama.
+
+16
+00:00:44,020 --> 00:00:47,540
+Nah, jika saya salin TextView ini
+dan meletakkannya di bawah yang ini,
+
+17
+00:00:47,540 --> 00:00:49,760
+menurut Anda apa yang akan terjadi?
+
+18
+00:00:49,760 --> 00:00:54,270
+Ya, muncul Kunal lain
+di bawah yang pertama.
+
+19
+00:00:54,270 --> 00:00:57,340
+Baik, jadi polanya, jika
+kita tambahkan TextView lagi di sini,
+
+20
+00:00:57,340 --> 00:01:01,570
+maka akan muncul
+di bawah TextView yang terakhir.
+
+21
+00:01:01,570 --> 00:01:03,570
+Mari kita lihat kodenya lebih seksama.
+
+22
+00:01:03,570 --> 00:01:05,655
+Diawali dengan kurung sudut buka
+
+23
+00:01:05,655 --> 00:01:08,230
+dan nama tampilan, yaitu LinearLayout.
+
+24
+00:01:08,230 --> 00:01:12,120
+Lalu ia mengurutkan sekelompok atribut
+dan kemudian ada kurung sudut tutup.
+
+25
+00:01:12,120 --> 00:01:14,140
+Perhatikan, tak ada garis miring karena...
+
+26
+00:01:14,140 --> 00:01:16,910
+...ini adalah <i>tag</i> pembuka LinearLayout.
+
+27
+00:01:16,910 --> 00:01:19,270
+<i>Tag</i> penutupnya ada di bawah sini,
+
+28
+00:01:19,270 --> 00:01:21,470
+karena kita mau memasukkan
+elemen anak-anaknya
+
+29
+00:01:21,470 --> 00:01:24,470
+di antara <i>tag</i> pembuka dan penutup.
+
+30
+00:01:24,470 --> 00:01:28,430
+Tapi contoh, untuk tampilan teks ini,
+karena tak ada anak di antaranya,
+
+31
+00:01:28,430 --> 00:01:31,330
+maka kita pakai saja<i>
+tag</i> penutup sendiri di situ.
+
+32
+00:01:31,330 --> 00:01:35,280
+Sama juga halnya dengan
+TextView di sini, dan juga yang ini.
+
+33
+00:01:35,280 --> 00:01:38,410
+Jadi saat kita bilang kelompok tampilan
+mencakup tampilan anaknya,
+
+34
+00:01:38,410 --> 00:01:42,610
+kemudian kita harus memasukkannya
+di antara <i>tag</i> pembuka dan penutup.
+
+35
+00:01:42,610 --> 00:01:45,770
+Nah, hal lain yang mungkin Anda tahu
+adalah atribut yang bernama...
+
+36
+00:01:45,770 --> 00:01:48,670
+...android:orientation="vertical".
+
+37
+00:01:48,670 --> 00:01:50,330
+Kita belum pernah melihatnya,
+
+38
+00:01:50,330 --> 00:01:54,040
+jadi mari lihat ke dokumentasi Android
+seperti yang saya tunjukkan sebelumnya.
+
+39
+00:01:54,680 --> 00:01:59,075
+Saya buka jendela perambah baru,
+dan ketik 'android orientation'.
+
+40
+00:01:59,075 --> 00:02:01,275
+hasil yang pertama adalah LinearLayout,
+
+41
+00:02:01,275 --> 00:02:03,555
+itu ada di situs developer.android.com.
+
+42
+00:02:03,555 --> 00:02:04,495
+Mari kita klik.
+
+43
+00:02:04,495 --> 00:02:07,505
+Seperti dokumentasi TextView,
+ini agak membingungkan.
+
+44
+00:02:07,505 --> 00:02:09,935
+Kita bisa abaikan kebanyakan teks ini.
+
+45
+00:02:09,935 --> 00:02:13,610
+Kita hanya perlu memverifikasi bahwa
+ini memang halaman LinearLayout,
+
+46
+00:02:13,610 --> 00:02:16,540
+dan kita gulir ke bawah
+dan lihat pada atribut XML-nya.
+
+47
+00:02:17,210 --> 00:02:21,110
+Nah, kita sedang melihat atribut
+yang bernama orientasi Android,
+
+48
+00:02:21,430 --> 00:02:22,390
+dan ini dia.
+
+49
+00:02:22,390 --> 00:02:24,510
+Mari kita klik untuk melihat detailnya.
+
+50
+00:02:25,390 --> 00:02:27,960
+Penjelasannya mengatakan bahwa atribut ini
+
+51
+00:02:27,960 --> 00:02:31,660
+menentukan apakah tata letaknya
+kolom atau baris.
+
+52
+00:02:31,660 --> 00:02:35,130
+Nilai atributnya harus
+horizontal untuk baris
+
+53
+00:02:35,130 --> 00:02:37,450
+dan vertikal untuk kolom.
+
+54
+00:02:37,980 --> 00:02:40,350
+Lalu ia menyebutkan dua nilai di sini.
+
+55
+00:02:40,350 --> 00:02:45,530
+Bagus. Jadi kode kita sekarang ini
+mengatakan orientasi Androidnya vertikal,
+
+56
+00:02:45,530 --> 00:02:49,410
+itu menjelaskan mengapa
+tampilan yang muncul adalah kolom.
+
+57
+00:02:49,410 --> 00:02:53,950
+Nah, supaya kita tahu,
+kita coba juga nilai yang lain.
+
+58
+00:02:53,950 --> 00:02:57,840
+Mari atur orientasinya menjadi horizontal
+dan lihat apa yang terjadi.
+
+59
+00:02:57,840 --> 00:03:00,410
+Saya akan buka kodenya
+dan hapus nilai vertikal.
+
+60
+00:03:00,410 --> 00:03:05,560
+Saya ketik horizontal, dan lihat.
+Sekarang tampilannya baris horizontal.
+
+61
+00:03:05,560 --> 00:03:09,430
+Saya tak tahu Anda bagaimana, tapi saya
+tak suka membaca daftar tamu horizontal.
+
+62
+00:03:09,820 --> 00:03:12,530
+Tapi masih ada kasus lain yang berguna
+
+63
+00:03:12,530 --> 00:03:15,070
+di mana Anda akan menggunakan
+LinearLayout horizontal.
+
+64
+00:03:15,070 --> 00:03:17,280
+Contoh, jika Anda membuat daftar barang,
+
+65
+00:03:17,280 --> 00:03:21,300
+Anda mungkin mau ada gambar di sisi kiri,
+dan penjelasannya di sisi kanan.
+
+66
+00:03:22,030 --> 00:03:25,200
+Saya akan biarkan Anda
+mencoba ini sendiri nanti,
+
+67
+00:03:25,200 --> 00:03:28,210
+tapi pertama-tama, saya ingin ingatkan
+baris kode tambahan ini.
+
+68
+00:03:28,210 --> 00:03:31,260
+Ini adalah pernyataan XML NameSpace.
+
+69
+00:03:31,260 --> 00:03:36,020
+Kita gunakan NameSpace ini untuk
+menyatakan bahwa semua atribut di sini
+
+70
+00:03:36,020 --> 00:03:38,200
+adalah milik Android.
+
+71
+00:03:38,200 --> 00:03:40,940
+Itu sebabnya semua berawal
+dengan tanda titik dua Android.
+
+72
+00:03:40,940 --> 00:03:45,580
+Ini cara cepat penting untuk
+URL khusus ini yang unik pada Android.
+
+73
+00:03:45,580 --> 00:03:48,390
+Anda bisa menyesuaikan
+atribut Anda sendiri.
+
+74
+00:03:48,390 --> 00:03:52,840
+Jadi untuk mencegah konflik penamaan,
+di mana dua atribut punya nama yang sama,
+
+75
+00:03:52,840 --> 00:03:57,595
+tapi sebenarnya punya <i>behavior</i> berbeda,
+kita selalu menambahkan awalan ini,
+
+76
+00:03:57,595 --> 00:04:02,430
+'android:', untuk menandakan bahwa
+ini adalah atribut Android.
+
+77
+00:04:02,430 --> 00:04:06,970
+Pada dasarnya, ingatlah selalu untuk
+menambahkan pernyataan XML NameSpace ini
+
+78
+00:04:06,970 --> 00:04:10,590
+di <i>tag</i> pembuka pada
+pokok tampilan berkas XML Anda.
+
+79
+00:04:11,710 --> 00:04:12,910
+Sekarang giliran Anda.
+
+80
+00:04:12,910 --> 00:04:16,490
+Sekarang kami ingin Anda bisa
+bereksperimen dengan kode LinearLayout.
+
+81
+00:04:16,630 --> 00:04:19,930
+Coba tambahkan TextView lagi
+sehingga lebih banyak item pada kolom.
+
+82
+00:04:20,460 --> 00:04:23,750
+Siapa yang akan Anda tuliskan
+di daftar tamu eksklusif pesta Anda?
+
+83
+00:04:24,500 --> 00:04:28,050
+Cobalah juga untuk mengubah
+atribut orientasi LinearLayout.
+
+84
+00:04:28,220 --> 00:04:30,890
+Ingatlah bahwa ini bisa diatur
+vertikal atau horizontal.
+

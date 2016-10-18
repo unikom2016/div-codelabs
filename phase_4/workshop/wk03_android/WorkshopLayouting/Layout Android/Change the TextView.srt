@@ -1,0 +1,374 @@
+1
+00:00:00,400 --> 00:00:03,923
+Baik, kita sudah lihat
+kode TextView pertama kalinya.
+
+2
+00:00:03,923 --> 00:00:05,911
+Tapi sepertinya masih belum jelas.
+
+3
+00:00:05,911 --> 00:00:09,025
+Benar, kita butuh ruang sebagai tempatnya.
+
+4
+00:00:09,025 --> 00:00:10,521
+Ya, ruang itu bernama IDE.
+
+5
+00:00:10,521 --> 00:00:12,541
+- Nah, ada singkatan lagi.
+- Ya.
+
+6
+00:00:12,541 --> 00:00:15,782
+- Apa kepanjangannya, Catherine?
+- <i>Integrated Development Environment</i>
+
+7
+00:00:15,782 --> 00:00:19,660
+Benar. Kita akan gunakan
+Android Studio di kelas ini.
+
+8
+00:00:19,660 --> 00:00:21,650
+Seperti inilah kelihatannya.
+
+9
+00:00:21,650 --> 00:00:23,280
+Masih sedikit mengintimidasi.
+
+10
+00:00:23,280 --> 00:00:24,870
+Ya. Sepertinya kita butuh sesuatu
+
+11
+00:00:24,870 --> 00:00:27,560
+yang akan membantu siswa
+memahami dengan lebih mudah.
+
+12
+00:00:27,560 --> 00:00:32,166
+Benar, jadi kami telah membuat sesuatu
+yaitu Android Studio untuk pelatihan,
+
+13
+00:00:32,166 --> 00:00:36,237
+dalam tradisi singkatan berbelit
+pada ilmu komputer.
+
+14
+00:00:36,237 --> 00:00:37,568
+Kami menyebutnya XMLV.
+
+15
+00:00:37,568 --> 00:00:39,304
+Kepanjangannya XML Visualizer.
+
+16
+00:00:39,304 --> 00:00:42,360
+Jadi, Anda menulis sedikit XML?
+Anda harus melihat keluarannya.
+
+17
+00:00:42,360 --> 00:00:44,560
+Anda menulis lagi,
+Anda mendapat keluaran lagi.
+
+18
+00:00:44,560 --> 00:00:46,170
+Ya. Jadi mari kita gunakan.
+
+19
+00:00:46,170 --> 00:00:47,420
+Baik.
+
+20
+00:00:47,420 --> 00:00:51,600
+Karena XML Visualizer
+dibuat khusus untuk kursus ini,
+
+21
+00:00:51,600 --> 00:00:55,190
+tidak semua fungsi Android Studionya ada.
+
+22
+00:00:55,190 --> 00:00:57,770
+Tapi akhirnya, masalah yang dibuat
+untuk pelajaran ini,
+
+23
+00:00:57,770 --> 00:01:01,310
+Anda akan gunakan Android Studio
+sehingga Anda tidak butuh situs ini lagi.
+
+24
+00:01:02,450 --> 00:01:05,670
+Tautan ada di catatan instruktur
+jika Anda ingin mengikutinya.
+
+25
+00:01:05,670 --> 00:01:08,110
+Untuk kode ini,
+teksnya tertulis <i>Happy Birthday.</i>
+
+26
+00:01:08,110 --> 00:01:12,190
+Jadi ketika saya lihat pada perangkat,
+tulisannya <i>Happy Birthday.</i>
+
+27
+00:01:12,190 --> 00:01:15,320
+Nah, mari coba ubah teksnya
+menjadi <i>Happy Birthday, Kunal.</i>
+
+28
+00:01:16,350 --> 00:01:19,550
+Jika saya besarkan tampilannya,
+Anda bisa lihat sekarang tulisannya,
+
+29
+00:01:19,550 --> 00:01:21,270
+<i>Happy Birthday, Kunal.</i>
+
+30
+00:01:21,270 --> 00:01:24,250
+Dan apa yang terjadi jika
+kita ubah lebar dan tingginya.
+
+31
+00:01:24,250 --> 00:01:26,310
+Saya coba pakai nilai asal saja seperti...
+
+32
+00:01:26,310 --> 00:01:30,630
+...300dp untuk lebarnya
+dan 500dp untuk tingginya.
+
+33
+00:01:31,150 --> 00:01:34,309
+Dan sekarang di panel tampilan,
+Anda lihat TextView lebih besar.
+
+34
+00:01:35,160 --> 00:01:39,510
+Tapi ukuran teksnya
+masih sama di pojok kiri atas.
+
+35
+00:01:40,640 --> 00:01:43,990
+Perhatikan untuk nilai lebar
+dan tingginya 300 dan 500
+
+36
+00:01:43,990 --> 00:01:48,400
+diikuti dengan dp di setiap angkanya.
+
+37
+00:01:48,400 --> 00:01:51,750
+Ini adalah satuan unit
+seperti centimeter atau milimeter,
+
+38
+00:01:51,750 --> 00:01:55,120
+yang digunakan untuk menggambarkan
+ukuran tampilan di Android
+
+39
+00:01:55,120 --> 00:01:57,570
+dan juga jarak antar tampilan.
+
+40
+00:01:58,360 --> 00:01:59,640
+Satuan dp kepanjangan dari
+
+41
+00:01:59,640 --> 00:02:02,110
+<i>density-independent pixels</i>
+(piksel bebas kepadatan).
+
+42
+00:02:02,540 --> 00:02:04,840
+Mari saya jelaskan
+mengapa kita membutuhkannya.
+
+43
+00:02:04,840 --> 00:02:09,030
+Katakanlah kotak yang indah ini
+mewakili perangkat yang berbeda.
+
+44
+00:02:09,030 --> 00:02:14,230
+Ukuran fisiknya sama,
+tapi resolusinya beda.
+
+45
+00:02:14,230 --> 00:02:18,980
+Ini adalah perangkat resolusi menengah
+dengan piksel ukuran sedang pada layar,
+
+46
+00:02:18,980 --> 00:02:22,580
+perangkat resolusi tinggi,
+dan ekstra tinggi.
+
+47
+00:02:22,580 --> 00:02:26,540
+Ketika saya bilang piksel, maksud saya
+layar terdiri dari banyak kotak kecil,
+
+48
+00:02:26,540 --> 00:02:30,300
+yaitu piksel, dan mereka menyala
+tergantung dari apa yang Anda lihat.
+
+49
+00:02:30,300 --> 00:02:32,340
+Jadi jika saya menentukan ukuran tampilan,
+
+50
+00:02:32,340 --> 00:02:35,900
+contohnya, tombol,
+tinggi 2 piksel kali lebar 2 piksel,
+
+51
+00:02:35,900 --> 00:02:39,670
+seperti inilah kelihatannya
+pada perangkat resolusi menengah.
+
+52
+00:02:39,670 --> 00:02:43,340
+Pada perangkat resolusi tinggi,
+juga 2 x 2 piksel.
+
+53
+00:02:43,340 --> 00:02:44,850
+Tapi sedikit lebih kecil,
+
+54
+00:02:44,850 --> 00:02:49,060
+karena ada lebih banyak piksel
+yang harus masuk ke perangkat ini.
+
+55
+00:02:49,060 --> 00:02:52,680
+Lalu pada perangkat resolusi ekstra tinggi
+di mana ada sangat banyak piksel
+
+56
+00:02:52,680 --> 00:02:56,570
+yang termuat di ruang ini,
+tombol ini sebenarnya cukup kecil.
+
+57
+00:02:56,570 --> 00:02:58,470
+Sangat sulit ditekan dengan jari saya.
+
+58
+00:02:58,470 --> 00:03:02,300
+Saya harus menggunakan
+ujung jari atau kuku untuk menekannya.
+
+59
+00:03:02,300 --> 00:03:04,990
+Hanya karena saya punya
+perangkat resolusi ekstra tinggi,
+
+60
+00:03:04,990 --> 00:03:06,790
+tak berarti jari saya lebih mungil.
+
+61
+00:03:06,790 --> 00:03:10,060
+Saya ingin tetap bisa
+menekan tombol di layar.
+
+62
+00:03:10,060 --> 00:03:12,730
+Dan itulah sebabnya kita memakai
+piksel bebas kepadatan.
+
+63
+00:03:12,730 --> 00:03:15,720
+Saya bisa tentukan tombol
+dengan tinggi 2dps kali lebar 2dps.
+
+64
+00:03:15,720 --> 00:03:19,390
+Seperti inilah kelihatannya
+pada perangkat yang berbeda.
+
+65
+00:03:19,390 --> 00:03:21,440
+Ukuran fisiknya sama.
+
+66
+00:03:21,440 --> 00:03:26,090
+Tapi di balik itu, Android mengubahnya
+menjadi ukuran piksel yang berbeda.
+
+67
+00:03:26,090 --> 00:03:28,140
+Anda tak perlu memikirkan logikanya,
+
+68
+00:03:28,140 --> 00:03:33,520
+yang Anda harus ingat hanyalah
+menentukan ukurannya dalam nilai dp.
+
+69
+00:03:33,520 --> 00:03:38,040
+Saat mendesain aplikasi, kami sarankan
+semua target tekan yang seperti tombol
+
+70
+00:03:38,040 --> 00:03:41,160
+harus sedikitnya
+setinggi dan selebar 48dps.
+
+71
+00:03:41,160 --> 00:03:44,100
+Perhatikan bahwa itu
+48dps dan bukan 48 piksel.
+
+72
+00:03:44,100 --> 00:03:47,930
+Jika tidak, nanti akan jadi amat kecil
+di perangkat resolusi ekstra tinggi.
+
+73
+00:03:47,930 --> 00:03:50,690
+Ini akan membuat aplikasi Anda
+mudah digunakan semua orang.
+
+74
+00:03:50,690 --> 00:03:52,079
+Dengan semua pengetahuan ini,
+
+75
+00:03:52,079 --> 00:03:55,213
+saya mau Anda coba
+dan ubah kode TextView sekarang.
+
+76
+00:03:55,213 --> 00:03:59,890
+Anda akan menulis baris pertama
+XML Anda. Asyik sekali.
+
+77
+00:03:59,890 --> 00:04:02,700
+Pertama, coba ubah teks pada TextView.
+
+78
+00:04:02,700 --> 00:04:05,130
+Dan coba ubah ukuran TextView.
+
+79
+00:04:05,810 --> 00:04:09,700
+Lalu coba buat eror
+dengan muka sedih.
+
+80
+00:04:09,700 --> 00:04:11,750
+Lalu kembalikan lagi, muka senang.
+
