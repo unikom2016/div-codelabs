@@ -48,10 +48,11 @@ begin
                         sisa := sisa - 1;
 
                         if (sisa = 0) then
-                            writeln(', mati satu tinggal induknya')
+                            
                         else
                             writeln(', mati satu tinggal ', sisa);
-                    end;                
+                    end;    
+                    writeln(', mati satu tinggal induknya')            
                     
                     write('Press any key to continue...'); readln();
                 end;
