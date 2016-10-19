@@ -18,64 +18,74 @@ var
     mahasiswa: array_mhs;
     i: integer;
 
+procedure tambahdata(i: integer; var m: array_mhs);
+begin
+    write('Masukkan NIM Mahasiswa   : '); readln(m[i].nim);
+    write('Masukkan Nama Mahasiswa  : '); readln(m[i].nama);
+    write('Masukkan Umur Mahasiswa  : '); readln(m[i].umur);
+
+    write('Masukkan nilai kehadiran mahasiswa ke-', i, ' :'); // 10%
+    readln(m[i].n_kehadiran);
+
+    write('Masukkan nilai tugas mahasiswa ke-', i, '     :'); // 20%
+    readln(m[i].n_tugas);
+
+    write('Masukkan nilai uts mahasiswa ke-', i, '       :'); // 30%
+    readln(m[i].n_uts);
+
+    write('Masukkan nilai uas mahasiswa ke-', i, '       :'); // 40%
+    readln(m[i].n_uas);
+end;
+
+function hitungnilaiakhir(i: integer; m: array_mhs): real;
+begin
+    hitungnilaiakhir := (m[i].n_kehadiran * 0.10) + (m[i].n_tugas * 0.20) + (m[i].n_uts * 0.30) + (m[i].n_uas * 0.40);
+end;
+
+function hitungindeks(i: integer; m: array_mhs): char;
+begin
+    if (m[i].n_akhir >= 80) then
+        hitungindeks := 'A'
+    else if (m[i].n_akhir >= 60) and (m[i].n_akhir < 80) then
+        hitungindeks := 'B'
+    else if (m[i].n_akhir >= 50) and (m[i].n_akhir < 60) then
+        hitungindeks := 'C'
+    else if (m[i].n_akhir >= 30) and (mahasiswa[i].n_akhir < 50) then
+        hitungindeks := 'D'
+    else
+        hitungindeks := 'E';
+end;
+
+procedure tampildata(i: integer; m: array_mhs);
+begin         
+    writeln('NIM Mahasiswa  : ', m[i].nim);
+    writeln('Nama Mahasiswa : ', m[i].nama);
+    writeln('Umur Mahasiswa : ', m[i].umur);
+
+    write('Nilai akhir mahasiswa dengan NIM ', m[i].nim);
+    writeln(' yaitu: ', m[i].n_akhir:10:2);
+
+    write('Indeks nilai mahasiswa dengan NIM ', m[i].nim);
+    writeln(' yaitu: ', m[i].indeks);
+end;
+
 begin
     for i := 1 to maks do
     begin
         { Input }
-        write('Masukkan NIM Mahasiswa   : '); readln(mahasiswa[i].nim);
-        write('Masukkan Nama Mahasiswa  : '); readln(mahasiswa[i].nama);
-        write('Masukkan Umur Mahasiswa  : '); readln(mahasiswa[i].umur);
+        tambahdata(i, mahasiswa);
+
+        writeln;
 
         { Process }
-        write('Masukkan nilai kehadiran mahasiswa ke-', i, ' :'); // 10%
-        readln(mahasiswa[i].n_kehadiran);
-
-        write('Masukkan nilai tugas mahasiswa ke-', i, '     :'); // 20%
-        readln(mahasiswa[i].n_tugas);
-
-        write('Masukkan nilai uts mahasiswa ke-', i, '       :'); // 30%
-        readln(mahasiswa[i].n_uts);
-
-        write('Masukkan nilai uas mahasiswa ke-', i, '       :'); // 40%
-        readln(mahasiswa[i].n_uas);
-
-        mahasiswa[i].n_akhir := (mahasiswa[i].n_kehadiran * 0.10) + (mahasiswa[i].n_tugas * 0.20) + (mahasiswa[i].n_uts * 0.30) + (mahasiswa[i].n_uas * 0.40);
+        mahasiswa[i].n_akhir := hitungnilaiakhir(i, mahasiswa);
+        mahasiswa[i].indeks := hitungindeks(i, mahasiswa);
 
         writeln;
-
-        writeln('NIM Mahasiswa  : ', mahasiswa[i].nim);
-        writeln('Nama Mahasiswa : ', mahasiswa[i].nama);
-        writeln('Umur Mahasiswa : ', mahasiswa[i].umur);
-
-        write('Nilai akhir mahasiswa dengan NIM ', mahasiswa[i].nim);
-        writeln(' yaitu: ', mahasiswa[i].n_akhir:10:2);
-
-        // case (mahasiswa[i].n_akhir) of
-        //     80..100: mahasiswa[i].indeks := 'A';
-        //     60..79: mahasiswa[i].indeks := 'B';
-        //     50..69: mahasiswa[i].indeks := 'C';
-        //     30..49: mahasiswa[i].indeks := 'D';
-        // else
-        //     mahasiswa[i].indeks := 'E';
-        // end;
-
-        if (round(mahasiswa[i].n_akhir) >= 80) then
-            mahasiswa[i].indeks := 'A'
-        else if (round(mahasiswa[i].n_akhir) >= 60) and (round(mahasiswa[i].n_akhir) < 80) then
-            mahasiswa[i].indeks := 'B'
-        else if (round(mahasiswa[i].n_akhir) >= 50) and (round(mahasiswa[i].n_akhir) < 60) then
-            mahasiswa[i].indeks := 'C'
-        else if (round(mahasiswa[i].n_akhir) >= 30) and (round(mahasiswa[i].n_akhir) < 50) then
-            mahasiswa[i].indeks := 'D'
-        else
-            mahasiswa[i].indeks := 'E';
+        
+        { Output }
+        tampildata(i, mahasiswa);
 
         writeln;
-
-        write('Indeks nilai mahasiswa dengan NIM ', mahasiswa[i].nim);
-        writeln(' yaitu: ', mahasiswa[i].indeks);
-
-        writeln;
-
     end;
 end.
