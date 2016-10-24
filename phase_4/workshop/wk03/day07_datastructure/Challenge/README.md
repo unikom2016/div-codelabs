@@ -1,0 +1,1 @@
+angka -1, baru berhenti
