@@ -17,27 +17,31 @@ type
 var
     mahasiswa: array_mhs;
     i: integer;
-    lanjut: string;
+    lanjut: char;
 
-procedure tambahdata(i: integer; var m: array_mhs);
+procedure tambahdata(var m: array_mhs);
+var
+    i: integer;
 begin
-    // Start with 1
-    setlength(m, i);
-    write('Masukkan NIM Mahasiswa   : '); readln(m[i].nim);
-    write('Masukkan Nama Mahasiswa  : '); readln(m[i].nama);
-    write('Masukkan Umur Mahasiswa  : '); readln(m[i].umur);
+    for i := 0 to length(m) do
+    begin
+        setlength(m, i + 1);
+        write('Masukkan NIM Mahasiswa   : '); readln(m[i].nim);
+        write('Masukkan Nama Mahasiswa  : '); readln(m[i].nama);
+        write('Masukkan Umur Mahasiswa  : '); readln(m[i].umur);
 
-    write('Masukkan nilai kehadiran mahasiswa ke-', i, ' :'); // 10%
-    readln(m[i].n_kehadiran);
+        write('Masukkan nilai kehadiran mahasiswa ke-', i + 1, ' :'); // 10%
+        readln(m[i].n_kehadiran);
 
-    write('Masukkan nilai tugas mahasiswa ke-', i, '     :'); // 20%
-    readln(m[i].n_tugas);
+        write('Masukkan nilai tugas mahasiswa ke-', i + 1, '     :'); // 20%
+        readln(m[i].n_tugas);
 
-    write('Masukkan nilai uts mahasiswa ke-', i, '       :'); // 30%
-    readln(m[i].n_uts);
+        write('Masukkan nilai uts mahasiswa ke-', i + 1, '       :'); // 30%
+        readln(m[i].n_uts);
 
-    write('Masukkan nilai uas mahasiswa ke-', i, '       :'); // 40%
-    readln(m[i].n_uas);
+        write('Masukkan nilai uas mahasiswa ke-', i + 1, '       :'); // 40%
+        readln(m[i].n_uas);
+    end;
 end;
 
 function hitungnilaiakhir(i: integer; m: array_mhs): real;
@@ -59,41 +63,45 @@ begin
         hitungindeks := 'E';
 end;
 
-procedure tampildata(i: integer; m: array_mhs);
+procedure tampildata(m: array_mhs);
+var
+    i: integer;
 begin         
-    writeln('NIM Mahasiswa  : ', m[i].nim);
-    writeln('Nama Mahasiswa : ', m[i].nama);
-    writeln('Umur Mahasiswa : ', m[i].umur);
+    for i := 0 to length(m) - 1 do
+    begin
+        writeln('NIM Mahasiswa  : ', m[i].nim);
+        writeln('Nama Mahasiswa : ', m[i].nama);
+        writeln('Umur Mahasiswa : ', m[i].umur);
 
-    write('Nilai akhir mahasiswa dengan NIM ', m[i].nim);
-    writeln(' yaitu: ', m[i].n_akhir:10:2);
+        m[i].n_akhir := hitungnilaiakhir(i, m);
+        write('Nilai akhir mahasiswa dengan NIM ', m[i].nim);
+        writeln(' yaitu: ', m[i].n_akhir:10:1);
 
-    write('Indeks nilai mahasiswa dengan NIM ', m[i].nim);
-    writeln(' yaitu: ', m[i].indeks);
+        m[i].indeks := hitungindeks(i, m);
+        write('Indeks nilai mahasiswa dengan NIM ', m[i].nim);
+        writeln(' yaitu: ', m[i].indeks);
+    end;
 end;
 
 begin
-    i := 1;
     repeat
         { Input }
-        tambahdata(i, mahasiswa);
+        tambahdata(mahasiswa);
 
         writeln;
 
         { Process }
-        mahasiswa[i].n_akhir := hitungnilaiakhir(i, mahasiswa);
-        mahasiswa[i].indeks := hitungindeks(i, mahasiswa);
+        // mahasiswa[i].n_akhir := hitungnilaiakhir(i, mahasiswa);
+        // mahasiswa[i].indeks := hitungindeks(i, mahasiswa);
 
         writeln;
         
         { Output }
-        tampildata(i, mahasiswa);
+        tampildata(mahasiswa);
 
         writeln;
 
         write('Mau menambahkan mahasiswa? (Y / N): ');
         readln(lanjut);
-
-        i := i + 1;
-    until (lanjut = 'N');
+    until (lanjut = 'N') or (lanjut = 'n');
 end.
