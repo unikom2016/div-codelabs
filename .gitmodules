@@ -1,0 +1,3 @@
+[submodule "phase_4/workshop/wk02/day06_scrum/pancakescrum"]
+	path = phase_4/workshop/wk02/day06_scrum/pancakescrum
+	url = git@github.com:evangilang/pancakescrum.git
