@@ -4,3 +4,6 @@
 [submodule "phase_4/workshop/wk04/day10_android/Codelabs-App"]
 	path = phase_4/workshop/wk04/day10_android/Codelabs-App
 	url = git@github.com:mochadwi/cl-homework-layouting.git
+[submodule "phase_4/repo/weouts"]
+	path = phase_4/repo/weouts
+	url = git@github.com:weouts/android.git
