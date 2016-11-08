@@ -21,14 +21,14 @@
             android:id="@+id/btn_fragment_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Frament 1" />
+            android:text="Fragment 1" />
 
         <Button
             android:id="@+id/btn_fragment_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/btn_fragment_1"
-            android:text="Frament 2" />
+            android:text="Fragment 2" />
     </RelativeLayout>
 
     <FrameLayout
