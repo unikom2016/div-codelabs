@@ -1,5 +1,6 @@
 program insertion;
 
+{ LinkedList }
 type
     pointer = ^node;
 
@@ -9,16 +10,7 @@ type
     end;
 
 var
-    head, tail, temp, help, del: pointer;
-
-    { Is linkedlist empty? }
-    function isempty: boolean;
-    begin
-        if head = nil then
-            isempty := true;
-            
-        isempty := false;
-    end;
+    head, temp, tail, help, del: pointer;
 
     { Create }
     procedure create;
@@ -27,21 +19,31 @@ var
         tail := nil;
     end;
 
+    { Is linkedlist empty? }
+    function isempty: boolean;
+    begin
+        if (head = nil) then
+            isempty := true;
+            
+        isempty := false;
+    end;
+
     { Front Insertion }
     procedure addfirst(elem: integer);
     begin
         new(temp);
-        temp^.data:= elem;
+        temp^.data := elem;
 
-        if not isempty then
+        if (head = nil) then
+        // if (isempty) then
             begin
-                temp^.next:= nil;
-                tail:= temp;
+                temp^.next := nil;
+                tail := temp;
             end
         else
-            temp^.next:= head;
+            temp^.next := head;
 
-        head:= temp;
+        head := temp;
     end;
 
     { Back Insertion }
@@ -51,19 +53,14 @@ var
         temp^.data := elem;
         temp^.next := nil;
 
-        if not isempty then
-        begin
+        if (isempty) then
             head := temp;
-        end
-        else
-        begin
-            tail^.next := temp;
-        end;
 
+        tail^.next := temp;
         tail := temp;
     end;
 
-    { Remove First }
+    { Remove Insertion }
     procedure removefirst;
     begin
         del := head;
@@ -92,17 +89,16 @@ var
         dispose(del);
     end;
 
-    { View LinkedList }
     procedure viewall;
     begin
-        if not isempty then
+        if (not isempty) then
         begin
-            help:= head;
+            help := head;
             writeln;
             while (help <> nil) do
             begin
                 write(help^.data, ' ');
-                help:= help^.next;
+                help := help^.next;
                 writeln;
             end;
         end;
@@ -110,11 +106,12 @@ var
 
 begin
     create;
+
     addfirst(3);
     addfirst(10);
     addfirst(6);
 
-    // if (not isempty) then
+    // if ((not isempty)) then
     //     removefirst;
 
     writeln;
@@ -126,9 +123,9 @@ begin
     // viewall;
     // add(1000);
 
-    viewall;
+    // viewall;
 
-    remove;
+    // remove;
 
     viewall;
 end.
