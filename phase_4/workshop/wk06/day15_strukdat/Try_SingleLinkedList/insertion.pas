@@ -46,6 +46,33 @@ var
         head := temp;
     end;
 
+    { Middle / Any Insertion }
+    procedure add(elem: integer);
+    var
+        k: integer;
+        temp2: pointer;
+    begin
+        new(temp);
+        temp := head;
+
+        write('Posisi ke berapa? ');
+        readln(k);
+        while (k - 1 <> 0) do
+        begin
+            k := k - 1;
+            temp := temp^.next;
+        end;
+
+        new(temp2);
+        temp2 := temp^.next;
+
+        new(help);
+        help^.data := elem;
+        help^.next := temp2;
+
+        temp^.next := help;
+    end;
+
     { Back Insertion }
     procedure addlast(elem: integer);
     begin
@@ -120,8 +147,8 @@ begin
     addlast(9);
 
     // removelast;
-    // viewall;
-    // add(1000);
+    viewall;
+    add(1000);
 
     // viewall;
 
