@@ -28,6 +28,77 @@ var
         isempty := false;
     end;
 
+    { Find Data }
+    procedure find(elem: integer);
+    // function find(elem: integer): integer;
+    var
+        idx: integer; 
+    begin
+        if (not isempty) then
+            begin
+                temp := head;
+                idx := 0;
+                while (temp^.data <> elem) and (temp <> nil) do
+                begin
+                    temp := temp^.next;
+                    idx := idx + 1;
+                end;
+                writeln('Nilai ', elem, ' ada di index: ', idx);
+            end
+        else
+            writeln('NOT FOUND!');
+    end;
+
+    { Find Data }
+    // function find(elem: integer): integer;
+    // begin
+    //     if (not isempty) then
+    //         begin
+    //             temp := head;
+    //             while (temp^.data <> elem) and (temp <> nil) do
+    //                 temp := temp^.next;
+
+    //             writeln('Nilai ', elem, ' ada di index: ', idx);
+    //         end
+    //     else
+    //         writeln('NOT FOUND!');
+    // end;
+
+    procedure sort(sorttype: integer);
+    var
+        swapped: boolean;
+    begin
+        if (sorttype = 0) then
+        begin
+            temp := head;
+            help := temp^.next;
+
+            repeat
+                swapped := false;
+
+                while (temp <> nil) do
+                begin
+                    // Bubble sort
+                    if (temp^.data > help^.data) then
+                    begin
+                        writeln(temp^.data, ' > ', help^.data);
+                        
+                        temp^.data := temp^.data xor help^.data;
+                        help^.data := temp^.data xor help^.data;
+                        temp^.data := temp^.data xor help^.data;
+                        swapped := true;
+
+                        writeln(temp^.data, ' < ', help^.data);               
+                    end;
+
+                    writeln(temp^.data);
+                    temp := temp^.next;
+                    writeln(temp^.data);
+                end;
+            until (swapped);
+        end;
+    end;
+
     { Front Insertion }
     procedure addfirst(elem: integer);
     begin
@@ -105,7 +176,7 @@ var
     { Middle / Any Deletion }
     procedure remove;
     var
-        k: integer;
+        k, elem: integer;
         after: pointer;
     begin
         if (not isempty) then
@@ -115,11 +186,15 @@ var
 
             write('Posisi yang mau dihapus? ');
             readln(k);
+            // write('Hapus nilai? ');
+            // k := find(elem);
+            // writeln('Sedang mencari... ');
             while (k - 1 <> 0) do
             begin
                 k := k - 1;
                 temp := temp^.next;
             end;
+            // write('Nilai ditemukan... ');
                 
             
             del := temp^.next;
@@ -166,7 +241,7 @@ begin
 
     addfirst(3);
     addfirst(10);
-    addfirst(6);
+    addfirst(11);
 
     // if ((not isempty)) then
     //     removefirst;
@@ -183,6 +258,11 @@ begin
     viewall;
 
     remove;
+
+    viewall;
+
+    find(10);
+    // sort(0); // ascending
 
     viewall;
 end.

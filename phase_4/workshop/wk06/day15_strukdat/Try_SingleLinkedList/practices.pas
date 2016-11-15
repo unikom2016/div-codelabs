@@ -3,7 +3,7 @@ addLast(elem: int); #done
 removeLast; #done
 remove(elem: int); // remove(find(5)) #done
 
-find(elem: int);
+find(elem: int); #done
 sort(type: int); // 0 asc, 1 desc
 
 program insertion;
@@ -161,6 +161,29 @@ var
         dispose(del);
     end;
 
+    { Find Data }
+    procedure find(elem: integer);
+    var
+        idx: integer; 
+    begin
+        if (not isempty) then
+            begin
+                temp = head;
+                idx := 0;
+                while (temp^.data <> elem) do
+                    begin
+                        temp := temp^.next;
+                        idx := idx + 1;
+                        if (temp = nil) then
+                            writeln('NOT FOUND!');
+                    end;
+                writeln('Nilai ', elem, ' ada di index: ', idx);
+            end
+        else
+            writeln('NOT FOUND!');
+
+    end;
+
     procedure viewall;
     begin
         if head = nil then
@@ -201,4 +224,6 @@ begin
     remove;
 
     viewall;
+
+    find(10);
 end.
