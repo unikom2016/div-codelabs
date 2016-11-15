@@ -87,7 +87,7 @@ var
         tail := temp;
     end;
 
-    { Remove Insertion }
+    { First Deletion }
     procedure removefirst;
     begin
         del := head;
@@ -102,6 +102,36 @@ var
         dispose(del);
     end;
 
+    { Middle / Any Deletion }
+    procedure remove;
+    var
+        k: integer;
+        after: pointer;
+    begin
+        if (not isempty) then
+        begin
+            new(temp);
+            temp := head;
+
+            write('Posisi yang mau dihapus? ');
+            readln(k);
+            while (k - 1 <> 0) do
+            begin
+                k := k - 1;
+                temp := temp^.next;
+            end;
+                
+            
+            del := temp^.next;
+            after := del^.next;
+
+            temp^.next := after;
+
+            dispose(del);            
+        end;
+    end;
+
+    { Last Deletion }
     procedure removelast;
     begin
         del := tail;
@@ -150,9 +180,9 @@ begin
     viewall;
     add(1000);
 
-    // viewall;
+    viewall;
 
-    // remove;
+    remove;
 
     viewall;
 end.
