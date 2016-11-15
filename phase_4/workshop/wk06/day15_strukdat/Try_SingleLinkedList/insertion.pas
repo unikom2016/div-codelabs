@@ -9,8 +9,9 @@ type
     end;
 
 var
-    head, temp, tail, help, del: pointer;
+    head, tail, temp, help, del: pointer;
 
+    { Is linkedlist empty? }
     function isempty: boolean;
     begin
         if head = nil then
@@ -19,18 +20,20 @@ var
         isempty := false;
     end;
 
+    { Create }
     procedure create;
     begin
         head := nil;
         tail := nil;
     end;
 
+    { Front Insertion }
     procedure addfirst(elem: integer);
     begin
         new(temp);
         temp^.data:= elem;
 
-        if head = nil then
+        if not isempty then
             begin
                 temp^.next:= nil;
                 tail:= temp;
@@ -41,27 +44,26 @@ var
         head:= temp;
     end;
 
-    procedure removefirst(var elem: integer);
+    { Back Insertion }
+    procedure addlast(elem: integer);
     begin
-        if head = nil then
-            writeln('Tidak bisa dihapus, karena kosong')
-        else if head = tail then
-            begin
-                del := head;
-                elem := del^.data;
-                head := nil;
-                tail := nil;
-                dispose(del);
-            end
+        new(temp);
+        temp^.data := elem;
+        temp^.next := nil;
+
+        if not isempty then
+        begin
+            head := temp;
+        end
         else
-            begin
-                del := head;
-                elem := del^.data; 
-                head := head^.next; // move the head to the second list
-                dispose(del);
-            end;
+        begin
+            tail^.next := temp;
+        end;
+
+        tail := temp;
     end;
 
+    { Remove First }
     procedure removefirst;
     begin
         del := head;
@@ -71,16 +73,29 @@ var
                 tail := nil;
             end
         else 
-            head := head^.next; // move the head to the second list
+            head := del^.next; // move the head to the second list
 
         dispose(del);
     end;
 
-    procedure viewAll;
+    procedure removelast;
     begin
-        if head = nil then
-            writeln('Tidak ada data')
+        del := tail;
+        if head = tail then
+            begin
+                head := nil;
+                tail := nil;
+            end
         else
+            tail := del^.next;
+
+        dispose(del);
+    end;
+
+    { View LinkedList }
+    procedure viewall;
+    begin
+        if not isempty then
         begin
             help:= head;
             writeln;
@@ -102,5 +117,18 @@ begin
     // if (not isempty) then
     //     removefirst;
 
-    viewAll;      
+    writeln;
+
+    addlast(90);
+    addlast(9);
+
+    // removelast;
+    // viewall;
+    // add(1000);
+
+    viewall;
+
+    remove;
+
+    viewall;
 end.
