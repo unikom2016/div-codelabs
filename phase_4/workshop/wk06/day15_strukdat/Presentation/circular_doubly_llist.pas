@@ -35,18 +35,25 @@ begin
 end;
 
 { Check if current list is empty }
-function is_empty: boolean;
-begin
+function is_empty: boolean; begin
 	if (head = nil) then
 		is_empty := true;
 
 	is_empty := false;
 end;
 
+function is_exceed: boolean; begin
+	if (number < pos) then begin
+		writeln('Posisi ini melampaui list!');
+		is_exceed := true;
+	end;
+		
+	is_exceed := false;
+end;
+
 { Memory allocated for node dynamically }
 // function create_node(mahasiswa: dmhs): pointer;
-function create_node(info: integer): pointer;
-begin
+function create_node(info: integer): pointer; begin
 	number := number + 1;
 	head := nil; tail := nil;
 	new(recent);
@@ -79,8 +86,7 @@ end;
 // 	tail^ := node;
 // end;
 { Adds new node }
-procedure add_node;
-begin
+procedure add_node; begin
 	write('Masukkan data baru: ');
 	readln(info);
 	recent := create_node(info);
@@ -162,9 +168,7 @@ begin
 		end else
 			writeln('List kosong, kamu tidak bisa memasukkan data di posisi tersebut');
 	end else begin
-		if (number < pos) then
-			writeln('List tidak bisa dimasukkan pada posisi tersebut karena melampaui batas!')
-		else begin
+		if (not is_exceed) then begin
 			ptr := head;
 			for (i := 1 to number) do begin
 				prevnode := ptr;
@@ -183,9 +187,38 @@ begin
 end;
 
 { Deletes element at given position }
-// procedure delete_node_position;
-// var
-// 	pos, count, i: integer;
+procedure delete_node_position;
+var
+	pos, count, i: integer;
+	temp, prevnode: pointer;
+begin
+	writeln('Masukkan posisi untuk menghapus data: ');
+	if (not is_empty) then begin
+		if (not is_exceed) then begin
+			ptr := head;
+			for (i := 1 to number) then begin
+				prevnode := ptr;
+				ptr := ptr^.next;
+				if (pos = 1) then begin
+					number := number - 1;
+					tail^.next := prevnode^.next;
+					ptr^.prev := prevnode^.prev;
+					head := ptr;
+					writeln(prevnode^.val, ' is deleted');
+					dispose(prevnode);
+					break;
+				end else if (i = pos - 1) begin
+					number := number - 1;
+					prevnode^.next := ptr^.next;
+					ptr^.next := prevnode; ptr^.prev := prevnode;
+					writeln(ptr^.val, ' is deleted');
+					dispose(ptr);
+					break;
+				end;
+			end;
+		end;
+	end;
+end;
 
 { Sort the info list }
 procedure sort_list(sort: integer);
