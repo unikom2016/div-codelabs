@@ -66,36 +66,39 @@ var
 
     procedure sort(sorttype: integer);
     var
-        swapped: boolean;
+        value: integer;
     begin
-        if (sorttype = 0) then
+        if isempty then
+            writeln('list is empty');
+
+        temp := head;
+        while (temp <> nil) do
         begin
-            temp := head;
             help := temp^.next;
-
-            repeat
-                swapped := false;
-
-                while (temp <> nil) do
-                begin
-                    // Bubble sort
-                    if (temp^.data > help^.data) then
-                    begin
-                        writeln(temp^.data, ' > ', help^.data);
-                        
-                        temp^.data := temp^.data xor help^.data;
-                        help^.data := temp^.data xor help^.data;
-                        temp^.data := temp^.data xor help^.data;
-                        swapped := true;
-
-                        writeln(temp^.data, ' < ', help^.data);               
+            while (help <> nil) do
+            begin
+                case (sorttype) of
+                    0: begin
+                        if (temp^.data > help^.data) then
+                        begin
+                            value := temp^.data;
+                            temp^.data := help^.data;
+                            help^.data := value;
+                        end;
                     end;
 
-                    writeln(temp^.data);
-                    temp := temp^.next;
-                    writeln(temp^.data);
+                    1: begin
+                        if (temp^.data < help^.data) then
+                        begin
+                            value := temp^.data;
+                            temp^.data := help^.data;
+                            help^.data := value;
+                        end;
+                    end;
                 end;
-            until (swapped);
+                help := help^.next;
+            end;
+            temp := temp^.next;
         end;
     end;
 
@@ -176,7 +179,7 @@ var
     { Middle / Any Deletion }
     procedure remove;
     var
-        k, elem: integer;
+        k: integer;
         after: pointer;
     begin
         if (not isempty) then
@@ -262,7 +265,7 @@ begin
     viewall;
 
     find(10);
-    // sort(0); // ascending
+    sort(0); // ascending
 
     viewall;
 end.
