@@ -6,7 +6,6 @@ type
   dmhs = record
     nim: integer;
     nama: string;
-    indeks: char;
   end;
 
   arr_mhs = array of dmhs;
@@ -15,7 +14,7 @@ type
 
   node = record
     prev: pointer;
-    data: arr_mhs;
+    data: dmhs;
     next: pointer;
   end;
 
@@ -23,7 +22,7 @@ var
   recent, ptr, help, del: pointer;
   head, tail: pointer;
   number: integer; // to count the data on list
-  mahasiswa: arr_mhs;
+  mahasiswa: dmhs;
 
 { Create }
 procedure create; begin
@@ -50,7 +49,7 @@ begin
   idx := 0;
   new(temp);
 
-  writeln('Masukkan data: ');
+  writeln('Masukkan NIM untuk mencari: ');
   readln(val);
   if (not isempty) then begin
     temp := head;
@@ -59,8 +58,9 @@ begin
     // end;
     for i := 0 to (number - 1) do begin
       idx := idx + 1;
-      if (temp^.data = val) then begin
-        writeln('Nilai ', val, ' ada di index: ', idx);
+      if (temp^.data.nim = val) then begin
+        writeln('Data dari NIM (', val, ') yaitu: ');
+        write('Nama: ', temp^.data.nama);
         f := 1;
       end;
       temp := temp^.next;
@@ -71,47 +71,36 @@ begin
   end;
 end;
 
-{ Find Data }
-// function find(elem: integer): integer;
-// begin
-//     if (not isempty) then
-//         begin
-//             recent := head;
-//             while (recent^.data <> elem) and (recent <> nil) do
-//                 recent := recent^.next;
-
-//             writeln('Nilai ', elem, ' ada di index: ', idx);
-//         end
-//     else
-//         writeln('NOT FOUND!');
-// end;
-
 procedure sort(sorttype: integer);
 var
-  value, i, j: integer;
+  value, i, j, kind: integer;
 begin
+  // writeln('Sortir');
+  // writeln('1. Ascending');
+  // writeln('2. Descending');
+  // readln(kind);
+
   if (isempty) then
     writeln('list is empty');
 
   recent := head;
-  // while (recent <> nil) do begin
   for i := 0 to (number - 1) do begin
     help := recent^.next;
     // while (help <> nil) do begin
     for j := i to (number - 1) do begin
-      case (sorttype) of
+      case (kind) of
         0: begin
-          if (recent^.data > help^.data) then begin
-            value := recent^.data;
-            recent^.data := help^.data;
-            help^.data := value;
+          if (recent^.data.nim > help^.data.nim) then begin
+            value := recent^.data.nim;
+            recent^.data.nim := help^.data.nim;
+            help^.data.nim := value;
           end;
         end;
         1: begin
-          if (recent^.data < help^.data) then begin
-            value := recent^.data;
-            recent^.data := help^.data;
-            help^.data := value;
+          if (recent^.data.nim < help^.data.nim) then begin
+            value := recent^.data.nim;
+            recent^.data.nim := help^.data.nim;
+            help^.data.nim := value;
           end;
         end;
       end;
@@ -126,23 +115,24 @@ begin
   new(recent);
 
   write('Masukkan nim: ');
-  readln(mahasiswa[number].nim);
+  readln(mahasiswa.nim);
 
   write('Masukkan nama: ');
-  readln(mahasiswa[number].nama);
+  readln(mahasiswa.nama);
 
-  write('Masukkan indeks: ');
-  readln(mahasiswa[number].indeks);
+  // write('Masukkan indeks: ');
+  // readln(mahasiswa.indeks);
 
   recent^.data := mahasiswa;
   recent^.prev := nil;
   recent^.next := nil;
+  
   create_node := recent;
 end;
 
 { Front Insertion }
 procedure addfirst(elem: integer); begin
-  recent := create_node(elem);
+  recent := create_node;
 
   if (head = nil) then begin
   // if (isempty) then begin
@@ -166,7 +156,7 @@ var
   i, mid: integer;
   prevnode: pointer;
 begin
-  recent := create_node(elem);
+  recent := create_node;
   mid := number div 2;
   if (isempty) then begin
     head := recent; tail := recent;
@@ -188,7 +178,7 @@ end;
 
 { Back Insertion }
 procedure addlast(elem: integer); begin
-  recent := create_node(elem);
+  recent := create_node;
 
   if (isempty) then begin
     head := recent;
@@ -236,7 +226,7 @@ begin
       if (i = mid) then begin
         prevnode^.next := ptr^.next;
         ptr^.next^.prev := prevnode;
-        writeln(ptr^.data, ' sekarang terhapus');
+        writeln('data mahasiswa dengan NIM (', ptr^.data.nim, ') sekarang terhapus!');
         dispose(ptr);
       end;
     end;
@@ -267,8 +257,11 @@ begin
   if (not isempty) then begin
     help := head;
     writeln;
+    writeln('Data Mahasiswa: ');
     for i := 0 to (number - 1) do begin
-      write(help^.data, ' ');
+      writeln(i, '.');
+      writeln('NIM: ', help^.data.nim, '; ');
+      writeln('Nama: ', help^.data.nama, '; ');
       help := help^.next;
     end;
     writeln;
