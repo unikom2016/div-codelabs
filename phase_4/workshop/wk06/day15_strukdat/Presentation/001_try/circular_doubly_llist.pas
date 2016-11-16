@@ -11,7 +11,7 @@ type
   end;
 
 var
-  temp, help, del: pointer;
+  recent, help, del: pointer;
   head, tail: pointer;
   number: integer; // to count the data on list
 
@@ -30,21 +30,35 @@ function isempty: boolean; begin
 end;
 
 { Find Data }
-procedure find(elem: integer);
+procedure find;
 // function find(elem: integer): integer;
 var
-  idx: integer; 
+  idx, val, i, f: integer;
+  temp: pointer;
 begin
+  f := 0;
+  idx := 0;
+  new(temp);
+
+  writeln('Masukkan data: ');
+  readln(val);
   if (not isempty) then begin
     temp := head;
-    idx := 0;
-    while (temp^.data <> elem) and (temp <> nil) do begin
-      temp := temp^.next;
+    // while (recent^.data <> val) do begin
+    //   recent := recent^.next;
+    // end;
+    for i := 0 to (number - 1) do begin
       idx := idx + 1;
+      if (temp^.data = val) then begin
+        writeln('Nilai ', val, ' ada di index: ', idx);
+        f := 1;
+      end;
+      temp := temp^.next;
     end;
-    writeln('Nilai ', elem, ' ada di index: ', idx);
-  end else
-    writeln('NOT FOUND!');
+
+    if (f = 0) then
+      writeln('NOT FOUND!');
+  end;
 end;
 
 { Find Data }
@@ -52,9 +66,9 @@ end;
 // begin
 //     if (not isempty) then
 //         begin
-//             temp := head;
-//             while (temp^.data <> elem) and (temp <> nil) do
-//                 temp := temp^.next;
+//             recent := head;
+//             while (recent^.data <> elem) and (recent <> nil) do
+//                 recent := recent^.next;
 
 //             writeln('Nilai ', elem, ' ada di index: ', idx);
 //         end
@@ -69,59 +83,59 @@ begin
   if (isempty) then
     writeln('list is empty');
 
-  temp := head;
-  // while (temp <> nil) do begin
+  recent := head;
+  // while (recent <> nil) do begin
   for i := 0 to (number - 1) do begin
-    help := temp^.next;
+    help := recent^.next;
     // while (help <> nil) do begin
     for j := i to (number - 1) do begin
       case (sorttype) of
         0: begin
-          if (temp^.data > help^.data) then begin
-            value := temp^.data;
-            temp^.data := help^.data;
+          if (recent^.data > help^.data) then begin
+            value := recent^.data;
+            recent^.data := help^.data;
             help^.data := value;
           end;
         end;
         1: begin
-          if (temp^.data < help^.data) then begin
-            value := temp^.data;
-            temp^.data := help^.data;
+          if (recent^.data < help^.data) then begin
+            value := recent^.data;
+            recent^.data := help^.data;
             help^.data := value;
           end;
         end;
       end;
     end;
-    temp := temp^.next;
+    recent := recent^.next;
   end;
 end;
 
 function create_node(elem: integer): pointer;
 begin
   number := number + 1;
-  new(temp);
-  temp^.data := elem;
-  temp^.prev := nil;
-  temp^.next := nil;
-  create_node := temp;
+  new(recent);
+  recent^.data := elem;
+  recent^.prev := nil;
+  recent^.next := nil;
+  create_node := recent;
 end;
 
 { Front Insertion }
 procedure addfirst(elem: integer); begin
-  temp := create_node(elem);
+  recent := create_node(elem);
 
   if (head = nil) then begin
   // if (isempty) then begin
-    head := temp; 
-    tail := temp;
+    head := recent; 
+    tail := recent;
     // head^.next := nil; head^.prev := nil;
     // tail^.next := nil; tail^.prev := nil; 
   end else begin
-    temp^.next := head;
-    head^.prev := temp;
+    recent^.next := head;
+    head^.prev := recent;
   end;
 
-  head := temp;
+  head := recent;
   head^.prev := tail;
   tail^.next := head;
 end;
@@ -129,43 +143,41 @@ end;
 { Middle / Any Insertion }
 procedure add(elem: integer);
 var
-  k: integer;
+  k, mid: integer;
   temp2: pointer;
 begin
-  number := number + 1;
-  new(temp);
-  temp := head;
+  recent := create_node(elem);
 
   write('Posisi ke berapa? ');
   readln(k);
   while (k - 1 <> 0) do begin
     k := k - 1;
-    temp := temp^.next;
+    recent := recent^.next;
   end;
 
   new(temp2);
-  temp2 := temp^.next;
+  temp2 := recent^.next;
 
   new(help);
   help^.data := elem;
   help^.next := temp2;
 
-  temp^.next := help;
+  recent^.next := help;
 end;
 
 { Back Insertion }
 procedure addlast(elem: integer); begin
-  temp := create_node(elem);
+  recent := create_node(elem);
 
   if (isempty) then begin
-    head := temp;
-    tail := temp;
+    head := recent;
+    tail := recent;
   end else begin
-    tail^.next := temp;
-    temp^.prev := tail;
+    tail^.next := recent;
+    recent^.prev := tail;
   end;
 
-  tail := temp;
+  tail := recent;
   head^.prev := tail;
   tail^.next := head;
 end;
@@ -195,8 +207,8 @@ var
 begin
   number := number - 1;
   if (not isempty) then begin
-    new(temp);
-    temp := head;
+    new(recent);
+    recent := head;
 
     write('Posisi yang mau dihapus? ');
     readln(k);
@@ -205,15 +217,15 @@ begin
     // writeln('Sedang mencari... ');
     while (k - 1 <> 0) do begin
       k := k - 1;
-      temp := temp^.next;
+      recent := recent^.next;
     end;
 // write('Nilai ditemukan... ');
 
 
-    del := temp^.next;
+    del := recent^.next;
     after := del^.next;
 
-    temp^.next := after;
+    recent^.next := after;
 
     dispose(del);            
   end;
@@ -291,6 +303,9 @@ viewall;
 write('List diurutkan (asc)');
 sort(1);
 viewall;
+
+writeln('Temukan list');
+find;
 
 writeln;
 end.
