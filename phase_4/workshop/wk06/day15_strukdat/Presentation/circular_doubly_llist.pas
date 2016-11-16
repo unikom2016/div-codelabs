@@ -183,10 +183,45 @@ begin
 end;
 
 { Deletes element at given position }
-procedure delete_node_position;
+// procedure delete_node_position;
 // var
 // 	pos, count, i: integer;
-// procedure sort_list;
+
+{ Sort the info list }
+procedure sort_list(sort: integer);
+var
+	temp: pointer;
+	tempval, j: integer;
+begin
+	if (is_empty) then
+		writeln('List kosong, tidak data yang bisa diurutkan')
+	else begin
+		ptr := head;
+		while (ptr <> nil) do begin
+			temp := ptr^.next;
+			for (j := 0 to number - 1) do begin
+				case (sort) of begin
+					0: begin // ascending
+						if (ptr^.val > temp^.val) then begin
+							tempval := ptr^.val;
+							ptr^.val := temp^.val;
+							temp^.val := tempval;
+						end;
+					end;
+					1: begin // descending
+						if (ptr^.val < temp^.val) then begin
+							tempval := ptr^.val;
+							ptr^.val := temp^.val;
+							temp^.val := tempval;
+						end;
+					end;
+				end;
+			end;
+			write(ptr^.val, ' ');
+		end;
+
+	end;
+end;
 // procedure search;
 
 { Algoritma Utama }
