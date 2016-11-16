@@ -13,9 +13,8 @@ type
   pointer = ^node;
 
   node = record
-    prev: pointer;
     data: dmhs;
-    next: pointer;
+    prev, next: pointer;
   end;
 
 var
@@ -36,6 +35,164 @@ function isempty: boolean; begin
     isempty := true;
 
   isempty := false;
+end;
+
+function create_node: pointer;
+begin
+  number := number + 1;
+  new(recent);
+
+  write('Masukkan nim: ');
+  readln(mahasiswa.nim);
+
+  write('Masukkan nama: ');
+  readln(mahasiswa.nama);
+
+  // write('Masukkan indeks: ');
+  // readln(mahasiswa.indeks);
+
+  recent^.data := mahasiswa;
+  recent^.prev := nil;
+  recent^.next := nil;
+  
+  create_node := recent;
+end;
+
+{ Front Insertion }
+procedure addfirst; begin
+  recent := create_node;
+
+  if (head = nil) then begin
+  // if (isempty) then begin
+    head := recent; 
+    tail := recent;
+    // head^.next := nil; head^.prev := nil;
+    // tail^.next := nil; tail^.prev := nil; 
+  end else begin
+    recent^.next := head;
+    head^.prev := recent;
+  end;
+
+  head := recent;
+  head^.prev := tail;
+  tail^.next := head;
+end;
+
+{ Middle / Any Insertion }
+procedure add;
+var
+  i, position: integer;
+  prevnode: pointer;
+begin
+  writeln('Masukkan ke posisi berapa: ');
+  readln(position);
+  // mid := number div 2;
+  if (number < position) then
+      writeln('Posisi ', position, ' tidak ada. Karena melampaui batas list, yaitu: ', number)
+  else begin
+    recent := create_node;
+
+    if (isempty) then begin
+      if (position = 1) then begin
+        head := recent;
+        tail := head;
+      end else
+        writeln('List kosong, tidak bisa memasukkan di posisi: ', position);
+    end else begin
+        ptr := head;
+        // for i := 1 to mid do begin
+
+        for i := 1 to number do begin
+          prevnode := ptr;
+          ptr := ptr^.next;
+          if (i = position - 1) then begin
+            prevnode^.next := recent;
+            recent^.next := prevnode;
+            recent^.next := ptr;
+            ptr^.prev := recent;
+            writeln('Data telah berhasil diisi pada posisi: ', position);
+            break;
+          end;
+        end;
+    end;
+  end;
+end;
+
+{ Back Insertion }
+procedure addlast; begin
+  recent := create_node;
+
+  if (isempty) then begin
+    head := recent;
+    tail := recent;
+  end else begin
+    tail^.next := recent;
+    recent^.prev := tail;
+  end;
+
+  tail := recent;
+  head^.prev := tail;
+  tail^.next := head;
+end;
+
+{ First Deletion }
+procedure removefirst; begin
+  number := number - 1;
+  del := head;
+
+  if head = tail then begin // node only 1
+    head := nil;
+    tail := nil;
+  end else begin
+    head := del^.next; // move the head to the second list
+    head^.prev := tail;
+    tail^.next := head;
+  end;
+
+  dispose(del);
+end;
+
+{ Middle / Any Deletion }
+procedure remove;
+var
+  i, mid, position: integer;
+  prevnode: pointer;
+begin
+  number := number - 1;
+  // mid := number div 2;
+  if (not isempty) then begin
+    ptr := head;
+
+    writeln('Posisi data yang ingin dihapus: ');
+    readln(position);
+    for i := 1 to number do begin
+      prevnode := ptr;
+      ptr := ptr^.next;
+      if (i = position) then begin
+        prevnode^.next := ptr^.next;
+        ptr^.next^.prev := prevnode;
+        writeln('data mahasiswa dengan NIM (', ptr^.data.nim, ') sekarang terhapus!');
+        dispose(ptr);
+      end;
+    end;
+  end;
+end;
+
+{ Last Deletion }
+procedure removelast; begin
+  number := number - 1;
+  del := tail;
+
+  if head = tail then begin // node only 1
+    head := nil;
+    tail := nil;
+  end else begin
+    tail := del^.prev;
+    tail^.next := head;
+    head^.prev := tail;
+  end;
+
+  dispose(del);
 end;
 
 { Find Data }
@@ -60,6 +217,7 @@ begin
       idx := idx + 1;
       if (temp^.data.nim = val) then begin
         writeln('Data dari NIM (', val, ') yaitu: ');
+        write('NIM: ', temp^.data.nim);
         write('Nama: ', temp^.data.nama);
         f := 1;
       end;
@@ -109,147 +267,6 @@ begin
   end;
 end;
 
-function create_node: pointer;
-begin
-  number := number + 1;
-  new(recent);
-
-  write('Masukkan nim: ');
-  readln(mahasiswa.nim);
-
-  write('Masukkan nama: ');
-  readln(mahasiswa.nama);
-
-  // write('Masukkan indeks: ');
-  // readln(mahasiswa.indeks);
-
-  recent^.data := mahasiswa;
-  recent^.prev := nil;
-  recent^.next := nil;
-  
-  create_node := recent;
-end;
-
-{ Front Insertion }
-procedure addfirst(elem: integer); begin
-  recent := create_node;
-
-  if (head = nil) then begin
-  // if (isempty) then begin
-    head := recent; 
-    tail := recent;
-    // head^.next := nil; head^.prev := nil;
-    // tail^.next := nil; tail^.prev := nil; 
-  end else begin
-    recent^.next := head;
-    head^.prev := recent;
-  end;
-
-  head := recent;
-  head^.prev := tail;
-  tail^.next := head;
-end;
-
-{ Middle / Any Insertion }
-procedure add(elem: integer);
-var
-  i, mid: integer;
-  prevnode: pointer;
-begin
-  recent := create_node;
-  mid := number div 2;
-  if (isempty) then begin
-    head := recent; tail := recent;
-  end else begin
-    ptr := head;
-    for i := 1 to mid do begin
-      prevnode := ptr;
-      ptr := ptr^.next;
-      if (i = mid) then begin
-        prevnode^.next := recent;
-        recent^.next := prevnode;
-        recent^.next := ptr;
-        ptr^.prev := recent;
-        writeln('Data telah berhasil diisi pada posisi: ', i);
-      end;
-    end;
-  end;
-end;
-
-{ Back Insertion }
-procedure addlast(elem: integer); begin
-  recent := create_node;
-
-  if (isempty) then begin
-    head := recent;
-    tail := recent;
-  end else begin
-    tail^.next := recent;
-    recent^.prev := tail;
-  end;
-
-  tail := recent;
-  head^.prev := tail;
-  tail^.next := head;
-end;
-
-{ First Deletion }
-procedure removefirst; begin
-  number := number - 1;
-  del := head;
-
-  if head = tail then begin // node only 1
-    head := nil;
-    tail := nil;
-  end else begin
-    head := del^.next; // move the head to the second list
-    head^.prev := tail;
-    tail^.next := head;
-  end;
-
-  dispose(del);
-end;
-
-{ Middle / Any Deletion }
-procedure remove;
-var
-  i, mid: integer;
-  prevnode: pointer;
-begin
-  number := number - 1;
-  mid := number div 2;
-  if (not isempty) then begin
-    ptr := head;
-    for i := 1 to mid do begin
-      prevnode := ptr;
-      ptr := ptr^.next;
-      if (i = mid) then begin
-        prevnode^.next := ptr^.next;
-        ptr^.next^.prev := prevnode;
-        writeln('data mahasiswa dengan NIM (', ptr^.data.nim, ') sekarang terhapus!');
-        dispose(ptr);
-      end;
-    end;
-  end;
-end;
-
-{ Last Deletion }
-procedure removelast; begin
-  number := number - 1;
-  del := tail;
-
-  if head = tail then begin // node only 1
-    head := nil;
-    tail := nil;
-  end else begin
-    tail := del^.prev;
-    tail^.next := head;
-    head^.prev := tail;
-  end;
-
-  dispose(del);
-end;
-
 procedure viewall;
 var
   i: integer;
@@ -259,7 +276,7 @@ begin
     writeln;
     writeln('Data Mahasiswa: ');
     for i := 0 to (number - 1) do begin
-      writeln(i, '.');
+      writeln(i + 1, '.');
       writeln('NIM: ', help^.data.nim, '; ');
       writeln('Nama: ', help^.data.nama, '; ');
       help := help^.next;
@@ -271,58 +288,69 @@ end;
 begin
 create;
 
-addfirst(3);
-addfirst(10);
-addfirst(11);
+writeln('Tambah data paling depan: ');
+addfirst;
+// writeln('Tambah data paling depan: ');
+// addfirst;
+// addfirst;
 
+writeln('Jumlah list: ', number);
 
-add(100);
-// if ((not isempty)) then
-//     removefirst;
+writeln('Tambah data di tengah: ');
+add;
+// // if ((not isempty)) then
+// //     removefirst;
 
-addlast(90);
-addlast(9);
+writeln('Tambah data di belakang: ');
+addlast;
+// addlast;
 
-// viewall
-// removelast;
-
-// viewall;
-// add(1000);
-
-// viewall;
-// remove;
-
-write('List saat ini: ');
+writeln('Data sebelum dihapus');
 viewall;
-writeln;
 
-write('Hapus list paling depan: ');
-removefirst;
-viewall;
-writeln;
-
-write('Hapus list tengah: ');
+writeln('Hapus data di posisi: ');
 remove;
-viewall;
-writeln;
 
-write('Hapus list paling belakang: ');
-removelast;
 viewall;
-writeln;
+// // removelast;
 
-write('List diurutkan (desc)');
-sort(0);
-viewall;
-writeln;
+// // viewall;
+// // add(1000);
 
-write('List diurutkan (asc)');
-sort(1);
-viewall;
-writeln;
+// // viewall;
+// // remove;
 
-writeln('Temukan list');
-find;
+// write('List saat ini: ');
+// viewall;
+// writeln;
+
+// write('Hapus list paling depan: ');
+// removefirst;
+// viewall;
+// writeln;
+
+// write('Hapus list tengah: ');
+// remove;
+// viewall;
+// writeln;
+
+// write('Hapus list paling belakang: ');
+// removelast;
+// viewall;
+// writeln;
+
+// write('List diurutkan (desc)');
+// sort(0);
+// viewall;
+// writeln;
+
+// write('List diurutkan (asc)');
+// sort(1);
+// viewall;
+// writeln;
+
+// writeln('Temukan list');
+// find;
 
 writeln;
 end.
