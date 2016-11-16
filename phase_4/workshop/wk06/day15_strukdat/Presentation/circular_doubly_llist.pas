@@ -252,10 +252,30 @@ begin
 			end;
 			write(ptr^.val, ' ');
 		end;
-
 	end;
 end;
-// procedure search;
+
+{ Searching using key }
+procedure search;
+var count, key, i, f: integer;
+begin
+	count := 0; f := 0;
+	writeln('Masukkan data yang ingin dicari: ');
+	readln(key);
+
+	if (not is_empty) then begin
+		ptr := head;
+		while (ptr <> nil) do begin
+			count := count + 1;
+			if (ptr^.val = key) then begin
+				writeln('Data ditemukan pada posisi: ', count);
+				f := 1;
+			end;
+		end;
+		if (f = 0) then
+			writeln('Data tidak ditemukan dalam list ini!');
+	end;
+end;
 
 { Algoritma Utama }
 begin
