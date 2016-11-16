@@ -2,18 +2,28 @@ program insertion;
 
 { LinkedList }
 type
+
+  dmhs = record
+    nim: integer;
+    nama: string;
+    indeks: char;
+  end;
+
+  arr_mhs = array of dmhs;
+
   pointer = ^node;
 
   node = record
     prev: pointer;
-    data: integer;
+    data: arr_mhs;
     next: pointer;
   end;
 
 var
-  recent, help, del: pointer;
+  recent, ptr, help, del: pointer;
   head, tail: pointer;
   number: integer; // to count the data on list
+  mahasiswa: arr_mhs;
 
 { Create }
 procedure create; begin
@@ -110,11 +120,21 @@ begin
   end;
 end;
 
-function create_node(elem: integer): pointer;
+function create_node: pointer;
 begin
   number := number + 1;
   new(recent);
-  recent^.data := elem;
+
+  write('Masukkan nim: ');
+  readln(mahasiswa[number].nim);
+
+  write('Masukkan nama: ');
+  readln(mahasiswa[number].nama);
+
+  write('Masukkan indeks: ');
+  readln(mahasiswa[number].indeks);
+
+  recent^.data := mahasiswa;
   recent^.prev := nil;
   recent^.next := nil;
   create_node := recent;
@@ -143,26 +163,27 @@ end;
 { Middle / Any Insertion }
 procedure add(elem: integer);
 var
-  k, mid: integer;
-  temp2: pointer;
+  i, mid: integer;
+  prevnode: pointer;
 begin
   recent := create_node(elem);
-
-  write('Posisi ke berapa? ');
-  readln(k);
-  while (k - 1 <> 0) do begin
-    k := k - 1;
-    recent := recent^.next;
+  mid := number div 2;
+  if (isempty) then begin
+    head := recent; tail := recent;
+  end else begin
+    ptr := head;
+    for i := 1 to mid do begin
+      prevnode := ptr;
+      ptr := ptr^.next;
+      if (i = mid) then begin
+        prevnode^.next := recent;
+        recent^.next := prevnode;
+        recent^.next := ptr;
+        ptr^.prev := recent;
+        writeln('Data telah berhasil diisi pada posisi: ', i);
+      end;
+    end;
   end;
-
-  new(temp2);
-  temp2 := recent^.next;
-
-  new(help);
-  help^.data := elem;
-  help^.next := temp2;
-
-  recent^.next := help;
 end;
 
 { Back Insertion }
@@ -202,32 +223,23 @@ end;
 { Middle / Any Deletion }
 procedure remove;
 var
-  k: integer;
-  after: pointer;
+  i, mid: integer;
+  prevnode: pointer;
 begin
   number := number - 1;
+  mid := number div 2;
   if (not isempty) then begin
-    new(recent);
-    recent := head;
-
-    write('Posisi yang mau dihapus? ');
-    readln(k);
-    // write('Hapus nilai? ');
-    // k := find(elem);
-    // writeln('Sedang mencari... ');
-    while (k - 1 <> 0) do begin
-      k := k - 1;
-      recent := recent^.next;
+    ptr := head;
+    for i := 1 to mid do begin
+      prevnode := ptr;
+      ptr := ptr^.next;
+      if (i = mid) then begin
+        prevnode^.next := ptr^.next;
+        ptr^.next^.prev := prevnode;
+        writeln(ptr^.data, ' sekarang terhapus');
+        dispose(ptr);
+      end;
     end;
-// write('Nilai ditemukan... ');
-
-
-    del := recent^.next;
-    after := del^.next;
-
-    recent^.next := after;
-
-    dispose(del);            
   end;
 end;
 
@@ -270,6 +282,8 @@ addfirst(3);
 addfirst(10);
 addfirst(11);
 
+
+add(100);
 // if ((not isempty)) then
 //     removefirst;
 
@@ -287,22 +301,32 @@ addlast(9);
 
 write('List saat ini: ');
 viewall;
+writeln;
 
 write('Hapus list paling depan: ');
 removefirst;
 viewall;
+writeln;
+
+write('Hapus list tengah: ');
+remove;
+viewall;
+writeln;
 
 write('Hapus list paling belakang: ');
 removelast;
 viewall;
+writeln;
 
 write('List diurutkan (desc)');
 sort(0);
 viewall;
+writeln;
 
 write('List diurutkan (asc)');
 sort(1);
 viewall;
+writeln;
 
 writeln('Temukan list');
 find;

@@ -22,7 +22,7 @@ type
 var
 	recent, ptr, prev: pointer;
 	head, tail: pointer;
-	info, number, ch: integer;
+	info, number, ch, position: integer;
 	// mahasiswa: dmhs;
 	// mahasiswa: arr_mhs;
 
@@ -43,7 +43,7 @@ function is_empty: boolean; begin
 end;
 
 function is_exceed: boolean; begin
-	if (number < pos) then begin
+	if (number < position) then begin
 		writeln('Posisi ini melampaui list!');
 		is_exceed := true;
 	end;
@@ -151,17 +151,17 @@ end;
 { Inserts the element at given position }
 procedure insert_at_position; 
 var
-	pos, len, i: integer;
+	len, i: integer;
 	prevnode: pointer;
 begin
 	write('Masukkan data yang ingin dimasukkan: ');
 	readln(info);
 	write('Masukkan posisi ke berapa: ');
-	readln(pos);
+	readln(position);
 	recent := create_node(info);
 
 	if (is_empty) then begin
-		if (pos = 1) then begin
+		if (position = 1) then begin
 			head := recent; tail := recent;
 			head^.next := nil; tail^.next := nil;
 			head^.prev := nil; tail^.prev := nil;
@@ -170,15 +170,15 @@ begin
 	end else begin
 		if (not is_exceed) then begin
 			ptr := head;
-			for (i := 1 to number) do begin
+			for i := 1 to number do begin
 				prevnode := ptr;
 				ptr := ptr^.next;
-				if (i = pos - 1 ) then begin
+				if (i = position - 1 ) then begin
 					prevnode^.next := recent;
 					recent^.prev := prevnode;
 					recent^.next := ptr;
 					ptr^.prev := recent;
-					writeln('Berhasil memasukkan data di posisi ', pos);
+					writeln('Berhasil memasukkan data di posisi ', position);
 					break;
 				end;
 			end;
@@ -189,17 +189,18 @@ end;
 { Deletes element at given position }
 procedure delete_node_position;
 var
-	pos, count, i: integer;
+	count, i: integer;
 	temp, prevnode: pointer;
 begin
 	writeln('Masukkan posisi untuk menghapus data: ');
+	readln(position);
 	if (not is_empty) then begin
 		if (not is_exceed) then begin
 			ptr := head;
-			for (i := 1 to number) then begin
+			for i := 1 to number do begin
 				prevnode := ptr;
 				ptr := ptr^.next;
-				if (pos = 1) then begin
+				if (position = 1) then begin
 					number := number - 1;
 					tail^.next := prevnode^.next;
 					ptr^.prev := prevnode^.prev;
@@ -207,7 +208,7 @@ begin
 					writeln(prevnode^.val, ' is deleted');
 					dispose(prevnode);
 					break;
-				end else if (i = pos - 1) begin
+				end else if (i = position - 1) then begin
 					number := number - 1;
 					prevnode^.next := ptr^.next;
 					ptr^.next := prevnode; ptr^.prev := prevnode;
@@ -221,10 +222,10 @@ begin
 end;
 
 { Sort the info list }
-procedure sort_list(sort: integer);
+procedure sort_list();
 var
 	temp: pointer;
-	tempval, j: integer;
+	tempval, j, sort: integer;
 begin
 	if (is_empty) then
 		writeln('List kosong, tidak data yang bisa diurutkan')
@@ -232,8 +233,10 @@ begin
 		ptr := head;
 		while (ptr <> nil) do begin
 			temp := ptr^.next;
-			for (j := 0 to number - 1) do begin
-				case (sort) of begin
+			for j := 0 to number - 1 do begin
+				writeln('Masukkan tipe sortir: ');
+				readln(sort);
+				case (sort) of
 					0: begin // ascending
 						if (ptr^.val > temp^.val) then begin
 							tempval := ptr^.val;
@@ -247,7 +250,8 @@ begin
 							ptr^.val := temp^.val;
 							temp^.val := tempval;
 						end;
-					end;
+					end else
+						writeln('Tipe sortir tidak ditemukan');
 				end;
 			end;
 			write(ptr^.val, ' ');
@@ -257,7 +261,7 @@ end;
 
 { Searching using key }
 procedure search;
-var count, key, i, f: integer;
+var count, key, f: integer;
 begin
 	count := 0; f := 0;
 	writeln('Masukkan data yang ingin dicari: ');
@@ -281,13 +285,47 @@ end;
 begin
 	number := 0;
 
+	init_llist;
+
 	writeln('linked list');
   writeln('1.insert at beginning');
 	writeln('2.insert at end');
 	writeln('3.insert at position');
 	writeln('4.sort linked list');
 	writeln('5.delete node at position');
-	writeln('6.updatenodevalue');
-	writeln('7.search element');
-	writeln('8.exit');
+	writeln('6.search element');
+	writeln('7.exit');
+
+	repeat
+	
+		readln(ch);
+
+		case (ch) of
+			1: begin
+				insert_at_first;
+				// break;
+			end;
+			2: begin
+				insert_at_end;
+				// break;
+			end;
+			3: begin
+				insert_at_position;
+				// break;
+			end;
+			4: begin
+				sort_list;
+				// break;
+			end;
+			5: begin
+				delete_node_position;
+				// break;
+			end;
+			6: begin
+				search;
+				// break;
+			end else
+				writeln('Pilihan tidak ditemukan!');
+		end;
+	until (ch = 7);
 end.
