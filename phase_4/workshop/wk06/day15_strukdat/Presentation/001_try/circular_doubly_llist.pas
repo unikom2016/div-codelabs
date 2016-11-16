@@ -64,16 +64,17 @@ end;
 
 procedure sort(sorttype: integer);
 var
-  value: integer;
+  value, i, j: integer;
 begin
   if (isempty) then
     writeln('list is empty');
 
   temp := head;
-  while (temp <> nil) do begin
-
+  // while (temp <> nil) do begin
+  for i := 0 to (number - 1) do begin
     help := temp^.next;
-    while (help <> nil) do begin
+    // while (help <> nil) do begin
+    for j := i to (number - 1) do begin
       case (sorttype) of
         0: begin
           if (temp^.data > help^.data) then begin
@@ -90,10 +91,7 @@ begin
           end;
         end;
       end;
-      
-      help := help^.next;
     end;
-    
     temp := temp^.next;
   end;
 end;
@@ -174,14 +172,17 @@ end;
 
 { First Deletion }
 procedure removefirst; begin
+  number := number - 1;
   del := head;
 
-  number := number - 1;
   if head = tail then begin // node only 1
     head := nil;
     tail := nil;
-  end else 
+  end else begin
     head := del^.next; // move the head to the second list
+    head^.prev := tail;
+    tail^.next := head;
+  end;
 
   dispose(del);
 end;
@@ -220,14 +221,16 @@ end;
 
 { Last Deletion }
 procedure removelast; begin
-  del := tail;
   number := number - 1;
+  del := tail;
 
-  if head = tail then begin
+  if head = tail then begin // node only 1
     head := nil;
     tail := nil;
   end else begin
-    tail := del^.next;
+    tail := del^.prev;
+    tail^.next := head;
+    head^.prev := tail;
   end;
 
   dispose(del);
@@ -244,6 +247,7 @@ begin
       write(help^.data, ' ');
       help := help^.next;
     end;
+    writeln;
   end;
 end;
 
@@ -269,10 +273,23 @@ addlast(9);
 // viewall;
 // remove;
 
-// viewall;
-// find(10);
-// sort(0); // ascending
+write('List saat ini: ');
+viewall;
 
+write('Hapus list paling depan: ');
+removefirst;
+viewall;
+
+write('Hapus list paling belakang: ');
+removelast;
+viewall;
+
+write('List diurutkan (desc)');
+sort(0);
+viewall;
+
+write('List diurutkan (asc)');
+sort(1);
 viewall;
 
 writeln;
