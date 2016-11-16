@@ -7,3 +7,6 @@
 [submodule "phase_4/repo/weouts"]
 	path = phase_4/repo/weouts
 	url = git@github.com:weouts/android.git
+[submodule "phase_4/repo/cheesesquare"]
+	path = phase_4/repo/cheesesquare
+	url = git@github.com:chrisbanes/cheesesquare.git
