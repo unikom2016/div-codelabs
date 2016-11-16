@@ -18,3 +18,7 @@ Sender and receiver mechanic on Android to communicate between Activity
 
 - Implicit
     Communicate between another apps (e.g: Share button)
+
+# References
+- http://codetheory.in/android-pick-select-image-from-gallery-with-intents/
+- http://stackoverflow.com/questions/5309190/android-pick-images-from-gallery
