@@ -81,39 +81,76 @@ end;
 { Middle / Any Insertion }
 procedure add;
 var
-  i, position: integer;
+  ch, val, position, i: integer;
+  f: boolean;
   prevnode: pointer;
 begin
-  writeln('Masukkan ke posisi berapa: ');
-  readln(position);
-  // mid := number div 2;
-  if (number < position) then
-      writeln('Posisi ', position, ' tidak ada. Karena melampaui batas list, yaitu: ', number)
-  else begin
-    recent := create_node;
+  writeln('Mencari berdasarkan: ');
+  writeln('1. Data');
+  writeln('2. Posisi');
+  readln(ch);
+  case (ch) of
+    1: begin
+      writeln('Cari data NIM: ');
+      readln(val);
 
-    if (isempty) then begin
-      if (position = 1) then begin
+      recent := create_node;
+
+      if (isempty) then begin
+        writeln('Tidak ada data');
         head := recent;
         tail := head;
-      end else
-        writeln('List kosong, tidak bisa memasukkan di posisi: ', position);
-    end else begin
+      end else begin
         ptr := head;
-        // for i := 1 to mid do begin
-
-        for i := 1 to number do begin
+        f := false;
+        for i := 1 to number do
           prevnode := ptr;
-          ptr := ptr^.next;
-          if (i = position - 1) then begin
+          if (val = ptr^.data.nim) then begin
+            f := true;
             prevnode^.next := recent;
-            recent^.next := prevnode;
+            recent^.prev := prevnode;
             recent^.next := ptr;
             ptr^.prev := recent;
-            writeln('Data telah berhasil diisi pada posisi: ', position);
-            break;
-          end;
+            writeln('Data berhasil di tambah sebelum: ', ptr^.data.nim);
+          end else
+            ptr := ptr^.next;
         end;
+      end;
+    2: begin
+      writeln('Masukkan ke posisi berapa: ');
+      readln(position);
+
+      recent := create_node;
+
+      if (isempty) then begin
+        if (position = 1) then begin
+          head := recent;
+          tail := head;
+        end else
+          writeln('List kosong, tidak bisa memasukkan di posisi: ', position);
+      end else begin
+        if (number < position) then
+          writeln('Posisi ', position, ' tidak ada. Karena melampaui batas list, yaitu: ', number)
+        else begin
+          // if (position <> number) and () then begin
+            ptr := head;
+            writeln('Posisi di: ', position);
+            for i := 1 to number do begin
+              prevnode := ptr;
+              ptr := ptr^.next;
+              if (i = position - 1) then begin
+                prevnode^.next := recent;
+                recent^.prev := prevnode;
+                recent^.next := ptr;
+                ptr^.prev := recent;
+                writeln('Data telah berhasil diisi pada posisi: ', position);
+              end;
+            end;
+          // end else
+          //   writeln('You can not insert it');
+        end;
+      end;
+      // end;
     end;
   end;
 end;
@@ -290,8 +327,9 @@ create;
 
 writeln('Tambah data paling depan: ');
 addfirst;
+writeln('Tambah data paling depan: ');
+addfirst;
 // writeln('Tambah data paling depan: ');
-// addfirst;
 // addfirst;
 
 writeln('Jumlah list: ', number);
