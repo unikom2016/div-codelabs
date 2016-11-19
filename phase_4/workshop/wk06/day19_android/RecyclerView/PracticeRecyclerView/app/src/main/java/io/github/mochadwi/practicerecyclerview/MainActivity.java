@@ -21,16 +21,14 @@ public class MainActivity extends AppCompatActivity {
         arrayList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ArrayListActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, ArrayListActivity.class));
             }
         });
 
         okHttp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OkHttpActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, OkHttpActivity.class));
             }
         });
     }

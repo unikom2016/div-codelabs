@@ -2,7 +2,6 @@ package io.github.mochadwi.practicerecyclerview.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,12 +44,12 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
         Buku buku = bukuArrayList.get(position);
         holder.txtJudul.setText(buku.getJudulBuku());
         holder.txtPenerbit.setText(buku.getPenerbit());
-        holder.txtHarga.setText(buku.getHarga());
+        holder.txtHarga.setText(String.valueOf(buku.getHarga()));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return bukuArrayList.size();
     }
 
     public class BukuViewHolder extends RecyclerView.ViewHolder {
