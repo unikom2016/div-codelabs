@@ -52,9 +52,9 @@ begin
                         else
                             writeln(', mati satu tinggal ', sisa);
                     end;    
-                    writeln(', mati satu tinggal induknya')            
+                    writeln(', mati satu tinggal induknya');            
                     
-                    write('Press any key to continue...'); readln();
+                    write('Press any key to continue...'); readln;
                 end;
                 
                 if (pilihan = 2) then
@@ -96,10 +96,8 @@ begin
 
                     clrscr;
                     write('Masukkan banyak baris: '); readln(baris);
-                    for i := 1 to baris do
-                    begin
-                        for j := 1 to i do
-                        begin
+                    for i := 1 to baris do begin // for luar -> baris
+                        for j := 1 to i do begin // for dalam -> 
                             if (angka < 10) then
                                 write(' ');
                             write(angka, ' ');
