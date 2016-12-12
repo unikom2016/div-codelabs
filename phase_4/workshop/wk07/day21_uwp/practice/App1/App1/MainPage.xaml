@@ -7,11 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Vertical">
-        <Rectangle Width="100" Height="50" Fill="Black"></Rectangle>
-        <Rectangle Width="100" Height="50" Fill="Red"></Rectangle>
-        <Rectangle Width="100" Height="50" Fill="Aqua"></Rectangle>
-        <Rectangle Width="100" Height="50" Fill="Black"></Rectangle>
-        <Rectangle Width="100" Height="50" Fill="Black"></Rectangle>
-    </StackPanel>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView Name="MainMenu" CompactPaneLength="48"
+                   OpenPaneLength="250"
+                   DisplayMode="CompactOverlay"
+                   IsPaneOpen="False">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Click="HamburgerButton_Click" Width="48" Height="48" Content="&#xE700;"/>
+                    <ListBox SelectionChanged="ListBox_SelectionChanged">
+                        <ListBoxItem Name="home">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Home"></SymbolIcon>
+                                <TextBlock Text="HOMEPAGE" Margin="15 0 0 0"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="addFriend">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="AddFriend"></SymbolIcon>
+                                <TextBlock Text="Add Friend" Margin="15 0 0 0"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="mainFrame"></Frame>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
 </Page>
