@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="Basic1.View.VUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Basic1.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="207*"/>
+        </Grid.RowDefinitions>
+        <Rectangle
+            Fill="#446CB3">
+
+        </Rectangle>
+
+        <TextBlock
+            Grid.Row="0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Text="{Binding name}"
+            FontSize="30"
+            FontWeight="Black"
+            Margin="0 20 0 0">
+
+        </TextBlock>
+        
+        <Ellipse
+            Width="100"
+            Height="100"
+            Grid.Row="0"
+            Margin="0 0 0 -50"
+            VerticalAlignment="Bottom">
+
+            <Ellipse.Fill>
+                <ImageBrush
+                    ImageSource="{Binding picture}"></ImageBrush>
+            </Ellipse.Fill>
+
+        </Ellipse>
+
+        <TextBlock
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Text="{Binding email}"
+            FontSize="30"
+            FontWeight="Black"
+            Margin="0 70 0 0">
+            
+        </TextBlock>
+
+        <TextBlock
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Text="{Binding gender}"
+            FontSize="25"
+            Margin="0 110 0 0">
+
+        </TextBlock>
+    </Grid>
+</Page>

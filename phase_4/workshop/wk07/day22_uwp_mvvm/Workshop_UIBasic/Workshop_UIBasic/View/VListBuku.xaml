@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="Workshop_UIBasic.View.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Workshop_UIBasic.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Brown"></Rectangle>
+        <TextBlock Text="Perpustakaan Unikom"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="bold"
+                   Grid.Row="0"></TextBlock>
+
+        <ListView Grid.Row="1" Name="LV_Buku" ItemsSource="{Binding collectionBuku}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <StackPanel Width="100">
+                            <TextBlock Text="{Binding judulBuku}"></TextBlock>
+                            <TextBlock Text="{Binding pengarang}"></TextBlock>
+                            <TextBlock Text="{Binding penerbit}"></TextBlock>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Text="{Binding tahun}"></TextBlock>
+                            <TextBlock Text="{Binding stok}"></TextBlock>
+                            <TextBlock Text="{Binding harga}"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
