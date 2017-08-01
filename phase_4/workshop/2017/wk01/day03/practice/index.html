@@ -27,9 +27,7 @@
                     <p>5</p>
                 </li>
             </ul>
-        </div>
 
-        <div class="container">
             <ul class="sortable">
                 <li>
                     <p>1</p>
@@ -54,6 +52,7 @@
     <script src="assets/js/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
+        $(".container").sortable();
         $(".sortable").sortable({
             connectWith: ".sortable"
         });
