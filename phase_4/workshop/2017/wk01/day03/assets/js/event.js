@@ -13,6 +13,7 @@
     // })
 // }
 
-$("button").click(function() {
+// selector has same behaviour with css-like
+$("button:nth-child(2)").click(function() {
     window.alert("hello world!");
 });
