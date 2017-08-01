@@ -54,7 +54,9 @@
     <script src="assets/js/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
-        $(".sortable").sortable();
+        $(".sortable").sortable({
+            connectWith: ".sortable"
+        });
     </script>
 </body>
 </html>
